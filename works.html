@@ -8,7 +8,12 @@
     <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
     <script>
         $(function() {
-        $("#header").load("./header.html");
+        $("#header").load("./header.html", function(){
+            const page_tag = $(this).find("#kyoto-header-works-wrapper");
+            page_tag.css({
+                "border-bottom": "5px white solid"
+            })
+        });
         $("#footer").load("./footer.html");
         });
     </script>
