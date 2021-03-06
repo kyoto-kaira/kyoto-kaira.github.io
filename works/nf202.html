@@ -1,0 +1,60 @@
+<!doctype html>
+
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    <title>KaiRA</title>
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(function() {
+        $("#header").load("../header.html", function(){
+            var icons = $(this).find("#kyoto-header-wrapper");
+            icons.html("<div id='kyoto-header-home-wrapper'><div id='kyoto-header-home'></div></div> \
+            <div id='kyoto-header-about-wrapper'><div id='kyoto-header-about'></div></div> \
+            <div id='kyoto-header-events-wrapper'><div id='kyoto-header-events'><a href='../index.html'><img src='./imgs/Kyoto-kaira-text.png' height='26'></a></div></div> \
+            <div id='kyoto-header-works-wrapper'><div id='kyoto-header-works'></div></div> \
+            <div id='kyoto-header-contact-wrapper'><div id='kyoto-header-contact'></div></div> \
+            ");
+        });
+        $("#footer").load("./footer.html");
+        });
+    </script>
+    <style type="text/css">
+        #kyoto-header-line{
+            /*background-color: transparent;*/
+            background-color: rgba(30, 30, 32, 0.7);
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="header">
+</div>
+
+<div id="kyoto-top-background">
+</div>
+
+<div id="kyoto-background-color">
+</div>
+
+<div id="kyoto-wrapper">
+    <div class="kyoto-chapter">
+        <img src="./imgs/Kyoto-nf2020-text.png">
+    </div>
+    <div class="kyoto-about-text">
+        <h1>サークル活動</h1>
+        hogehoge
+
+        <h1>Deep Learningについて</h1>
+        hogehoge
+    </div>
+    <div><a href="../works.html">KaiRA TOPへ</a></div>
+    <div><a href="../index.html">戻る</a></div>
+</div>
+
+
+</body>
+
+</html>
