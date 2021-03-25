@@ -73,6 +73,24 @@
         </div>
         <h2>Big GAN</h2>
         <h2>人流推定</h2>
+	<h2>音声分離</h2>
+	<div>
+		<p><b>Deep Attractor Network</b></p>
+		<p><a href=https://arxiv.org/pdf/1611.08930.pdf>DEEP ATTRACTOR NETWORK FOR SINGLE-MICROPHONE SPEAKER SEPARATION</a>という論文で提案されている音声分離のモデルです。任意の種類の音声が混ざった入力音声を分離することができます。
+		</p>
+		<p>KaiRAメンバーの一人がこのモデルの実装に取り組み、<a href=https://github.com/karolpiczak/ESC-50>ESC-50</a>という環境音データセットを用いて2種類の環境音を分離させるモデルの構築、学習を行いました。<a href=https://colab.research.google.com/drive/1HCnVnLwGp8bMlnDwZybW1sY7L_gNMAC9#scrollTo=bc2Q3Q7J0JX6>Google Colaboratory</a>上で簡単に実行できます。また、実装したモデルについてまとめた<a href=https://qiita.com/KMASAHIRO/items/3b87fd67949f3445b23b>Qiita記事</a>や実装コードを載せた<a href=https://github.com/KMASAHIRO/DANet>Githubリポジトリ</a>もあります。
+		</p>
+		<ul>
+			<li>例として、風の音とカエルの鳴き声の分離について示します。</li>
+			<img src="./example/DANet.png" height="500">
+			<p>テストデータでの推論結果(※音量が少し大きいので注意してください。)</p>
+			<figcaption>混合前のカエルの鳴き声</figcaption><audio controls src="./example/frog_before.wav"></audio>
+			<figcaption>混合前の風の音</figcaption><audio controls src="./example/wind_before.wav"></audio>
+			<figcaption>混合音声</figcaption><audio controls src="./example/input_data.wav"></audio>
+			<figcaption>分離後のカエルの鳴き声</figcaption><audio controls src="./example/frog_after.wav"></audio>
+			<figcaption>分離後の風の音</figcaption><audio controls src="./example/wind_after.wav"></audio>
+		</ul>
+	</div>
     </div>
     <div><a href="../works.html">KaiRA TOPへ</a></div>
     <div><a href="../index.html">戻る</a></div>
