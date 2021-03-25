@@ -58,7 +58,8 @@
 		<li>誤差逆伝播法</li>
 	</ol>
 
-        <h1>実例</h1>
+    <h1>実例</h1>
+
         <h2>顔認識</h2>
         <div style="display: flex;justify-content: space-around; width: 75%">
             <p><img src="./imgs/Lenna.png" height="200"></p>
@@ -68,29 +69,44 @@
                 画像を機械に読み取らせ、機械が学習した70人のうち最も似ている順に
                 その名前を教えてくれます<br>
                 デモ: <a href="https://colab.research.google.com/github/KYM384/FaceRecognition_kaira/blob/main/demo.ipynb" target="_blank">Google Colab</a><br>
-                解説: <a href="https://github.com/KYM384/FaceRecognition_kaira">KYM384/FaceRecgnition_kaira</a>
+                解説: <a href="https://github.com/KYM384/FaceRecognition_kaira" target="_blank">KYM384/FaceRecgnition_kaira</a>
             </p>
         </div>
-        <h2>Big GAN</h2>
+
         <h2>人流推定</h2>
-	<h2>音声分離</h2>
-	<div>
-		<p><b>Deep Attractor Network</b></p>
-		<p><a href=https://arxiv.org/pdf/1611.08930.pdf>DEEP ATTRACTOR NETWORK FOR SINGLE-MICROPHONE SPEAKER SEPARATION</a>という論文で提案されている音声分離のモデルです。任意の種類の音声が混ざった入力音声を分離することができます。
-		</p>
-		<p>KaiRAメンバーの一人がこのモデルの実装に取り組み、<a href=https://github.com/karolpiczak/ESC-50>ESC-50</a>という環境音データセットを用いて2種類の環境音を分離させるモデルの構築、学習を行いました。<a href=https://colab.research.google.com/drive/1HCnVnLwGp8bMlnDwZybW1sY7L_gNMAC9#scrollTo=bc2Q3Q7J0JX6>Google Colaboratory</a>上で簡単に実行できます。また、実装したモデルについてまとめた<a href=https://qiita.com/KMASAHIRO/items/3b87fd67949f3445b23b>Qiita記事</a>や実装コードを載せた<a href=https://github.com/KMASAHIRO/DANet>Githubリポジトリ</a>もあります。
-		</p>
-		<ul>
-			<li>例として、風の音とカエルの鳴き声の分離について示します。</li>
-			<img src="./example/DANet.png" height="500">
-			<p>テストデータでの推論結果(※音量が少し大きいので注意してください。)</p>
-			<figcaption>混合前のカエルの鳴き声</figcaption><audio controls src="./example/frog_before.wav"></audio>
-			<figcaption>混合前の風の音</figcaption><audio controls src="./example/wind_before.wav"></audio>
-			<figcaption>混合音声</figcaption><audio controls src="./example/input_data.wav"></audio>
-			<figcaption>分離後のカエルの鳴き声</figcaption><audio controls src="./example/frog_after.wav"></audio>
-			<figcaption>分離後の風の音</figcaption><audio controls src="./example/wind_after.wav"></audio>
-		</ul>
-	</div>
+        <div style="display: flex;justify-content: space-around; width: 75%">
+            <p><img src="./imgs/demo-results.png" height="400"></p>
+            <p>&nbsp;&nbsp;</p>
+            <p>
+                <b>人の流れを把握したい</b><br>
+                新型コロナウイルス感染症により以前と比べ混雑する状況は減りましたが、
+                都市設計やイベントの運営者にとって人の流れを把握することは今だ大事に違いありません。
+                カメラ一つでそれを把握出来たら、コストも少なくてすみます。
+                今回はUSBカメラを用いてデモを行えます。<br>
+                デモ: <a href="https://colab.research.google.com/github/hanebarla/62nf-kaira-peopleflow/blob/main/demo.ipynb" target="_blank">Google Colab</a><br>
+                解説: <a href="https://github.com/hanebarla/62nf-kaira-peopleflow" target="_blank">hanebarla/62nf-kaira-peopleflow</a><br>
+                元論文: <a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123600715.pdf">Estimating People Flows to Better Count Them in Crowded Scenes</a>
+            </p>
+        </div>
+
+	    <h2>音声分離</h2>
+	    <div>
+	    	<p><b>Deep Attractor Network</b></p>
+	    	<p><a href=https://arxiv.org/pdf/1611.08930.pdf>DEEP ATTRACTOR NETWORK FOR SINGLE-MICROPHONE SPEAKER SEPARATION</a>という論文で提案されている音声分離のモデルです。任意の種類の音声が混ざった入力音声を分離することができます。
+	    	</p>
+	    	<p>KaiRAメンバーの一人がこのモデルの実装に取り組み、<a href=https://github.com/karolpiczak/ESC-50>ESC-50</a>という環境音データセットを用いて2種類の環境音を分離させるモデルの構築、学習を行いました。<a href=https://colab.research.google.com/drive/1HCnVnLwGp8bMlnDwZybW1sY7L_gNMAC9#scrollTo=bc2Q3Q7J0JX6>Google Colaboratory</a>上で簡単に実行できます。また、実装したモデルについてまとめた<a href=https://qiita.com/KMASAHIRO/items/3b87fd67949f3445b23b>Qiita記事</a>や実装コードを載せた<a href=https://github.com/KMASAHIRO/DANet>Githubリポジトリ</a>もあります。
+	    	</p>
+	    	<ul>
+	    		<li>例として、風の音とカエルの鳴き声の分離について示します。</li>
+	    		<img src="./example/DANet.png" height="500">
+	    		<p>テストデータでの推論結果(※音量が少し大きいので注意してください。)</p>
+	    		<figcaption>混合前のカエルの鳴き声</figcaption><audio controls src="./example/frog_before.wav"></audio>
+	    		<figcaption>混合前の風の音</figcaption><audio controls src="./example/wind_before.wav"></audio>
+	    		<figcaption>混合音声</figcaption><audio controls src="./example/input_data.wav"></audio>
+	    		<figcaption>分離後のカエルの鳴き声</figcaption><audio controls src="./example/frog_after.wav"></audio>
+	    		<figcaption>分離後の風の音</figcaption><audio controls src="./example/wind_after.wav"></audio>
+	    	</ul>
+	    </div>
     </div>
     <div><a href="../works.html">KaiRA TOPへ</a></div>
     <div><a href="../index.html">戻る</a></div>
