@@ -1,0 +1,92 @@
+<!doctype html>
+
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    <title>KaiRA</title>
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(function() {
+        $("#header").load("../header.html", function(){
+            var icons = $(this).find("#kyoto-header-wrapper");
+            icons.html("<div id='kyoto-header-home-wrapper'><div id='kyoto-header-home'></div></div> \
+            <div id='kyoto-header-about-wrapper'><div id='kyoto-header-about'></div></div> \
+            <div id='kyoto-header-events-wrapper'><div id='kyoto-header-events'><a href='../index.html'><img src='./imgs/Kyoto-kaira-text.png' height='26'></a></div></div> \
+            <div id='kyoto-header-works-wrapper'><div id='kyoto-header-works'></div></div> \
+            <div id='kyoto-header-contact-wrapper'><div id='kyoto-header-contact'></div></div> \
+            ");
+        });
+        $("#footer").load("./footer.html");
+        });
+    </script>
+    <style type="text/css">
+        #kyoto-header-line{
+            /*background-color: transparent;*/
+            background-color: rgba(30, 30, 32, 0.7);
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="header">
+</div>
+
+<div id="kyoto-top-background">
+</div>
+
+<div id="kyoto-background-color">
+</div>
+
+<div id="kyoto-wrapper">
+    <div class="kyoto-chapter">
+        <img src="./imgs/nf62th-kaira.png">
+    </div>
+    <div class="kyoto-about-text">
+        <h1>サークル活動</h1>
+        学期中の毎週の活動として輪読会を行っています。
+        輪読会では本を読んだり、
+        中には自分が気になっていることについて発表したりと盛況しています。
+	また、サークル内で進めたいプロジェクトがあれば、気軽に提案して進めることもできます!
+	今回発表している音声変換モデルもそういったプロジェクトです。
+        今までの活動は<a href="../events.html">こちら</a>から。
+	<!--
+	<a href="https://nf.la/events/general/exhibition.php?code=T-030" target="_blank">NF(京大文化祭)のKaiRAのページ</a>の方もぜひご覧になってください。
+	-->
+
+        <h1>会誌</h1>
+	現在作成中です!
+	<!--
+	Deep Learningの基礎知識となる以下の事柄について<a href="../docs/NF_2020.pdf" target="_blank">pdf</a>にまとめました。簡単に説明しているのでぜひ気軽にご覧になってください!
+	<ol type="1">
+		<li>人工知能・機械学習・深層学習</li>
+		<li>ニューラルネットワークと層構造</li>
+		<li>学習</li>
+		<li>損失関数</li>
+		<li>勾配法</li>
+		<li>誤差逆伝播法</li>
+	</ol>
+	-->
+
+    <h1>KaiRAメンバーが関係しているプロジェクト</h1>
+
+        <h2>音声変換モデル</h2>
+        <div style="display: flex;justify-content: space-around; width: 75%">
+            <p>KaiRA内で音声変換のプロジェクトを立ち上げ、KaiRAで借りているGCPリソースを使用して学習させました。</p>
+	    <p>従来のモデルと比べ、学習データにない音声や言語を入力しても音声変換が上手くいくような工夫をしました。</p>
+	    <p>まだ発表できる段階までまとめられていませんが、完成次第デモを上げていきます!</p>
+        </div>
+
+    </div>
+    <div><a href="../index.html">KaiRA TOPへ</a></div>
+<!--
+    <div><a href="https://nf.la/events/general/exhibition.php?code=T-030" target="_blank">NFのKaiRAページへ</a></div>
+-->
+
+</div>
+
+
+</body>
+
+</html>
