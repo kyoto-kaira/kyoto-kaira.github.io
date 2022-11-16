@@ -1,24 +1,25 @@
 <!doctype html>
 
 <html lang="ja">
+
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="main.css">
     <title>KaiRA</title>
     <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
     <script>
-        $(function() {
-        $("#header").load("./header.html", function(){
-            const page_tag = $(this).find("#kyoto-header-works-wrapper");
-            page_tag.css({
-                "border-bottom": "5px white solid"
-            })
-        });
-        $("#footer").load("./footer.html");
+        $(function () {
+            $("#header").load("./header.html", function () {
+                const page_tag = $(this).find("#kyoto-header-works-wrapper");
+                page_tag.css({
+                    "border-bottom": "5px white solid"
+                })
+            });
+            $("#footer").load("./footer.html");
         });
     </script>
     <style type="text/css">
-        #kyoto-header-line{
+        #kyoto-header-line {
             /*background-color: transparent;*/
             background-color: rgba(30, 30, 32, 0.7);
         }
@@ -27,44 +28,58 @@
 
 <body>
 
-<div id="header">
-</div>
-
-<div id="kyoto-top-background">
-</div>
-
-<div id="kyoto-background-color">
-</div>
-
-<div id="kyoto-wrapper">
-    <div class="kyoto-chapter">
-	    <img src="./img/icon/Kyoto-works-text.png">
-    </div>
-    <div class="kyoto-about-text">
-	KaiRA内で取り組んだプロジェクトや、KaiRAメンバーが個人で取り組んだプロジェクトの紹介ページです。
-	主にNF(京大文化祭)に向けた発表物を掲載しています。<br>
-	簡単に実行できて楽しめるデモも用意しているので、ぜひ遊んでみてください。<br>
-	これらをきっかけにしてサークル興味を持ってくださったら、twitter等でコンタクトを取っていただけるとうれしいです!
-
+    <div id="header">
     </div>
 
-    <div>
-	    <h1>NF(京大文化祭)</h1>
-        2022年度のNFは<b>体育館会場展示</b>と<b>オンライン展示</b>の2種類があります。
-        <a href="./works/nf2022.html">オンライン展示はこちらからアクセスできます。</a>
-        <br>
-        ※体育館会場へお越しになるには事前予約が必要です。詳しくは<a href="https://nf.la/#/join/walk">11月祭公式サイト</a>をご覧ください。
+    <div id="kyoto-top-background">
     </div>
 
-    <div>
-        <h3>過去のNF展示</h3>
-	    <p>2020年度、2021年度はNFがオンライン開催であったため、NFの公式サイトとKaiRAのホームページ上でのみ発表を行いました。特設サイトに発表内容を掲載してあります。</p>
-	    <ul>
-		    <li><a href="./works/nf2020.html">第62回NF(2020年度) KaiRA特設サイト</a></li>
-		    <li><a href="./works/nf2021.html">第63回NF(2021年度) KaiRA特設サイト</a></li>
-	    </ul>
+    <div id="kyoto-background-color">
     </div>
-</div>
+
+    <div id="kyoto-wrapper">
+        <div class="kyoto-chapter">
+            <img src="./img/icon/Kyoto-works-text.png">
+        </div>
+        <div class="kyoto-about-text">
+            KaiRA内で取り組んだプロジェクトや、KaiRAメンバーが個人で取り組んだプロジェクトの紹介ページです。
+            主にNF(京大文化祭)に向けた発表物を掲載しています。<br>
+            簡単に実行できて楽しめるデモも用意しているので、ぜひ遊んでみてください。<br>
+            これらをきっかけにしてサークル興味を持ってくださったら、twitter等でコンタクトを取っていただけるとうれしいです!
+        </div>
+
+        <div>
+            <h1>NF(京都大学11月祭)</h1>
+            <p>
+                2022年度のNFは<b>体育館会場展示</b>と<b>オンライン展示</b>の2種類があります。
+                体育館会場では21日(月)と22日(火)に出展し、デモの体験会と会誌の販売を行います。
+                オンライン展示ではデモの一部と会誌のPDFを展示しています。
+            </p>
+
+            <a href="./works/nf2022.html" style="
+                display: inline-block;
+                margin: 10px 0 10px 0;
+                padding: 0.5em 1em;
+                color: #fff;
+                font-size: 20px;
+                font-weight: bold;
+                border: solid 3px #99883A;
+                background-color: #ddc354;
+                border-radius: 20px;
+                transition: .4s;
+            ">2022年度NFオンライン展示ページはこちら>></a>
+
+            <p>※体育館会場へお越しになるには事前予約が必要です。詳しくは<a href="https://nf.la/#/join/walk">11月祭公式サイト</a>をご覧ください。</p>
+
+
+            <h3>過去のNF展示</h3>
+            <p>2020年度、2021年度はNFがオンライン開催であったため、NFの公式サイトとKaiRAのホームページ上でのみ発表を行いました。特設サイトに発表内容を掲載してあります。</p>
+            <ul>
+                <li><a href="./works/nf2020.html">第62回NF(2020年度) KaiRA特設サイト</a></li>
+                <li><a href="./works/nf2021.html">第63回NF(2021年度) KaiRA特設サイト</a></li>
+            </ul>
+        </div>
+    </div>
 
 
 </body>
