@@ -1,0 +1,117 @@
+<!doctype html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    <link rel="stylesheet" type="text/css" href="nf2022.css">
+    <title>KaiRA</title>
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#header").load("../header.html", function () {
+                var icons = $(this).find("#kyoto-header-wrapper");
+                icons.html("<div id='kyoto-header-home-wrapper'><div id='kyoto-header-home'></div></div> \
+            <div id='kyoto-header-about-wrapper'><div id='kyoto-header-about'></div></div> \
+            <div id='kyoto-header-events-wrapper'><div id='kyoto-header-events'><a href='../index.html'><img src='./imgs/Kyoto-kaira-text.png' height='26'></a></div></div> \
+            <div id='kyoto-header-works-wrapper'><div id='kyoto-header-works'></div></div> \
+            <div id='kyoto-header-contact-wrapper'><div id='kyoto-header-contact'></div></div> \
+            ");
+            });
+            $("#footer").load("./footer.html");
+        });
+    </script>
+    <style type="text/css">
+        #kyoto-header-line {
+            /*background-color: transparent;*/
+            background-color: rgba(30, 30, 32, 0.7);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header">
+    </div>
+
+    <div id="kyoto-top-background">
+    </div>
+
+    <div id="kyoto-background-color">
+    </div>
+
+    <div id="kyoto-wrapper">
+        <div class="nf-title">
+            第64回NF KaiRA特設サイト
+        </div>
+
+        <div class="kyoto-about-text">
+            <h1>KaiRA展示について</h1>
+            2022年度は<b>体育館会場展示</b>と<b>オンライン展示</b>の2種類があります。
+            事前予約をしていない方は体育館会場に入場できませんのでご注意ください。
+            体育館会場ではデモの体験会と会誌の販売を行っています。
+            オンライン展示(このページ)ではデモの一部と会誌のPDFを展示しています。
+
+            <h1>会誌</h1>
+
+            <div class="side_text">
+                KaiRAでは毎年11月祭で会誌の制作・販売を行っています。
+                体育館会場では冊子形式で1部200円で販売しています。
+                PDFでは右から無料でダウンロードできます。
+                <br><br>
+                目次
+                <ol>
+                    <li>深層学習入門</li>
+                    <li>BERT の解説と実用上のTips</li>
+                    <li>強化学習の方策勾配法を用いた交通制御シミュレーションの改良</li>
+                    <li>アニメスタイルへのリアルタイム映像変換</li>
+                    <li>3D KaiRA 君への姿勢推定技術の適用について</li>
+                </ol>
+            </div>
+            <figure class="side_image"><a href="../docs/NF_2022.pdf"><img src="../docs/NF_2022_thumb.png" width="321" , height="455" title="ダウンロード"></a></figure>
+
+            <h1>デモプログラム一覧</h1>
+            KaiRAメンバーが制作したデモプログラムです。いずれも無料で動かせるので、ぜひ試してみてください！
+
+            <h2>Stable Diffusion体験デモ(準備中)</h2>
+            昨今話題のStable Diffusionを動かすことができます。
+
+            <h2>数理最適化デモ(準備中)</h2>
+            夏休み中に開催した「しっかり学ぶ数理最適化」勉強会に関する実装です。
+
+            <h2>コミュニケーションAI(準備中)</h2>
+            ※KaiRA関係者限定公開<br>
+            AIとおしゃべりができるサービスのデモプログラムです。
+
+            <h2>human2anime(準備中)</h2>
+            ※KaiRA関係者限定公開<br>
+            カメラで認識した全身映像をアニメ調に変換します。
+
+
+            <h1>サークルについて</h1>
+            <p>
+                KaiRAでは毎週木曜日に例会(輪読会)を行っています。
+                輪読会は、担当者にテキストの各章を解説してもらい参加者同士で議論する形式で進めています。
+                現在は「ゼロから作るDeep Learning 4」の輪読会を行っています。
+                過去の輪読会については<a href="../events.html">Events</a>をご覧ください。
+                その他、上記のような実装開発やKaggle参加、論文読み会なども行っています。
+            </p>
+            <p>
+                KaiRAの活動にご興味を持たれた方は<a href="../contact.html">Contact</a>よりご連絡ください！見学は年中受け付けております。(オンライン参加可。)
+            </p>
+
+
+            <h1>お問い合わせ</h1>
+            デモプログラムに関するお問い合わせやKaiRAの活動に関するお問い合わせはこちらの<a
+                href="https://forms.gle/r8mkbUFKDB4VazHG8">Googleフォーム</a>からご連絡ください。
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSfiIDbU_l0FbjYr481HrYgb6QKylV7_xIxR3Fy-RXpPanQ41Q/viewform?embedded=true"
+                width="640" height="400" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+            <div><a href="../index.html">KaiRA TOPへ</a></div>
+        </div>
+
+
+</body>
+
+</html>

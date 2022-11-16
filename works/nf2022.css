@@ -1,0 +1,35 @@
+h1 {
+    color: rgb(255, 240, 139);
+    padding: 0.25em 0.5em;
+    border-left: solid 8px rgb(255, 240, 139);
+    border-bottom: solid 5px rgb(255, 240, 139);
+}
+
+h2 {
+    color: rgb(247, 170, 160);
+    padding: 0.1em 0;
+    border-bottom: solid 3px rgb(247, 170, 160);
+}
+
+.nf-title {
+    font-size: 60px;
+    font-weight: 900px;
+    text-align: center;
+    text-stroke: 1px rgb(160, 163, 206);
+    color: #fff;
+    -webkit-text-stroke: 1px rgb(160, 163, 206);
+}
+
+.side_image {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.side_text {
+    display: inline-block;
+    width: 550px;
+    margin: 0 50px 0 0;
+    padding: 0;
+    vertical-align: top;
+}
