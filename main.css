@@ -589,3 +589,30 @@ a, a:hover{
     margin-bottom:55px;
     background:rgba(250,250,250,0.3);
 }
+
+/*******FAQ*******/
+.faq dt {
+    margin-bottom: 1em;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.faq dt::before,
+.faq dd::before {
+    margin-right: .4em;
+}
+
+.faq dt::before {
+    content: "Q.";
+}
+
+.faq dd {
+    margin: 0 0 2.5em;
+    padding: 1em 1.5em;
+    background-color: rgba(255,255,255,0.1);
+    color: #ffffff;
+}
+
+.faq dd::before {
+    content: "A.";
+}
