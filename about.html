@@ -1,131 +1,211 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="ja">
+
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <title>KaiRA</title>
-    <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
-    <script>
-        $(function() {
-        $("#header").load("./header.html", function(){
-            const page_tag = $(this).find("#kyoto-header-about-wrapper");
-            page_tag.css({
-                'border-bottom': '5px white solid'
-            });
-        });
-        $("#footer").load("./footer.html");
-        });
-    </script>
-    <style type="text/css">
-        #kyoto-header-line{
-            /*background-color:transparent;*/
-            background-color: rgba(30, 30, 32, 0.7);
-        }
-    </style>
-    <link rel="icon" href="./img/icon/favicon.ico">
-    <link rel="apple-touch-icon" href="./img/icon/apple-touch-icon.png" sizes="180x180">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>京都大学人工知能研究会 KaiRA</title>
+    <link rel="icon" href="./assets/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div id="header">
-</div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./assets/images/logo_KaiRA.png" width="110" height="46"
+                        class="d-inline-block align-top mr-1" alt="KaiRA">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-<div id="kyoto-top-background">
-</div>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">ホーム<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./about.html">KaiRAについて</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./news.html">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./works.html">作品</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">入会案内</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-<div id="kyoto-background-color">
-</div>
+    <main class="pb-5">
+        <div class="fixed-background background-about">
+            <div class="kaira-title">
+                <div class="jumbotron">
+                    <h1 class="text-center">KaiRAについて</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="scroll-background  background-color-1">
+                
+                <!-- 活動紹介 -->
+                <h2>サークルの活動について</h2>
+                <p>
+                    活動の中心は、AI・機械学習に関する本の輪読会です。<br>
+                    個人的に読みたい本があれば、サークル内で仲間を募って集まった人たちで勉強会を開くこともできます。<br>
+                    その他、論文読み会をしたり、個人やチームでモデル・ソフトを開発したり、kaggleやSIGNATEなどの機械学習コンペティションでチーム参加したりしています。
+                </p>
+                <div class="list-border">
+                    <ul>
+                        <li>活動日：毎週木曜日<sub>※1</sub></li>
+                        <li>活動時間：18:30～ (平均1時間半程度)</li>
+                        <li>場所：京都大学付属図書館共同研究室<sub>※2</sub>＆オンライン</li>
+                        <li>内容：担当者が発表する形式の輪読会</li>
+                        <li>会費：原則無料。書籍や計算リソース代<sub>※3</sub>の補助あり。</li>
+                    </ul>
+                </div>
+                <p>
+                    ※1　京都大学の長期休暇期間、試験期間を除く。<br>
+                    ※2　場所は変更となる可能性があります。<br>
+                    ※3　Google Colaboratory有料プランの料金等
+                </p>
+                
+                <!-- NF紹介 -->
+                <h2>NF(京都大学11月祭)</h2>
+                <p>
+                    KaiRAでは毎年ポスター展示やAIデモ展示、会誌販売という形で出展を行っています。<br>
+                    上記メニューのNF特設ページから会誌やデモが見れるので、ぜひご覧ください！
+                </p>
+                
+                <!-- 会長プロフィール -->
+                <h2>会長</h2>
+                <div class="profile mx-auto">
+                    <img class="profile__img" src="assets/images/matsuda.jpg">
+                    <div class="profile__name">松田 拓巳</div>
+                    <div class="profile__title text-center">京都大学 理学部 地球物理学分野</div>
+                    <p>ゼロからデータ収集して機械学習モデルを構築するのが好きで、趣味で色々なAIを作っています。インターンではAI資格の教材作成に携わっていることもあり、勉強会等では常にわかりやすい説明を心がけています。</p>
+                </div>
 
-<div id="kyoto-wrapper">
-    <div class="kyoto-chapter">
-        <img src="./img/icon/Kyoto-about-text.png">
-    </div>
-    <div class="kyoto-about-text">
-        近年はテレビ番組などのメディアで「人工知能」という言葉が多く登場するようになりました。
-        人工知能というとSF映画のように自我を持ったプログラムが勝手に物事を考えて動き出すイメージがあるかもしれませんが、
-        実際は「膨大な数のデータから法則を見つけ出し、有益な情報を得るプログラム」のイメージの方が正確です。
-        このような仕組みは機械学習と呼ばれる分野で昔から研究されていますが、近年では高性能なコンピュータの力を借りたディープラーニング（深層学習）と呼ばれる分野が注目されてきました。
-        これらの分野に興味のある大学生は多いのですが、いざ本格的な本を開いてみると複雑な数式に心を折られて本棚に戻してしまう人が多いのではないでしょうか。
-        そこで、同じ志をもつ学生が一緒に勉強できる場所を作ろうと思い立ち上げたのが京都大学人工知能研究会 KaiRA です。
-        KaiRA は理系文系・専攻・回生・大学を問わず様々なバックグラウンドの学生が一丸となって活動しています。
-        KaiRA の活動は本の輪読が中心で、これは課題図書の各章を担当者が分かりやすく発表することで理解を深めるというものです。
-        これに加えて、勉強した知識を活かしてアプリケーションの開発も行っています。
-        会長の私自身まだまだ勉強途中の未熟者ですが、皆で一緒に勉強できればいいなと思います。(金子英樹)
-    </div>
+                <!-- 歴代会長プロフィール -->
+                <h2>歴代の会長</h2>
+                <div class="profile-old mx-auto">
+                    <img class="profile__img" src="assets/images/miyake.jpg">
+                    <div class="profile__name">三宅 大貴</div>
+                    <div class="profile__title text-center">
+                        京都大学 工学部 電気電子工学科<br>
+                        （3代目, 2021年度～2022年度）
+                    </div>
+                    <p>GANを始めとする画像生成モデルに興味を持っています。</p>
+                </div>
+                <div class="profile-old mx-auto">
+                    <img class="profile__img" src="assets/images/oyama.png">
+                    <div class="profile__name">大山 百々勢</div>
+                    <div class="profile__title text-center">
+                        京都大学 情報学科 数理工学コース<br>
+                        （2代目, 2019年度～2020年度）
+                    </div>
+                    <p>１回生の頃からゼミで深層学習関連の論文を読んでいるので、理論面に強みがあります。</p>
+                </div>
+                <div class="profile-old mx-auto">
+                    <img class="profile__img" src="assets/images/kaneko.png">
+                    <div class="profile__name">金子 英樹</div>
+                    <div class="profile__title text-center">
+                        京都大学 農学部<br>
+                        （初代, 2017年度～2018年度）
+                    </div>
+                    <p>
+                        農学部で画像認識に関する研究をしています。
+                        以前よりコンピュータ・サイエンスや機械学習、深層学習に興味を持ち、独学で勉強してきました。
+                        Microsoft Developmentを始めとする数々のIT企業で機械学習に関するインターンやアルバイトを重ね、日々修行しております。
+                        2017年に、同じ分野に興味のある学生と勉強をすべくKaiRAを設立しました。
+                    </p>
+                </div>
+                
+                <!-- 顧問プロフィール -->
+                <h2>技術顧問</h2>
+                <div class="profile mx-auto">
+                    <a href="https://hkashima.github.io/index.html"><img class="profile__img" src="assets/images/kashima.jpg"></a>
+                    <div class="profile__name">鹿島 久嗣</div>
+                    <div class="profile__title text-center">
+                        京都大学 大学院情報学研究科 知能情報学専攻 教授<br>
+                    </div>
+                    <p>
+                        コンピュータを用いたデータ解析技術の研究と開発を行っている研究者です。
+                        「機械学習」と呼ばれるコンピュータ科学、人工知能の一分野を専門としています。
+                        特にグラフやネットワーク構造をもったデータにおける、予測モデリングを得意としています。
+                        近ごろはクラウドソーシングやヒューマンコンピュテーションによる人間と機械の協調問題解決に取り組んでいます。
+                    </p>
+                </div>
+                <div class="profile mx-auto">
+                    <a href="https://kojima-r.github.io/kojima/"><img class="profile__img" src="assets/images/kojima.jpg"></a>
+                    <div class="profile__name">小島 諒介</div>
+                    <div class="profile__title text-center">
+                        京都大学 大学院医学研究科 人間健康科学系専攻 ビッグデータ医科学分野<br>
+                        京都大学 医学研究科 附属医療教育研究センター 医療データ活用部門
+                    </div>
+                    <p>
+                        人工知能・機械学習技術の実問題への展開、特に時系列データ処理に関する研究に取り組んでいます。世の中の多くのデータは潜在的に時系列の情報を含んでいますが、問題に固有の背景知識・ノイズなどの要因により、未だ確立された技術が存在しないのが現状です。
+                        実問題を通してそういった問題を解決するための技術の開発に取り組んでいます。
+                    </p>
+                </div>
+                
+                <!-- スポンサー一覧 -->
+                <h2>スポンサー</h2>
+                <p>
+                    KaiRAは以下の企業様にご支援を頂いています。
+                </p>
+                <div class="sponsor mx-auto">
+                    <a href="https://www.rist.co.jp/"><img class="sponsor__img" src="./assets/images/logo_rist.jpg" alt="株式会社Rist"></a>
+                    <div class="sponsor__name">株式会社Rist</div>
+                    <p>いくつかの勉強会やイベントに参加させて頂いています。</p>
+                </div>
+                <div class="sponsor mx-auto">
+                    <a href="https://scrumsign.com/"><img class="sponsor__img" src="./assets/images/logo_scrumsign.png" alt="株式会社スクラムサイン"></a>
+                    <div class="sponsor__name">株式会社スクラムサイン</div>
+                    <p>合同でイベントを開催したりしています。</p>
+                </div>
+                
+                <!-- 創設者の言葉 -->
+                <h2>創設者の言葉</h2>
+                <p>
+                近年はテレビ番組などのメディアで「人工知能」という言葉が多く登場するようになりました。
+                人工知能というとSF映画のように自我を持ったプログラムが勝手に物事を考えて動き出すイメージがあるかもしれませんが、実際は「膨大な数のデータから法則を見つけ出し、有益な情報を得るプログラム」のイメージの方が正確です。
+                このような仕組みは機械学習と呼ばれる分野で昔から研究されていますが、近年では高性能なコンピュータの力を借りたディープラーニング（深層学習）と呼ばれる分野が注目されてきました。
+                これらの分野に興味のある大学生は多いのですが、いざ本格的な本を開いてみると複雑な数式に心を折られて本棚に戻してしまう人が多いのではないでしょうか。
+                そこで、同じ志をもつ学生が一緒に勉強できる場所を作ろうと思い立ち上げたのが京都大学人工知能研究会 KaiRA です。
+                KaiRAは理系文系・専攻・回生・大学を問わず様々なバックグラウンドの学生が一丸となって活動しています。
+                KaiRAの活動は本の輪読が中心で、これは課題図書の各章を担当者が分かりやすく発表することで理解を深めるというものです。
+                これに加えて、勉強した知識を活かしてアプリケーションの開発も行っています。
+                会長の私自身まだまだ勉強途中の未熟者ですが、皆で一緒に勉強できればいいなと思います。(金子英樹)
+                </p>
+            </div>
+        </div>
+    </main>
 
-    <div>
-        <h1>Member</h1>
-        <ul>
-        	<li>
-        		<h2>会長 (4代目 2023年度-):松田 拓巳</h2>
-        		<p>理学部(地球惑星科学系地球物理学分野)所属です。実際にコードを書いて実装開発することが好きで、これまでに「コロナ感染者数予測」「ひらがな認識」「手加減オセロAI」などのプログラムを開発してきました。KaiRAとしても実装開発に積極的に取り組める環境づくりをしていきたいと思っています。</p>
-        	</li>
-        	<li>
-        		<h2>会長 (3代目 2021年度-2022年度):三宅 大貴</h2>
-        		<p>工学部電気電子工学科所属です。現在はGANを始めとする画像生成モデルに興味を持っています。</p>
-        	</li>
-            <li>
-                <h2>会長 (2代目 2019年度-2020年度):大山 百々勢</h2>
-                <p>情報学科の数理工学コースで勉強しています。１回生の頃からゼミで深層学習関連の論文を読んでいるので、理論面に強みがあります。</p>
-            </li>
-            <li>
-                <h2>会長 (初代 2017-2018年度):金子 英樹</h2>
-                <p>農学部で画像認識に関する研究をしています。以前よりコンピュータ・サイエンスや機械学習、深層学習に興味を持ち、独学で勉強してきました。Microsoft Developmentを始めとする数々のIT企業で機械学習に関するインターンやアルバイトを重ね、日々修行しております。2017年に、同じ分野に興味のある学生と勉強をすべくKaiRAを設立しました。</p>
-            </li>
-            <li>
-                <h2>技術顧問:鹿島 久嗣</h2>
-                <p><a href="https://hkashima.github.io/index.html">プロフィール</a></p>
-                <p>コンピュータを用いたデータ解析技術の研究と開発を行っている研究者です。
-                    「機械学習」と呼ばれるコンピュータ科学、人工知能の一分野を専門としています。
-                    特にグラフやネットワーク構造をもったデータにおける、予測モデリングを得意としています。
-                    近ごろはクラウドソーシングやヒューマンコンピュテーションによる人間と機械の協調問題解決に取り組んでいます。</p>
-            </li>
-            <li>
-                <h2>技術顧問:小島 諒介</h2>
-                <p><a href="https://kojima-r.github.io/kojima/">プロフィール</a></p>
-                <p>人工知能・機械学習技術の実問題への展開、特に時系列データ処理に関する研究に取り組んでいます。世の中の多くのデータは潜在的に時系列の情報を含んでいますが、問題に固有の背景知識・ノイズなどの要因により、未だ確立された技術が存在しないのが現状です。 実問題を通してそういった問題を解決するための技術の開発に取り組んでいます。</p>
-            </li>
-        </ul>
 
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="./js/bootstrap.min.js"></script>
 
-    </div>
-
-    <div>
-        <h1>スポンサー</h1>
-        <ul>
-            <li>
-                <h2>株式会社Rist</h2>
-                いくつかの勉強会やイベントに参加させて頂いています。
-                <a href="https://www.rist.co.jp/"><img src="./img/about/rist_logo.jpg" alt="株式会社Rist"></a>
-            </li>
-            <li>
-                <h2>株式会社スクラムサイン</h2>
-                合同でイベントを開催したりしています。
-                <a href="https://scrumsign.com/"><img src="./img/about/scrumsign_logo.png" alt="株式会社スクラムサイン"></a>
-            </li>
-        </ul>
-    </div>
-
-    <!--
-    <div>
-        <h1>参加プログラム</h1>
-        <ul>
-            <li>
-                <h2>DLI</h2>
-                <img src="./img/about/DLI.png">
-                <p>KaiRAはNVIDIA社により、公式に<a href="https://www.nvidia.com/ja-jp/deep-learning-ai/education/">Deep Learning Institute</a>プログラムの支援を受けています。希望者は、同社が提供する数々のトレーニングを受講することができます。</p>
-            </li>
-        </ul>
-
-    </div>
-
-    誰も把握していないだけなので一応コメントアウトで
-    -->
-</div>
-
-
+<script type="text/javascript">
+    $('.bs-component [data-toggle="popover"]').popover();
+    $('.bs-component [data-toggle="tooltip"]').tooltip();
+</script>
 </body>
-
 </html>

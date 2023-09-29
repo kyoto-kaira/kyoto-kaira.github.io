@@ -1,0 +1,323 @@
+.bs-component + .bs-component {
+    margin-top: 1rem;
+}
+
+header{
+    position: sticky; /*固定する*/
+    position: -webkit-sticky; /*Safari用ベンダープレフィックス*/
+    top: 0; /*ブラウザの上からの距離はゼロ*/
+    z-index: 10;
+    opacity: 0.8;
+    font-size: large;
+}
+
+.fixed-background {
+    min-height: none;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.kaira-title .jumbotron {
+    background:none
+    center no-repeat;
+    background-size: cover;
+}
+
+@media (min-width: 768px) {
+    .bs-docs-section {
+        margin-top: 8em;
+    }
+    .bs-component {
+        position: relative;
+    }
+    .bs-component .modal {
+        position: relative;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+        z-index: 1;
+        display: block;
+    }
+    .bs-component .modal-dialog {
+        width: 90%;
+    }
+    .bs-component .popover {
+        position: relative;
+        display: inline-block;
+        width: 220px;
+        margin: 20px;
+    }
+    .nav-tabs {
+        margin-bottom: 15px;
+    }
+    .progress {
+        margin-bottom: 10px;
+    }
+}
+
+
+/*** 背景画像 ***/
+.background-title {
+    background-image: url(../assets/images/background_home.jpg);
+}
+.background-about {
+    background-image: url(../assets/images/background_about.jpg);
+}
+.background-events {
+    background-image: url(../assets/images/background_events.jpg);
+}
+.background-journal {
+    background-image: url(../assets/images/background_collection_of_journals.jpg);
+}
+.background-contact {
+    background-image: url(../assets/images/background_contact.webp);
+}
+.background-works {
+    background-image: url(../assets/images/background_works.jpg);
+}
+.background-nf2020 {
+    background-image: url(../assets/images/background_nf2020.jpg);
+}
+.background-nf2021 {
+    background-image: url(../assets/images/background_nf2021.webp);
+}
+.background-nf2022 {
+    background-image: url(../assets/images/background_nf2022.webp);
+}
+
+
+/*** フォント ***/
+p, h1, h2, h3, h4, h5, dl, ul, ol, table {
+    font-family: "Noto Sans JP","ヒラギノ角ゴシック", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+}
+
+
+/*** 行間 ***/
+p {
+    line-height: 1.8; 
+}
+
+
+/*** H2見出し装飾 ***/
+h2 {
+    color: #0071C3;
+    padding: 0.5em 0; 
+    border-top: solid 3px #0071C3; 
+    border-bottom: solid 3px #0071C3; 
+}
+
+/*** H3見出し装飾 ***/
+.h3-left-line {
+    color: #494949; 
+    padding: 0.25em 0.5em; 
+    background: transparent; 
+    border-left: solid 5px #0071C3; 
+}
+
+/*** SNSアイコン ***/
+.sns-icon img {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 1rem auto; 
+    width: 35px; 
+}
+.sns-icon img:hover {
+    opacity: 0.5; 
+}
+
+
+/*** Newsページの装飾 ***/
+.news dl{
+    padding: 15px 0; 
+    border-bottom: 1px solid #ccc; 
+}
+.news dt{
+    padding-bottom: 5px; 
+}
+@media screen and (min-width: 768px) {
+    .news dt{
+        clear: left;
+        float: left; 
+        width: 10%;
+    }
+    .news dd{
+        margin-left: 11%;
+    }
+    .news img{
+        clear: left;
+    }
+}
+
+
+/*** 箇条書きの装飾 ***/
+.list-border ul {
+    background: #fcfcfc; 
+    padding: 0.5em 0.5em 0.5em 2em; 
+    border: dashed 3px #0071C3;  
+}
+.list-border ul li{
+    line-height: 1.5; 
+    padding: 0.5em 0;
+}
+
+
+/*** プロフィール装飾 ***/
+.profile {
+    background-color: rgba(0,113,195,0.1);
+    width: auto;
+    padding: 2rem;
+    border: solid 3px #0071C3;
+    margin-bottom: 1rem;
+}  
+.profile-old {  /*歴代会長用*/
+    width: auto;
+    padding: 2rem;
+    border: dashed 3px gray;
+    margin-bottom: 1rem;
+}  
+.profile__img {
+    display: block;
+    width: 160px;
+    height: 160px;
+    border-radius:50%;
+    margin: 0 auto;
+}
+.profile__name {
+    text-align:center;
+    font-weight:bold;
+    font-size:1.2rem;
+    margin: 1rem auto 0; 
+    letter-spacing:.1rem;
+}
+.profile__title {
+    font-size: 0.8rem;
+    color: #666;    
+    margin: 0 auto 0.5rem;
+}
+
+
+/*** スポンサー装飾 ***/
+.sponsor {
+    width: auto;
+    padding: 2rem;
+    border: solid 3px #0071C3;
+    margin-bottom: 1rem;
+}
+.sponsor__img {
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+}
+.sponsor__name {
+    text-align:center;
+    font-weight:bold;
+    font-size:1.2rem;
+    margin: 1rem auto 0;
+    letter-spacing:.1rem;
+}
+
+
+/*** 入会方法の装飾 ***/
+.step-wrap1 {
+    counter-reset:count;
+    margin: 2em 0;
+    position: relative;
+}
+.step-content1 {
+    padding: 0 0 1.3em 2em;
+    margin: 0;
+    position: relative;
+}
+.step-content1::before {
+    content: "";
+    display: block;
+    width: 13px;
+    height: 13px;
+    background: #0071C3;
+    border: solid 3px #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    box-shadow: 0 0 0 2px #0071C3;
+}
+.step-content1::after {
+    content: "";
+    display: block;
+    height: calc(100% - 35px);
+    border-left: dotted 5px #768888;
+    position: absolute;
+    top: 30px;
+    left: 10px;
+}
+.step-title1 {
+    font-weight: bold;
+    font-size: 120%;
+}
+.step-label1 {
+    color: #768888;
+    font-weight: bold;
+}
+.step-label1::after {
+    counter-increment:count;
+    content:counter(count);
+    position: relative;
+    left: .3em;
+}
+.step-body1 {
+    margin-top: .5em;
+    padding: 0 0 1em;
+    border-bottom: dotted 2px #ddd;
+}
+.step-wrap1 > :last-of-type::after {
+    display: none;
+}
+
+
+/*** FAQの装飾 ***/
+.Qa-Box .Qa {
+    padding: 20px 0;
+    border-bottom: 1px solid #c8c8c8;
+}
+.Qa-Box .Qa dt, .Qa-Box .Qa dd {
+    display: flex;
+    align-items: baseline;
+    margin: 15px 0;
+}  
+.Qa-Box .Qa dt p {
+    margin: 0;
+    padding-left: 15px;
+    font-weight: bold;
+    width: 100%;
+}  
+.Qa-Box .Qa dd p {
+    margin: 0;
+    padding-left: 15px;
+    width: 100%;
+}  
+.Qa-Box .Qa:last-of-type {
+    border-bottom: none;
+}  
+.Qa-Box .Qa dt::before {
+    content: "Q";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: #0071C3;
+    width: 2em;
+    height: 2em;
+}  
+.Qa-Box .Qa dd::before {
+    content: "A";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: #d65556;
+    width: 2em;
+    height: 2em;
+}

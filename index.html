@@ -1,106 +1,204 @@
-<!doctype html>
-
-<!-- 
-                                                             
-88      a8P               88  88888888ba          db         
-88    ,88'                ""  88      "8b        d88b        
-88  ,88"                      88      ,8P       d8'`8b       
-88,d88'       ,adPPYYba,  88  88aaaaaa8P'      d8'  `8b      
-8888"88,      ""     `Y8  88  88""""88'       d8YaaaaY8b     
-88P   Y8b     ,adPPPPP88  88  88    `8b      d8""""""""8b    
-88     "88,   88,    ,88  88  88     `8b    d8'        `8b   
-88       Y8b  `"8bbdP"Y8  88  88      `8b  d8'          `8b  
-                                                             
-
-Special thanks: iGEM Kyoto
- -->
-
+<!DOCTYPE html>
 <html lang="ja">
+
 <head>
-	
-	<!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-DX5GXFJ6EH"></script>
 	<script>
   		window.dataLayer = window.dataLayer || [];
   		function gtag(){dataLayer.push(arguments);}
-  		gtag('js', new Date());
-		
+  		gtag('js', new Date());		
   		gtag('config', 'G-DX5GXFJ6EH');
 	</script>
-	
-    <meta charset="utf-8">
-    <meta name="keywords" content="KaiRA, AI, 人工知能, 深層学習, ディープラーニング, deeplearning, 京大, 京都大学">
-    <meta name="description" content="京都大学人工知能研究会KaiRAのWebサイトです">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="KaiRAはAIを学びたい京都大学の学生による自主ゼミサークルです。毎週メンバーで集まってAI・機械学習に関する本の輪読会を行っています。">
     <meta name="google-site-verification" content="mRG3nr5LTpB5NGw5UONR-OBg8Y6awPCxtLr5LKN5UpQ" />
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <title>KaiRA</title>
-    <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
-    <script>
-        $(function() {
-        $("#header").load("./header.html" ,function(){
-            const page_tag = $(this).find("#kyoto-header-home-wrapper");
-            page_tag.css({
-                "border-bottom": "5px white solid"
-            })
-        });
-        $("#footer").load("./footer.html");
-        });
-    </script>
-    <style type="text/css">
-        #kyoto-header-line{
-            /*background-color:transparent;*/
-            background-color: rgba(30, 30, 32, 0.7);
-        }
-    </style>
-    <link rel="icon" href="./img/icon/favicon.ico">
-    <link rel="apple-touch-icon" href="./img/icon/apple-touch-icon.png" sizes="180x180">
+    <meta property="og:title" content="ホームページ｜京都大学人工知能研究会KaiRA">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kyoto-kaira.github.io/">
+    <meta property="og:image" content="https://kyoto-kaira.github.io/assets/images/thumb_KaiRA.jpg">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="670">
+
+    <title>京都大学人工知能研究会 KaiRA</title>
+    <link rel="icon" href="./assets/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div id="header">
-</div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./assets/images/logo_KaiRA.png" width="110" height="46"
+                        class="d-inline-block align-top mr-1" alt="KaiRA">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-<div id="kyoto-top-background">
-</div>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./index.html">ホーム<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about.html">KaiRAについて</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./news.html">News</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="./works.html">作品</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">入会案内</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-<div id="kyoto-background-color">
-</div>
-
-<div id="kyoto-top-wrapper">
-    <div id="kyoto-top-formula-wrapper">
-        <div id="kyoto-top-formula">
-            <img src="img/icon/KaiRA_logo_w.png">
+    <main class="pb-5">
+        <div class="fixed-background background-title">
+            <div class="kaira-title">
+                <div class="jumbotron">
+                    <img src="./assets/images/logo_KaiRA.png"  class="img-fluid d-block mx-auto" alt="KaiRA">
+                    <p class="text-center" style="font-size:36px; font-weight:bold; margin-top:20px;">AIを学びたい京都大学の学生による<br>自主ゼミサークル</p>
+                </div>
+            </div>
         </div>
-    </div>
-    <div id="kyoto-top-sentence-wrapper">
-        <div id="kyoto-top-sentence">
-            <img src="img/top/phrase.png">
+        <div class="container">
+            <div class="scroll-background  background-color-1">
+                <!-- KaiRA概要説明 -->
+                <h2>京都大学人工知能研究会 KaiRAとは</h2>
+                <p>
+                KaiRAはAI・機械学習に関する本を輪読している自主ゼミサークルです。<br>
+                文理・専攻・回生・大学を問わず様々なバックグラウンドを持つ学生たちが集まっています。<br>
+                AIについて学びたい、こんなAIを一緒に作りたい、等々歓迎します。<br>
+                書籍の購入補助や計算リソース代の補助も行っています。
+                </p>
+                <!-- ボタン -->
+                <a href="./about.html" class="btn btn-info btn-block"><strong style="font-size:20px;">⇒ KaiRAの活動内容をもっと見る</strong></a><br>
+
+                <!-- 輪読会の様子スライドショー -->
+                <div class="carousel slide" id="sample" data-interval="3000" data-ride="carousel" data-pause="false">
+                    <ol class="carousel-indicators">
+                        <li data-target="#sample" data-slide-to="0" class="active"></li>
+                        <li data-target="#sample" data-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active"><img src="assets/images/picture_20220714.jpg" class="d-block mx-auto img-fluid"></div>
+                        <div class="carousel-item"><img src="assets/images/picture_202302.jpg" class="d-block mx-auto img-fluid"></div>
+                    </div>
+                    <a href="#sample" class="carousel-control-prev" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
+                    <a href="#sample" class="carousel-control-next" data-slide="next"><span class="carousel-control-next-icon"></span></a>
+                </div><br>
+                
+                <!-- docswell埋め込み -->
+                <script async class="docswell-embed" src="https://www.docswell.com/assets/libs/docswell-embed/docswell-embed.min.js" data-src="http://pr2.work/0/kaira-slide-recent" data-aspect="0.5625"></script><br>
+                
+                <!-- 今期の輪読本 -->
+                <h2>2023年後期に勉強する本</h2>
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                    <div class="card-deck">
+                        <div class="card" style="width: 18rem;">
+                            <img src="assets/images/book_learn_speech_recognition_with_python.jpg" class="card-img-top img-fluid" alt="Pythonで学ぶ音声認識" style="height: 400px; object-fit: contain;">
+                            <div class="card-body">
+                                <h5>Pythonで学ぶ音声認識</h5>
+                                <a href="https://book.impress.co.jp/books/1120101083" class="btn btn-outline-primary">本の詳細</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="assets/images/book_fundamentals_of_natural_language_processing.jpg" class="card-img-top img-fluid" alt="自然言語処理の基礎" style="height: 400px; object-fit: contain;">
+                            <div class="card-body">
+                                <h5>自然言語処理の基礎</h5>
+                                <a href="https://www.ohmsha.co.jp/book/9784274229008/" class="btn btn-outline-primary">本の詳細</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+                </div><br>
+                <!-- ボタン -->
+                <a href="./news.html" class="btn btn-info btn-block"><strong style="font-size:20px;">⇒ 過去の輪読本を見る</strong></a><br>
+
+                <!-- 入会案内・SNS -->
+                <h2>Study with Us!</h2>
+                <p>少しでもKaiRAに興味を持ってくださった方は入会案内をご覧ください！</p>
+                <!-- ボタン -->
+                <a href="./contact.html" class="btn btn-info btn-block"><strong style="font-size:20px;">⇒ 入会案内</strong></a><br>
+
+                <div class="sns-icon">
+                    <!-- X(Twitter) -->
+                    <div class="row">
+                        <div class="col-1">
+                        <a href="https://twitter.com/kyoto_kaira"><img src="./assets/images/logo_X.png"></a>
+                        </div>
+                        <div class="col-11">
+                        <p class="float-md-left"><b>X (旧Twitter)</b><br>日々の活動の様子などをつぶやいています。</p>
+                        </div>
+                    </div>
+
+                    <!-- GitHub -->
+                    <div class="row">
+                        <div class="col-1">
+                        <a href="https://github.com/kyoto-kaira"><img src="./assets/images/logo_github.png"></a>
+                        </div>
+                        <div class="col-11">
+                        <p><b>GitHub</b><br>KaiRAのメンバーが作成したコードを公開しています。ちなみにこのWebサイトはGitHub Pagesで公開しています。</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Docswell -->
+                    <div class="row">
+                        <div class="col-1">
+                        <a href="https://www.docswell.com/user/kyoto-kaira"><img src="./assets/images/logo_docswell.png"></a>
+                        </div>
+                        <div class="col-11">
+                        <p><b>Docswell</b><br>輪読会で使用したスライド資料を公開しています。</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Qiita -->
+                    <div class="row">
+                        <div class="col-1">
+                        <a href="https://qiita.com/organizations/kyoto-kaira"><img src="./assets/images/logo_qiita.png"></a>
+                        </div>
+                        <div class="col-11">
+                        <p><b>Qiita</b><br>KaiRAのメンバーが書いた記事をまとめています。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+    </main>
 
-<div id="kyoto-top-wrapper">
-    <div class="kyoto-about-text">
-        京都大学人工知能研究会KaiRA(カイラ)はAIを学びたい京都大学の学生による自主ゼミサークルです。<br>
-        毎週木曜日の5限後から定例会を行っています。<br>
-        AIについて学びたい、こんなAIを一緒に作りたい、等々大歓迎！！<br>
-        見学・入会の希望は<a href="./contact.html">contact</a>をご覧ください。 (長期休暇中は見学・入会できない場合があります)
-    </div>
-</div>
 
-<!--
-    Twitter埋め込みの位置合わせが上手く行かないのでアキラメ
-    誰かお願いします…
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+            crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.min.js"></script>
 
-    <div id="kyoto-twitter-warpper">
-    <div class="kyoto-twitter">
-        <a class="twitter-timeline" data-lang="ja" data-width="500" data-height="500" href="https://twitter.com/kyoto_kaira?ref_src=twsrc%5Etfw">Tweets by kyoto_kaira</a>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </div>
-</div>
---!>
-
+    <script type="text/javascript">
+        $('.bs-component [data-toggle="popover"]').popover();
+        $('.bs-component [data-toggle="tooltip"]').tooltip();
+    </script>
 </body>
 
 </html>

@@ -1,92 +1,165 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="ja">
+
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <title>KaiRA</title>
-    <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
-    <script>
-        $(function() {
-        $("#header").load("./header.html", function(){
-            const page_tag = $(this).find("#kyoto-header-contact-wrapper");
-            page_tag.css({
-                "border-bottom": "5px white solid"
-            })
-        });
-        $("#footer").load("./footer.html");
-        });
-    </script>
-    <style type="text/css">
-        #kyoto-header-line{
-            /*background-color:transparent;*/
-            background-color: rgba(30, 30, 32, 0.7);
-        }
-    </style>
-    <link rel="icon" href="./img/icon/favicon.ico">
-    <link rel="apple-touch-icon" href="./img/icon/apple-touch-icon.png" sizes="180x180">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>京都大学人工知能研究会 KaiRA</title>
+    <link rel="icon" href="./assets/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  
 </head>
 
 <body>
 
-<div id="header">
-</div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./assets/images/logo_KaiRA.png" width="110" height="46"
+                        class="d-inline-block align-top mr-1" alt="KaiRA">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-<div id="kyoto-top-background">
-</div>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">ホーム<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about.html">KaiRAについて</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./news.html">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./works.html">作品</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./contact.html">入会案内</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-<div id="kyoto-background-color">
-</div>
+    <main class="pb-5">
+        <div class="fixed-background background-contact">
+            <div class="kaira-title">
+                <div class="jumbotron">
+                    <h1 class="text-center">入会案内</h1>
+                </div>
+            </div>
+        </div>
 
-<div id="kyoto-wrapper">
-    <div class="kyoto-about-text">
-        <h1>KaiRAについて</h1>
-        <h2>サークル情報</h2>
-        <table>
-            <tr><td>活動日</td><td>毎週木曜日（京大の長期休暇期間、試験期間を除く）</td></tr>
-            <tr><td>時間</td><td>18:30～ 平均1時間半程度</td></tr>
-            <tr><td>会費</td><td>原則無料。定例会に関する経費補助あり</td></tr>
-        </table>
+        <div class="container">
+            <div class="scroll-background  background-color-1">
+                <!-- 入会方法 -->
+                <h2>入会方法</h2>
+                <div class="step-wrap1">
+                    <!-- STEP1 -->
+                    <div class="step-content1">
+                        <div class="step-label1">STEP</div>
+                        <div class="step-title1">フォームに回答</div>
+                        <div class="step-body1">
+                            <p>
+                                お問い合わせフォーム (▶<a href="https://forms.gle/zunet4N5AcgcwoB96">Google form</a>) から輪読会の見学を申込みましょう。<br>
+                                対面・オンラインどちらも可能となっていますが、対面の場合は場所の都合上、京都大学関係者のみとさせていただいております。
+                            </p>
+                            <p>
+                                ※3-4月は新規入会希望者を対象に説明会を行っている場合があります。最新情報は<a href="https://twitter.com/kyoto_kaira">X(旧Twitter)</a>をご確認ください。
+                            </p>
+                        </div>
+                    </div>
+                    <!-- STEP2 -->
+                    <div class="step-content1">
+                        <div class="step-label1">STEP</div>
+                        <div class="step-title1">輪読会の見学</div>
+                        <div class="step-body1">
+                            <p>前日までにメールで見学の案内をさせていただくので、開始時刻までにお越しください！</p>
+                        </div>
+                    </div>
+                    <!-- STEP3 -->
+                    <div class="step-content1">
+                        <div class="step-label1">STEP</div>
+                        <div class="step-title1">入会申請フォームに回答</div>
+                        <div class="step-body1">
+                            <p>
+                                見学後、入会のご案内をさせていただく際にお送りする入会申請フォームに回答してください。<br>
+                                こちらで確認後、KaiRAのSlackへ招待いたします。<br>
+                                これをもってKaiRA入会となります！！
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
-        <h2>入会方法</h2>
-        <ol>
-            <a href="https://twitter.com/kyoto_kaira">Twitter</a>のDMまたは<a href="https://forms.gle/zunet4N5AcgcwoB96">お問い合わせフォーム</a>から見学・入会希望の旨をお伝えください。<br>
-            見学後にお送りする入会希望フォームに記入して頂ければ、運営がSlackへ招待し、KaiRA入会となります。<br>
-            長期休み以外はいつでも、また回生を問わず見学・入会を歓迎します！
-        </ol>
+                <!-- よくある質問 -->
+                <h2>FAQ</h2>
+                <dl class="Qa-Box">
+                    <div class="Qa">
+                        <dt>
+                            <p>プログラミング初心者なのですが、参加できますか？</p>
+                        </dt>
+                        <dd>
+                            <p>問題ありません！ただし勉強会はある程度Pythonが書けることを前提に進むので、並行して勉強するとより楽しめます。</p>
+                        </dd>
+                    </div>
+                    <div class="Qa">
+                        <dt>
+                            <p>他大の学生ですが、参加できますか？</p>
+                        </dt>
+                        <dd>
+                            <p>はい、オンライン参加であれば参加可能です。</p>
+                        </dd>
+                    </div>
+                    <div class="Qa">
+                        <dt>
+                            <p>事前に勉強してから参加したいのですが、何を勉強すればいいですか？</p>
+                        </dt>
+                        <dd>
+                            <p>オライリーの「<a href="https://www.oreilly.co.jp/books/9784873117584/">ゼロから作るDeepLearning</a>」を読むことをおすすめします。</p>
+                        </dd>
+                    </div>
+                </dl>
 
-        <h2>FAQ</h2>
-        <dl class="faq">
-            <dt>プログラミング初心者なのですが、参加できますか？</dt>
-            <dd>大丈夫です。ただし勉強会はある程度Pythonが書けることを前提に進むので、並行して勉強するとより楽しめます。</dd>
-            <dt>他大の学生ですが、参加できますか？</dt>
-            <dd>はい、オンライン参加も可能になっています。</dd>
-            <dt>事前に勉強してから参加したいのですが、何を勉強すればいいですか？</dt>
-            <dd>オライリーの「<a href="https://www.oreilly.co.jp/books/9784873117584/">ゼロから作るDeepLearning</a>」を読むことをお勧めします。</dd>
-        </dl>
-    <!--
-        <ul>
-            <li>プログラミング初心者なのですが、参加できますか？</li>
-            <p>大丈夫です。ただし勉強会はある程度Pythonが書けることを前提に進むので、並行して勉強するとより楽しめます。</p>
-            <li>他大の学生ですが、参加できますか？</li>
-            <p>大丈夫です。</p>
-            <li>事前に勉強してから参加したいのですが、何を勉強すればいいですか？</li>
-            <p>オライリーの「ゼロから作るDeepLearning」を読むことをお勧めします。</p>
-            <p>プログラミングに関しては、Python3の環境を構築してください。</p>
-        </ul>
-    -->
-    </div>
-    <div class="kyoto-about-text">
-        <h1>連絡先</h1>
-        <ul>
-            <li>代表: 松田 拓巳</li>
-            <li>Twitter: <a href="https://twitter.com/kyoto_kaira">@kyoto_kaira</a></li>
-            <li>E-mail: kyoto.kaira　（末尾に@gmail.comをつけてください）</li>
-            <li><a href="https://forms.gle/zunet4N5AcgcwoB96">お問い合わせフォーム</a></li>
-        </ul>
-    </div>
-</div>
+                <!-- 連絡先情報 -->
+                <h2>連絡先</h2>
+                <div class="list-border">
+                    <ul>
+                        <li>代表：松田 拓巳</li>
+                        <li>X(旧Twitter)：<a href="https://twitter.com/kyoto_kaira">@kyoto_kaira</a></li>
+                        <li>E-mail：kyoto.kaira(末尾に@gmail.comをつけてください)</li>
+                        <li>お問い合わせフォーム：<a href="https://forms.gle/zunet4N5AcgcwoB96">Google form</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
 
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $('.bs-component [data-toggle="popover"]').popover();
+        $('.bs-component [data-toggle="tooltip"]').tooltip();
+    </script>
 </body>
 
 </html>
