@@ -137,6 +137,11 @@
     <script type="text/javascript">
         $('.bs-component [data-toggle="popover"]').popover();
         $('.bs-component [data-toggle="tooltip"]').tooltip();
+    </script>    
+    <script>
+        fetch("https://kyoto-kaira.github.io/header.html")
+            .then((response) => response.text())
+            .then((data) => document.querySelector("#header").innerHTML = data);
     </script>
 </body>
 
