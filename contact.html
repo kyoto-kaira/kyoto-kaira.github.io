@@ -32,40 +32,7 @@
 
 <body>
 
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <a class="navbar-brand" href="./index.html">
-                    <img src="./assets/images/logo_KaiRA.png" width="110" height="46"
-                        class="d-inline-block align-top mr-1" alt="KaiRA">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
-                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbar">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="./index.html">ホーム<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./about.html">KaiRAについて</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./news.html">News</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./works.html">作品</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="./contact.html">入会案内</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <header id="header"></header>
 
     <main class="pb-5">
         <div class="fixed-background background-contact">
@@ -172,6 +139,11 @@
     <script type="text/javascript">
         $('.bs-component [data-toggle="popover"]').popover();
         $('.bs-component [data-toggle="tooltip"]').tooltip();
+    </script>
+    <script>
+        fetch("https://kyoto-kaira.github.io/header.html")
+            .then((response) => response.text())
+            .then((data) => document.querySelector("#header").innerHTML = data);
     </script>
 </body>
 
