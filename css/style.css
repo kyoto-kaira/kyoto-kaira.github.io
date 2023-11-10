@@ -117,12 +117,10 @@ header{
 .background-nf2022::before {
     background-image: url(../assets/images/background_nf2022.webp);
 }
-
-/*
 .background-nf2023::before {
-    background-image: none;
+    background-image: url(../assets/images/background_nf2023.jpg);
 }
-*/
+
 
 body {
     overflow-x: hidden
