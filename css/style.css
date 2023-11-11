@@ -191,15 +191,19 @@ h2 {
 
 
 /*** 箇条書きの装飾 ***/
-.list-border ul {
-    background: #fcfcfc; 
-    padding: 0.5em 0.5em 0.5em 2em; 
-    border: dashed 3px #0071C3;  
-}
-.list-border ul li{
-    line-height: 1.5; 
-    padding: 0.5em 0;
-}
+.list-border > ul {
+    border: dashed 3px #0071C3;
+  }
+  
+  .list-border ul {
+    background: #fcfcfc;
+    padding: 0.5em 0.5em 0.5em 2em;
+  }
+  
+  .list-border ul li {
+    line-height: 1.5;
+    padding: 0.5em 0; 
+  }
 
 
 /*** プロフィール装飾 ***/
