@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-
+    <script src="https://kit.fontawesome.com/5714e39970.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -101,19 +101,17 @@
             <h2>デモ</h2>
             <p>
                 11月祭会場ではAIに関するデモを行っていますが、一部のデモはオンラインでもご覧になれます。
-            </p>
-            <p>
                 ぜひ楽しんでいってください！！
             </p>
             <h3 class="h3-left-line"><ruby>忖度<rt>そんたく</rt></ruby>オセロAI</h3>
+            <p><img src="../assets/nf2023/othello.jpg" width="60%"></p>
             <p>
                 世の中には強いオセロAI、弱いオセロAIがたくさんありますが、プレイヤーとちょうど良い勝負をしてくれるようなAIはなかなかありません。
+                そこで、<b>プレイヤーの強さに応じて<ruby>忖度<rt>そんたく</rt></ruby>を行い、ちょうど良い勝負をしてくれる</b>ようなオセロAIを作成しました。
             </p>
             <p>
-                そこで、プレイヤーの強さに応じて<ruby>忖度<rt>そんたく</rt></ruby>を行い、ちょうど良い勝負をしてくれるようなオセロAIを作成しました。
-            </p>
-            <p>
-                <a href="/" class="btn btn-primary btn-md">忖度オセロAIを試す</a>
+                <a href="/" class="btn btn-primary btn-md" target="_blank"><i class="fa-solid fa-arrow-right"></i> 忖度オセロAIを試す</a><br>
+                <a href="https://github.com/matsuda-tkm/adjust-othello-app"><i class="fa-brands fa-github fa-lg"></i></a>
             </p>
             
             <h3 class="h3-left-line">将棋AI</h3>
@@ -121,25 +119,13 @@
             <p>
                 2023年10月、藤井聡太さんが前人未到の八冠独占を達成しました。
                 藤井さんはAIを用いた将棋の研究をしていることでも有名です。
+                AIがどれほど強いのか、腕試ししてみませんか？
             </p>
 
             <p>
-                <a href="/" class="btn btn-primary btn-md">将棋AIを試す</a>
+                <a href="https://colab.research.google.com/drive/1I5PLsVACj25ob8Y9314aPaLtzP6jrEJU#forceEdit=true&sandboxMode=true" class="btn btn-primary btn-md" target="_blank"><i class="fa-solid fa-arrow-right"></i> 将棋AIを試す</a>
             </p>
 
-            <h3 class="h3-left-line">Stable Diffusionのプロンプト推定</h3>
-            <p>
-                Stable Diffusionというモデルでは<b>プロンプトから画像を生成する</b>ことができます。
-            </p>
-            <p>
-                機械学習コンペティションサイトのkaggleでは
-                「<a href="https://www.kaggle.com/competitions/stable-diffusion-image-to-prompts">Stable Diffusion - Image to Prompts</a>」
-                というコンペティションが開催され、画像生成とは逆に、<b>AI生成画像から生成に用いられたプロンプトを予測する</b>というタスクが出題されました。
-                本デモはこのコンペティションの紹介です。
-            </p>
-            <p>
-                ※このデモは会場でのみご覧になれます。
-            </p>
             <h3 class="h3-left-line">拡散モデルサンプリング</h3>
             <p><img src="../assets/nf2023/diffusion-sampling.png" class="img-fluid"></p>
             <p>
@@ -153,22 +139,27 @@
             </p>
             <p><b>元のデータと似たようなデータを生成</b>することができることや<b>ガイダンスによって生成するデータの種類を変える</b>ことができるということが体感できるでしょう！</p>
             <p>
-                <a href="https://colab.research.google.com/drive/1qulQPz8bjeu0Ugk7lamHFRUkgUU7XuFl#forceEdit=true&sandboxMode=true" class="btn btn-primary btn-md">拡散モデルサンプリングを試す</a>
+                <a href="https://diffusion-model-sampling.streamlit.app/" class="btn btn-primary btn-md" target="_blank"><i class="fa-solid fa-arrow-right"></i> 拡散モデルサンプリングを試す</a><br>
+                <a href="https://github.com/kyoto-kaira/diffusion-model-sampling"><i class="fa-brands fa-github fa-lg"></i></a>
             </p>
 
             <h3 class="h3-left-line">フェイク画像判定</h3>
+            <p><img src="../assets/nf2023/fake-face-detection.jpg" class="img-fluid"></p>
             <p>
                 近年、画像生成技術が発達したことで、インターネット上の<b>画像が本物なのか、それとも偽物（AIで生成された）画像なのかを見分けることが難しくなってきました</b>。
+                そこで、ある画像が<b>本物なのか、それともAI*で生成された画像なのかを判定する</b>モデルを作りました。
             </p>
             <p>
-                そこで、ある画像が<b>本物なのか、それともAIで生成された画像なのかを判定する</b>モデルを作りました。
+                *本デモは、StyleGAN2で生成された画像かどうかを判別するのに特化したモデルです。Diffusion Modelなどによる生成画像はこのAIでは判別できません。
             </p>
             <p>
-                <a href="/" class="btn btn-primary btn-md">フェイク画像判定を試す</a>
+                <a href="https://fake-face-image-detection.streamlit.app/" class="btn btn-primary btn-md" target="_blank"><i class="fa-solid fa-arrow-right"></i> フェイク画像判定を試す</a><br>
+                <a href="https://github.com/kyoto-kaira/fake-face-image-detection"><i class="fa-brands fa-github fa-lg"></i></a>
             </p>
 
             <h3 class="h3-left-line">歌詞からアーティスト判定XAI</h3>
-            <img src="https://user-images.githubusercontent.com/101240248/264873419-5ad6c0cd-ecb6-4f22-9be9-23fc544d468b.png" class="img-fluid">
+            <img src="https://camo.qiitausercontent.com/ed31060c87d7585a40a24b05c606a898319aa20e/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e61702d6e6f727468656173742d312e616d617a6f6e6177732e636f6d2f302f313930303539392f61313865313633372d636263632d343062322d363537372d3466366264363832383264632e706e67" class="img-fluid">
+            <img src="https://camo.qiitausercontent.com/9fe6a557ba78084e641936900563a9dcd31615f6/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e61702d6e6f727468656173742d312e616d617a6f6e6177732e636f6d2f302f313930303539392f33376331356366362d333633342d323265352d396134302d6338663132346565363964622e706e67" class="img-fluid">
             <p>
                 <b>歌詞を入力すると、どのアーティストの歌詞っぽいかを判定する</b>モデルを開発しました。
                 テキストを文字単位で分割したデータを入力とする
@@ -182,18 +173,24 @@
                 深層学習による予測はブラックボックスであることが多いですが、このようなXAI手法を使うことで、予測の根拠を可視化することもできます。
             </p>
             <p>
-                <a href="https://colab.research.google.com/drive/1DsSVmUxkpAo5qmLDusL-Z25RaGBYTvQ-#forceEdit=true&sandboxMode=true" class="btn btn-primary btn-md">アーティスト判定AIを試す</a>
+                <a href="https://colab.research.google.com/drive/1DsSVmUxkpAo5qmLDusL-Z25RaGBYTvQ-#forceEdit=true&sandboxMode=true" class="btn btn-primary btn-md" target="_blank"><i class="fa-solid fa-arrow-right"></i> アーティスト判定AIを試す</a>
+                <a href="https://artist-prediction.streamlit.app/" class="btn btn-secondary btn-md" target="_blank">Webアプリで試す</a><br>
+                <a href="https://github.com/matsuda-tkm/artist-prediction-xai"><i class="fa-brands fa-github fa-lg"></i></a>
+                <a href="https://qiita.com/matsuda_tkm/items/b3c6760abd1130ec3837"><i class="fa-solid fa-pen-to-square"></i></a>
             </p>
 
             <h3 class="h3-left-line">似ている芸能人判定XAI</h3>
+            <p><img src="../assets/nf2023/similar-person.jpg" width="60%"></p>
             <p>
-                あなたの顔がどの芸能人に似ているかを判定するAIです。さらに、その判定根拠をGrad-CAMというXAI手法を用いて可視化します。
+                あなたの顔が、<b>人の芸能人のうち誰に似ているかを判定するAI</b>です。さらに、その判定根拠をGrad-CAMというXAI手法を用いて可視化します。
             </p>
             <p>
-                <a href="/" class="btn btn-primary btn-md">芸能人類似度判定AIを試す</a>
+                <a href="/" class="btn btn-primary btn-md" target="_blank"><i class="fa-solid fa-arrow-right"></i> 芸能人類似度判定AIを試す</a><br>
+                <a href=""><i class="fa-brands fa-github fa-lg"></i></a>
             </p>
 
             <h3 class="h3-left-line">手書き文字認識AI</h3>
+            <p><img src="../assets/nf2023/emnist.jpg" width="70%"></p>
             <p>
                 <a href="https://arxiv.org/abs/1702.05373">EMNIST</a>という有名な手書き文字データセットを用いて、<b>手書き文字認識</b>を行うモデルを学習させました。
                 小文字のアルファベット、大文字のアルファベット、数字に関して<b>実際に自分が書いた文字を判別してもらうことが可能</b>です。
@@ -202,7 +199,7 @@
                 ちなみにこのデモは、今年度KaiRAに入会したばかりの1回生の会員たちが作成してくれました！
             </p>
             <p>
-                <a href="/" class="btn btn-primary btn-md">手書き文字認識AIを試す</a>
+                <a href=""><i class="fa-brands fa-github fa-lg"></i></a>
             </p>
         </div>
     </main>
