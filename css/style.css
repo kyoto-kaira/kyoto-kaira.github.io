@@ -11,17 +11,36 @@ header{
     font-size: large;
 }
 
-.fixed-background {
-    min-height: none;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+.box {
+    padding: 30px;
+    position: relative;
+    background-color: #fff;
 }
 
-.kaira-title .jumbotron {
-    background:none
-    center no-repeat;
+.attachment {
+    padding: 40px;
+    position: relative;
+}
+
+.attachment::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 70%;
+    margin-top:93px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: none;
     background-size: cover;
+}
+
+.attachment__container {
+    background-color: none;
+    padding: 25px;
 }
 
 @media (min-width: 768px) {
@@ -57,36 +76,55 @@ header{
     }
 }
 
+.navbar .navbar-nav .nav-link {
+    color: #2e2e2e
+}
+
+.navbar .navbar-nav .active>.nav-link {
+    color: #000000
+}
+
+.navbar .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #000000
+}
 
 /*** 背景画像 ***/
-.background-title {
+.background-title::before {
     background-image: url(../assets/images/background_home.jpg);
 }
-.background-about {
+.background-about::before {
     background-image: url(../assets/images/background_about.jpg);
 }
-.background-events {
+.background-news::before {
     background-image: url(../assets/images/background_events.jpg);
 }
-.background-journal {
+.background-journal::before {
     background-image: url(../assets/images/background_collection_of_journals.jpg);
 }
-.background-contact {
+.background-contact::before {
     background-image: url(../assets/images/background_contact.webp);
 }
-.background-works {
+.background-works::before {
     background-image: url(../assets/images/background_works.jpg);
 }
-.background-nf2020 {
+.background-nf2020::before {
     background-image: url(../assets/images/background_nf2020.jpg);
 }
-.background-nf2021 {
+.background-nf2021::before {
     background-image: url(../assets/images/background_nf2021.webp);
 }
-.background-nf2022 {
+.background-nf2022::before {
     background-image: url(../assets/images/background_nf2022.webp);
 }
+.background-nf2023::before {
+    background-image: url(../assets/images/background_nf2023.jpg);
+}
 
+
+body {
+    overflow-x: hidden
+}
 
 /*** フォント ***/
 p, h1, h2, h3, h4, h5, dl, ul, ol, table {
@@ -153,15 +191,19 @@ h2 {
 
 
 /*** 箇条書きの装飾 ***/
-.list-border ul {
-    background: #fcfcfc; 
-    padding: 0.5em 0.5em 0.5em 2em; 
-    border: dashed 3px #0071C3;  
-}
-.list-border ul li{
-    line-height: 1.5; 
-    padding: 0.5em 0;
-}
+.list-border > ul {
+    border: dashed 3px #0071C3;
+  }
+  
+  .list-border ul {
+    background: #fcfcfc;
+    padding: 0.5em 0.5em 0.5em 2em;
+  }
+  
+  .list-border ul li {
+    line-height: 1.5;
+    padding: 0.5em 0; 
+  }
 
 
 /*** プロフィール装飾 ***/
