@@ -120,7 +120,9 @@ header{
 .background-nf2023::before {
     background-image: url(../assets/images/background_nf2023.jpg);
 }
-
+.background-nf2024::before {
+    background-image: url(../assets/images/background_nf2024.jpg);
+}
 
 body {
     overflow-x: hidden
