@@ -25,7 +25,12 @@
     <link rel="icon" href="./assets/images/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/variables.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/modern-grid.css">
+    <link rel="stylesheet" href="./css/hero.css">
+    <link rel="stylesheet" href="./css/card-system.css">
+    <link rel="stylesheet" href="./css/footer.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,54 +41,99 @@
 
     <header id="header"></header>
 
-    <div class="attachment background-title">
-        <div class="attachment__container">
-            <img src="./assets/images/logo_KaiRA.png" class="img-fluid d-block mx-auto" alt="KaiRA">
-            <p class="text-center" style="font-size:36px; font-weight:bold; margin-top:20px;">
-                AIを学びたい京都大学の学生による<br>自主ゼミサークル</p>
+    <div class="hero-section background-title">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text animate-on-scroll">
+                    <h1 class="hero-title slide-in-left">京都大学人工知能研究会 KaiRA</h1>
+                    <p class="hero-subtitle slide-in-left">AIを学びたい京都大学の学生による自主ゼミサークル</p>
+                    <div class="hero-cta">
+                        <a href="./about.html" class="btn btn-primary btn-lg slide-in-left">詳しく見る</a>
+                        <a href="./contact.html" class="btn btn-outline-primary btn-lg ml-3 slide-in-left">入会案内</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="./assets/images/logo_KaiRA.png" class="img-fluid fade-in" alt="KaiRA">
+                    <div class="shape-decorator"></div>
+                </div>
+            </div>
         </div>
     </div>
-    <main class="box">
-        <div class="container">
+    <main class="main-content">
+        <div class="grid-container">
             <!-- KaiRA概要説明 -->
-            <h2>京都大学人工知能研究会 KaiRAとは</h2>
-            <p>
-                KaiRAはAI・機械学習に関する本を輪読している自主ゼミサークルです。<br>
-                文理・専攻・回生・大学を問わず様々なバックグラウンドを持つ学生たちが集まっています。<br>
-                AIについて学びたい、こんなAIを一緒に作りたい、等々歓迎します。<br>
-                書籍の購入補助や計算リソース代の補助も行っています。
-            </p>
-            <!-- ボタン -->
-            <a href="./about.html" class="btn btn-info btn-block"><strong style="font-size:20px;">⇒
-                    KaiRAの活動内容をもっと見る</strong></a><br>
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title animate-on-scroll">京都大学人工知能研究会 KaiRAとは</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-description">AIを学びたい京都大学の学生による自主ゼミサークル</p>
+                </div>
+                
+                <div class="card-grid">
+                    <div class="feature-card primary animate-on-scroll">
+                        <div class="card-icon">A</div>
+                        <h3 class="card-title">輪読会</h3>
+                        <p class="card-text">
+                            KaiRAはAI・機械学習に関する本を輪読している自主ゼミサークルです。
+                            最新の技術や理論について、メンバー同士で学び合い、理解を深めています。
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card secondary animate-on-scroll">
+                        <div class="card-icon">I</div>
+                        <h3 class="card-title">多様なメンバー</h3>
+                        <p class="card-text">
+                            文理・専攻・回生・大学を問わず様々なバックグラウンドを持つ学生たちが集まっています。
+                            多様な視点からAIについて議論し、新しいアイデアを生み出しています。
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card primary animate-on-scroll">
+                        <div class="card-icon">R</div>
+                        <h3 class="card-title">リソースサポート</h3>
+                        <p class="card-text">
+                            AIについて学びたい、こんなAIを一緒に作りたい、等々歓迎します。
+                            書籍の購入補助や計算リソース代の補助も行っています。
+                        </p>
+                        <div class="card-footer">
+                            <a href="./about.html" class="btn btn-primary">KaiRAの活動内容をもっと見る</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- 輪読会の様子スライドショー -->
-            <div class="carousel slide" id="sample" data-interval="4000" data-ride="carousel" data-pause="false">
-                <ol class="carousel-indicators">
-                    <li data-target="#sample" data-slide-to="0" class="active"></li>
-                    <li data-target="#sample" data-slide-to="1"></li>
-                    <li data-target="#sample" data-slide-to="2"></li>
-                    <li data-target="#sample" data-slide-to="3"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active"><img src="assets/images/picture_20231005.jpg"
-                            class="d-block mx-auto img-fluid"></div>
-                    <div class="carousel-item"><img src="assets/images/picture_202302.jpg"
-                            class="d-block mx-auto img-fluid"></div>
-                    <div class="carousel-item"><img src="assets/images/picture_20220714.jpg"
-                            class="d-block mx-auto img-fluid"></div>
-                    <div class="carousel-item"><img src="assets/images/AAAILT.jpg"
-                            class="d-block mx-auto img-fluid"></div>
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title animate-on-scroll">活動の様子</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-description">KaiRAの輪読会や活動の様子をご紹介します</p>
                 </div>
-                <a href="#sample" class="carousel-control-prev" data-slide="prev"><span
-                        class="carousel-control-prev-icon"></span></a>
-                <a href="#sample" class="carousel-control-next" data-slide="next"><span
-                        class="carousel-control-next-icon"></span></a>
-                <a href="#sample" class="carousel-control-next" data-slide="next"><span
-                        class="carousel-control-next-icon"></span></a>
-                <a href="#sample" class="carousel-control-next" data-slide="next"><span
-                        class="carousel-control-next-icon"></span></a>
-            </div><br>
+                
+                <div class="carousel slide shadow-sm" id="sample" data-interval="4000" data-ride="carousel" data-pause="false">
+                    <ol class="carousel-indicators">
+                        <li data-target="#sample" data-slide-to="0" class="active"></li>
+                        <li data-target="#sample" data-slide-to="1"></li>
+                        <li data-target="#sample" data-slide-to="2"></li>
+                        <li data-target="#sample" data-slide-to="3"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active"><img src="assets/images/picture_20231005.jpg"
+                                class="d-block mx-auto img-fluid"></div>
+                        <div class="carousel-item"><img src="assets/images/picture_202302.jpg"
+                                class="d-block mx-auto img-fluid"></div>
+                        <div class="carousel-item"><img src="assets/images/picture_20220714.jpg"
+                                class="d-block mx-auto img-fluid"></div>
+                        <div class="carousel-item"><img src="assets/images/AAAILT.jpg"
+                                class="d-block mx-auto img-fluid"></div>
+                    </div>
+                    <a href="#sample" class="carousel-control-prev" data-slide="prev"><span
+                            class="carousel-control-prev-icon"></span></a>
+                    <a href="#sample" class="carousel-control-next" data-slide="next"><span
+                            class="carousel-control-next-icon"></span></a>
+                </div>
+            </div>
 
             <!-- docswell埋め込み -->
             <script async class="docswell-embed"
@@ -91,86 +141,121 @@
                 data-src="https://www.docswell.com/slide/ZXYND7/embed" data-aspect="0.5625"></script><br>
 
             <!-- 今期の輪読本 -->
-            <h2>2024年前期に勉強する本</h2>
-            <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
-                    <div class="card-deck">
-                        <div class="card" style="width: 18rem;">
-                            <img src="assets/images/book_intro_LLM1.jpg"
-                                class="card-img-top img-fluid" alt="大規模言語モデル入門"
-                                style="height: 400px; object-fit: contain;">
-                            <div class="card-body">
-                                <h5>大規模言語モデル入門</h5>
-                                <a href="https://gihyo.jp/book/2023/978-4-297-13633-8"
-                                    class="btn btn-outline-primary">本の詳細</a>
-                            </div>
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title animate-on-scroll">2024年前期に勉強する本</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-description">現在KaiRAで輪読している書籍をご紹介します</p>
+                </div>
+                
+                <div class="card-grid-2">
+                    <div class="feature-card primary animate-on-scroll">
+                        <img src="assets/images/book_intro_LLM1.jpg" class="img-fluid mb-3" alt="大規模言語モデル入門" style="height: 300px; object-fit: contain;">
+                        <h3 class="card-title">大規模言語モデル入門</h3>
+                        <p class="card-text">
+                            ChatGPTやBardなどの大規模言語モデルの基礎から応用までを学ぶための入門書です。
+                            最新のAI技術について理解を深めることができます。
+                        </p>
+                        <div class="card-footer">
+                            <a href="https://gihyo.jp/book/2023/978-4-297-13633-8" class="btn btn-primary">本の詳細</a>
                         </div>
-                        <div class="card" style="width: 18rem;">
-                            <img src="assets/images/book_intro_LLM2.jpg"
-                                class="card-img-top img-fluid" alt="大規模言語モデル入門Ⅱ"
-                                style="height: 400px; object-fit: contain;">
-                            <div class="card-body">
-                                <h5>大規模言語モデル入門Ⅱ</h5>
-                                <a href="https://gihyo.jp/book/2024/978-4-297-14393-0"
-                                    class="btn btn-outline-primary">本の詳細</a>
-                            </div>
+                    </div>
+                    
+                    <div class="feature-card secondary animate-on-scroll">
+                        <img src="assets/images/book_intro_LLM2.jpg" class="img-fluid mb-3" alt="大規模言語モデル入門Ⅱ" style="height: 300px; object-fit: contain;">
+                        <h3 class="card-title">大規模言語モデル入門Ⅱ</h3>
+                        <p class="card-text">
+                            大規模言語モデル入門の続編として、より高度な内容や最新の技術動向について解説しています。
+                            実践的な応用例も豊富に紹介されています。
+                        </p>
+                        <div class="card-footer">
+                            <a href="https://gihyo.jp/book/2024/978-4-297-14393-0" class="btn btn-primary">本の詳細</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2"></div>
-            </div><br>
-            <!-- ボタン -->
-            <a href="./news.html" class="btn btn-info btn-block"><strong style="font-size:20px;">⇒
-                    過去の輪読本を見る</strong></a><br>
+                
+                <div class="text-center mt-4">
+                    <a href="./news.html" class="btn btn-outline-primary btn-lg">過去の輪読本を見る</a>
+                </div>
+            </div>
 
             <!-- 入会案内・SNS -->
-            <h2>Study with Us!</h2>
-            <p>少しでもKaiRAに興味を持ってくださった方は入会案内をご覧ください！</p>
-            <!-- ボタン -->
-            <a href="./contact.html" class="btn btn-info btn-block"><strong style="font-size:20px;">⇒
-                    入会案内</strong></a><br>
-
-            <div class="sns-icon">
-                <!-- X(Twitter) -->
-                <div class="row">
-                    <div class="col-1">
-                        <a href="https://twitter.com/kyoto_kaira"><img src="./assets/images/logo_X.png"></a>
-                    </div>
-                    <div class="col-11">
-                        <p class="float-md-left"><b>X (旧Twitter)</b><br>日々の活動の様子などをつぶやいています。</p>
-                    </div>
+            <div class="section">
+                <div class="section-header">
+                    <h2 class="section-title animate-on-scroll">Study with Us!</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-description">少しでもKaiRAに興味を持ってくださった方は入会案内をご覧ください！</p>
                 </div>
-
-                <!-- GitHub -->
-                <div class="row">
-                    <div class="col-1">
-                        <a href="https://github.com/kyoto-kaira"><img src="./assets/images/logo_github.png"></a>
-                    </div>
-                    <div class="col-11">
-                        <p><b>GitHub</b><br>KaiRAのメンバーが作成したコードを公開しています。ちなみにこのWebサイトはGitHub Pagesで公開しています。</p>
-                    </div>
+                
+                <div class="text-center mb-5">
+                    <a href="./contact.html" class="btn btn-primary btn-lg">入会案内を見る</a>
                 </div>
-
-                <!-- Docswell -->
-                <div class="row">
-                    <div class="col-1">
-                        <a href="https://www.docswell.com/user/kyoto-kaira"><img
-                                src="./assets/images/logo_docswell.png"></a>
+                
+                <h3 class="text-center mb-4">SNS &amp; リソース</h3>
+                
+                <div class="card-grid">
+                    <div class="feature-card primary animate-on-scroll">
+                        <div class="text-center mb-3">
+                            <a href="https://twitter.com/kyoto_kaira">
+                                <img src="./assets/images/logo_X.png" alt="X" style="width: 50px; height: 50px;">
+                            </a>
+                        </div>
+                        <h3 class="card-title">X (旧Twitter)</h3>
+                        <p class="card-text">
+                            日々の活動の様子などをつぶやいています。
+                            最新の情報やイベントの告知もこちらでチェックできます。
+                        </p>
+                        <div class="card-footer">
+                            <a href="https://twitter.com/kyoto_kaira" class="btn btn-outline-primary">フォローする</a>
+                        </div>
                     </div>
-                    <div class="col-11">
-                        <p><b>Docswell</b><br>輪読会で使用したスライド資料を公開しています。</p>
+                    
+                    <div class="feature-card secondary animate-on-scroll">
+                        <div class="text-center mb-3">
+                            <a href="https://github.com/kyoto-kaira">
+                                <img src="./assets/images/logo_github.png" alt="GitHub" style="width: 50px; height: 50px;">
+                            </a>
+                        </div>
+                        <h3 class="card-title">GitHub</h3>
+                        <p class="card-text">
+                            KaiRAのメンバーが作成したコードを公開しています。
+                            ちなみにこのWebサイトはGitHub Pagesで公開しています。
+                        </p>
+                        <div class="card-footer">
+                            <a href="https://github.com/kyoto-kaira" class="btn btn-outline-primary">リポジトリを見る</a>
+                        </div>
                     </div>
-                </div>
-
-                <!-- Qiita -->
-                <div class="row">
-                    <div class="col-1">
-                        <a href="https://qiita.com/organizations/kyoto-kaira"><img
-                                src="./assets/images/logo_qiita.png"></a>
+                    
+                    <div class="feature-card primary animate-on-scroll">
+                        <div class="text-center mb-3">
+                            <a href="https://www.docswell.com/user/kyoto-kaira">
+                                <img src="./assets/images/logo_docswell.png" alt="Docswell" style="width: 50px; height: 50px;">
+                            </a>
+                        </div>
+                        <h3 class="card-title">Docswell</h3>
+                        <p class="card-text">
+                            輪読会で使用したスライド資料を公開しています。
+                            過去の勉強会の内容を確認することができます。
+                        </p>
+                        <div class="card-footer">
+                            <a href="https://www.docswell.com/user/kyoto-kaira" class="btn btn-outline-primary">資料を見る</a>
+                        </div>
                     </div>
-                    <div class="col-11">
-                        <p><b>Qiita</b><br>KaiRAのメンバーが書いた記事をまとめています。</p>
+                    
+                    <div class="feature-card secondary animate-on-scroll">
+                        <div class="text-center mb-3">
+                            <a href="https://qiita.com/organizations/kyoto-kaira">
+                                <img src="./assets/images/logo_qiita.png" alt="Qiita" style="width: 50px; height: 50px;">
+                            </a>
+                        </div>
+                        <h3 class="card-title">Qiita</h3>
+                        <p class="card-text">
+                            KaiRAのメンバーが書いた記事をまとめています。
+                            技術的な知見や学習の成果を共有しています。
+                        </p>
+                        <div class="card-footer">
+                            <a href="https://qiita.com/organizations/kyoto-kaira" class="btn btn-outline-primary">記事を読む</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -191,10 +276,19 @@
         $('.bs-component [data-toggle="tooltip"]').tooltip();
     </script>
     <script>
-        fetch("https://kyoto-kaira.github.io/header.html")
+        fetch("./header.html")
             .then((response) => response.text())
             .then((data) => document.querySelector("#header").innerHTML = data);
+            
+        fetch("./footer.html")
+            .then((response) => response.text())
+            .then((data) => {
+                const footerElement = document.createElement('footer');
+                footerElement.innerHTML = data;
+                document.body.appendChild(footerElement);
+            });
     </script>
+    <script src="./js/animation.js"></script>
 </body>
 
 </html>

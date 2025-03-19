@@ -22,7 +22,12 @@
     <link rel="icon" href="./assets/images/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/variables.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/modern-grid.css">
+    <link rel="stylesheet" href="./css/hero.css">
+    <link rel="stylesheet" href="./css/gallery.css">
+    <link rel="stylesheet" href="./css/footer.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,41 +39,155 @@
 
     <header id="header"></header>
 
-    <div class="attachment background-works">
-        <div class="attachment__container">
-            <h1 class="text-center">作品</h1>
+    <div class="hero-section background-works">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text animate-on-scroll">
+                    <h1 class="hero-title slide-in-left">作品</h1>
+                    <p class="hero-subtitle slide-in-left">KaiRAメンバーによるプロジェクト紹介</p>
+                </div>
+                <div class="hero-image">
+                    <img src="./assets/images/logo_KaiRA.png" class="img-fluid fade-in" alt="KaiRA">
+                    <div class="shape-decorator"></div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <main class="box">
-        <div class="container">
-            <!-- このページの説明 -->
-            <p>
-                KaiRA内で取り組んだプロジェクトや、KaiRAメンバーが個人で取り組んだプロジェクトの紹介ページです。<br>
-                主にNF(京大11月祭)に向けた発表物を掲載しています。<br>
-                簡単に実行できて楽しめるデモも用意しているので、ぜひ遊んでみてください。<br>
-                これらをきっかけにしてサークル興味を持ってくださったら、<a href="./contact.html">入会案内</a>等でコンタクトを取っていただけるとうれしいです!<br>
-            </p>
-
-            <!-- NF -->
-            <h2>NF(京都大学11月祭)</h2>
-            <p>
-                KaiRAでは毎年ポスター展示や作品展示などの出展を行っています。<br>
-                出展に関するお知らせは<a href="https://twitter.com/kyoto_kaira">X(旧Twitter)</a>で行いますので、お越しになる際はご確認ください！<br>
-                2020年度以降はオンライン展示も行っており、以下からNF特設サイトへアクセスできます。<br>
-            </p>
-            <!-- NF特設サイトボタン -->
-            <h3 class="h3-left-line">2024年度</h3>
-            <p><a href="./works/nf2024.html" class="btn btn-primary btn-lg">2024年度NF特設サイト</a></p>
-            <!--<p><button class="btn btn-outline-secondary btn-lg">Coming Soon...</button></p>-->
-            <h3 class="h3-left-line">過去のNF特設サイト</h3>
-            <p>
-                <a href="./works/nf2023.html" class="btn btn-outline-secondary">2023年度NF特設サイト</a>
-                <a href="./works/nf2022.html" class="btn btn-outline-secondary">2022年度NF特設サイト</a>
-                <a href="./works/nf2021.html" class="btn btn-outline-secondary">2021年度NF特設サイト</a>
-                <a href="./works/nf2020.html" class="btn btn-outline-secondary">2020年度NF特設サイト</a>
-            </p>
-            <p><a href="./works/collection_of_journals.html">過去の会誌一覧</a></p>
+    <main class="main-content">
+        <div class="grid-container">
+            <div class="section-header">
+                <h2 class="section-title">作品紹介</h2>
+                <div class="section-divider"></div>
+                <p class="section-description">
+                    KaiRA内で取り組んだプロジェクトや、KaiRAメンバーが個人で取り組んだプロジェクトの紹介ページです。
+                    主にNF(京大11月祭)に向けた発表物を掲載しています。
+                    簡単に実行できて楽しめるデモも用意しているので、ぜひ遊んでみてください。
+                    これらをきっかけにしてサークルに興味を持ってくださったら、<a href="./contact.html">入会案内</a>等でコンタクトを取っていただけるとうれしいです!
+                </p>
+            </div>
+            
+            <div class="gallery-container">
+                <div class="gallery-section">
+                    <div class="gallery-header">
+                        <h3 class="gallery-title">NF(京都大学11月祭)</h3>
+                        <p class="gallery-description">
+                            KaiRAでは毎年ポスター展示や作品展示などの出展を行っています。
+                            出展に関するお知らせは<a href="https://twitter.com/kyoto_kaira">X(旧Twitter)</a>で行いますので、お越しになる際はご確認ください！
+                            2020年度以降はオンライン展示も行っており、以下からNF特設サイトへアクセスできます。
+                        </p>
+                    </div>
+                    
+                    <div class="gallery-filters">
+                        <button class="filter-btn active">すべて</button>
+                        <button class="filter-btn">2024</button>
+                        <button class="filter-btn">2023</button>
+                        <button class="filter-btn">2022</button>
+                        <button class="filter-btn">2021</button>
+                        <button class="filter-btn">2020</button>
+                    </div>
+                    
+                    <div class="gallery-featured">
+                        <div class="featured-project animate-on-scroll">
+                            <div class="featured-image">
+                                <img src="./assets/images/logo_KaiRA.png" alt="2024年度NF">
+                                <div class="featured-overlay">
+                                    <h3 class="featured-title">2024年度 NF特設サイト</h3>
+                                </div>
+                                <div class="featured-year">2024</div>
+                            </div>
+                            <div class="featured-content">
+                                <p class="featured-description">
+                                    2024年度の京都大学11月祭での展示内容をまとめた特設サイトです。
+                                    AIデモや研究発表、会誌の紹介などを行っています。
+                                </p>
+                                <div class="project-links">
+                                    <a href="./works/nf2024.html" class="link-with-arrow">特設サイトを見る</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-grid">
+                        <div class="project-card animate-on-scroll">
+                            <div class="project-image">
+                                <img src="./assets/images/logo_KaiRA.png" alt="2023年度NF">
+                                <div class="project-overlay">
+                                    <h4 class="project-title">2023年度 NF特設サイト</h4>
+                                </div>
+                                <div class="project-year">2023</div>
+                            </div>
+                            <div class="project-content">
+                                <p class="project-description">
+                                    2023年度の京都大学11月祭での展示内容をまとめた特設サイトです。
+                                </p>
+                                <div class="project-links">
+                                    <a href="./works/nf2023.html" class="link-with-arrow">特設サイトを見る</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-card animate-on-scroll">
+                            <div class="project-image">
+                                <img src="./assets/images/logo_KaiRA.png" alt="2022年度NF">
+                                <div class="project-overlay">
+                                    <h4 class="project-title">2022年度 NF特設サイト</h4>
+                                </div>
+                                <div class="project-year">2022</div>
+                            </div>
+                            <div class="project-content">
+                                <p class="project-description">
+                                    2022年度の京都大学11月祭での展示内容をまとめた特設サイトです。
+                                </p>
+                                <div class="project-links">
+                                    <a href="./works/nf2022.html" class="link-with-arrow">特設サイトを見る</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-card animate-on-scroll">
+                            <div class="project-image">
+                                <img src="./assets/images/logo_KaiRA.png" alt="2021年度NF">
+                                <div class="project-overlay">
+                                    <h4 class="project-title">2021年度 NF特設サイト</h4>
+                                </div>
+                                <div class="project-year">2021</div>
+                            </div>
+                            <div class="project-content">
+                                <p class="project-description">
+                                    2021年度の京都大学11月祭での展示内容をまとめた特設サイトです。
+                                </p>
+                                <div class="project-links">
+                                    <a href="./works/nf2021.html" class="link-with-arrow">特設サイトを見る</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-card animate-on-scroll">
+                            <div class="project-image">
+                                <img src="./assets/images/logo_KaiRA.png" alt="2020年度NF">
+                                <div class="project-overlay">
+                                    <h4 class="project-title">2020年度 NF特設サイト</h4>
+                                </div>
+                                <div class="project-year">2020</div>
+                            </div>
+                            <div class="project-content">
+                                <p class="project-description">
+                                    2020年度の京都大学11月祭での展示内容をまとめた特設サイトです。
+                                </p>
+                                <div class="project-links">
+                                    <a href="./works/nf2020.html" class="link-with-arrow">特設サイトを見る</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-5 text-center">
+                        <a href="./works/collection_of_journals.html" class="btn btn-outline-primary">過去の会誌一覧を見る</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -86,10 +205,19 @@
         $('.bs-component [data-toggle="tooltip"]').tooltip();
     </script>
     <script>
-        fetch("https://kyoto-kaira.github.io/header.html")
+        fetch("./header.html")
             .then((response) => response.text())
             .then((data) => document.querySelector("#header").innerHTML = data);
+            
+        fetch("./footer.html")
+            .then((response) => response.text())
+            .then((data) => {
+                const footerElement = document.createElement('footer');
+                footerElement.innerHTML = data;
+                document.body.appendChild(footerElement);
+            });
     </script>
+    <script src="./js/animation.js"></script>
 </body>
 
 </html>

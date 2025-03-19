@@ -1,0 +1,272 @@
+/* Process Steps for Contact Page */
+:root {
+  --border-color: #e0e0e0;
+  --primary: #0071C3;
+  --primary-dark: #0055A2;
+  --secondary: #f5f9ff;
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.process-section {
+  padding: var(--spacing-xl) 0;
+}
+
+.process-container {
+  max-width: 900px;
+  margin: 0 auto var(--spacing-xl);
+  position: relative;
+}
+
+.process-timeline {
+  position: relative;
+  padding: 0;
+}
+
+.process-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 24px;
+  width: 3px;
+  background-color: var(--border-color);
+  z-index: 0;
+}
+
+.process-step {
+  position: relative;
+  padding-left: 70px;
+  margin-bottom: var(--spacing-xl);
+  counter-increment: step;
+}
+
+.process-step:last-child {
+  margin-bottom: 0;
+}
+
+.step-number {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 3px solid var(--border-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-light);
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.process-step.active .step-number,
+.process-step:hover .step-number {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  transform: scale(1.1);
+}
+
+.step-content {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: var(--spacing-lg);
+  transition: all 0.3s ease;
+}
+
+.process-step.active .step-content,
+.process-step:hover .step-content {
+  box-shadow: var(--box-shadow-lg);
+  transform: translateY(-5px);
+}
+
+.step-title {
+  font-size: 1.25rem;
+  color: var(--primary-dark);
+  margin-bottom: var(--spacing-md);
+  font-weight: 700;
+}
+
+.step-description {
+  color: var(--text-light);
+}
+
+.step-description p {
+  margin-bottom: var(--spacing-md);
+}
+
+.step-description p:last-child {
+  margin-bottom: 0;
+}
+
+.step-actions {
+  margin-top: var(--spacing-md);
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: var(--spacing-xl) 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.accordion {
+  margin-top: var(--spacing-lg);
+}
+
+.accordion-item {
+  margin-bottom: var(--spacing-md);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.accordion-item:hover {
+  box-shadow: var(--box-shadow-lg);
+}
+
+.accordion-header {
+  margin: 0;
+}
+
+.accordion-button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  text-align: left;
+  background-color: white;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.accordion-button:hover {
+  background-color: var(--secondary);
+}
+
+.accordion-button::after {
+  content: '+';
+  position: absolute;
+  right: var(--spacing-lg);
+  font-size: 1.5rem;
+  font-weight: 300;
+  transition: transform 0.3s ease;
+}
+
+.accordion-button:not(.collapsed)::after {
+  content: '−';
+}
+
+.accordion-collapse {
+  border-top: 1px solid var(--border-color);
+}
+
+.accordion-body {
+  padding: var(--spacing-lg);
+  color: var(--text-light);
+}
+
+/* Contact Section */
+.contact-section {
+  padding: var(--spacing-xl) 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.contact-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: var(--spacing-lg);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow-lg);
+}
+
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--secondary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-md);
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.contact-title {
+  font-size: 1.1rem;
+  color: var(--primary-dark);
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+}
+
+.contact-info {
+  color: var(--text-light);
+  margin-bottom: 0;
+}
+
+.contact-info a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+  .process-timeline::before {
+    left: 20px;
+  }
+  
+  .process-step {
+    padding-left: 60px;
+  }
+  
+  .step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+}
