@@ -22,7 +22,12 @@
     <link rel="icon" href="./assets/images/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/variables.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/modern-grid.css">
+    <link rel="stylesheet" href="./css/hero.css">
+    <link rel="stylesheet" href="./css/process-steps.css">
+    <link rel="stylesheet" href="./css/footer.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,102 +39,176 @@
 
     <header id="header"></header>
 
-    <div class="attachment background-contact">
-        <div class="attachment__container">
-            <h1 class="text-center">入会案内</h1>
+    <div class="hero-section background-contact">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text animate-on-scroll">
+                    <h1 class="hero-title slide-in-left">入会案内</h1>
+                    <p class="hero-subtitle slide-in-left">KaiRAへの入会方法をご案内します</p>
+                    <div class="hero-cta">
+                        <a href="#join-steps" class="btn btn-primary btn-lg slide-in-left">入会方法を見る</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="./assets/images/logo_KaiRA.png" class="img-fluid fade-in" alt="KaiRA">
+                    <div class="shape-decorator"></div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <main class="box">
-        <div class="container">
+    <main class="main-content">
+        <div class="grid-container">
             <!-- 入会方法 -->
-            <h2>入会方法</h2>
-            <div class="step-wrap1">
-                <!-- STEP1 -->
-                <div class="step-content1">
-                    <div class="step-label1">STEP</div>
-                    <div class="step-title1">見学申し込み</div>
-                    <div class="step-body1">
-                        <p>
-                            <a href="https://kaira-thesis-reading.connpass.com/">connpass</a>
-                            から輪読会への参加申込みをしましょう。<br>
-                            対面・オンラインどちらも可能となっていますが、対面の場合は場所の都合上、京都大学関係者のみとさせていただいております。
-                        </p>
-                        <p>
-                            ※3-4月は新規入会希望者を対象に説明会を行っている場合があります。最新情報は<a
-                                href="https://twitter.com/kyoto_kaira">X(旧Twitter)</a>をご確認ください。
-                        </p>
-                    </div>
+            <div id="join-steps" class="process-section">
+                <div class="section-header">
+                    <h2 class="section-title">入会方法</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-description">KaiRAへの入会は以下の3ステップで簡単に行えます</p>
                 </div>
-                <!-- STEP2 -->
-                <div class="step-content1">
-                    <div class="step-label1">STEP</div>
-                    <div class="step-title1">輪読会の見学</div>
-                    <div class="step-body1">
-                        <p>開始時刻までにお越しください！</p>
-                    </div>
-                </div>
-                <!-- STEP3 -->
-                <div class="step-content1">
-                    <div class="step-label1">STEP</div>
-                    <div class="step-title1">入会申請フォームに回答</div>
-                    <div class="step-body1">
-                        <p>
-                            見学後、入会のご案内をさせていただく際にお送りする入会申請フォームに回答してください。<br>
-                            こちらで確認後、KaiRAのSlackへ招待いたします。<br>
-                            これをもってKaiRA入会となります！！
-                        </p>
+                
+                <div class="process-container">
+                    <div class="process-timeline">
+                        <div class="process-step active animate-on-scroll" data-step="1">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3 class="step-title">見学申し込み</h3>
+                                <div class="step-description">
+                                    <p>
+                                        <a href="https://kaira-thesis-reading.connpass.com/">connpass</a>
+                                        から輪読会への参加申込みをしましょう。
+                                        対面・オンラインどちらも可能となっていますが、対面の場合は場所の都合上、京都大学関係者のみとさせていただいております。
+                                    </p>
+                                    <p>
+                                        ※3-4月は新規入会希望者を対象に説明会を行っている場合があります。最新情報は<a
+                                            href="https://twitter.com/kyoto_kaira">X(旧Twitter)</a>をご確認ください。
+                                    </p>
+                                </div>
+                                <div class="step-actions">
+                                    <a href="https://kaira-thesis-reading.connpass.com/" class="btn btn-primary">connpassで申し込む</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step animate-on-scroll" data-step="2">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3 class="step-title">輪読会の見学</h3>
+                                <div class="step-description">
+                                    <p>開始時刻までにお越しください！</p>
+                                    <p>輪読会では、AIや機械学習に関する書籍を一緒に読み進めていきます。見学の際は、現在の輪読内容や雰囲気を体験していただけます。質問や疑問点があれば、お気軽にメンバーにお尋ねください。</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="process-step animate-on-scroll" data-step="3">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3 class="step-title">入会申請フォームに回答</h3>
+                                <div class="step-description">
+                                    <p>
+                                        見学後、入会のご案内をさせていただく際にお送りする入会申請フォームに回答してください。
+                                        こちらで確認後、KaiRAのSlackへ招待いたします。
+                                        これをもってKaiRA入会となります！！
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- よくある質問 -->
-            <h2>FAQ</h2>
-            <dl class="Qa-Box">
-                <div class="Qa">
-                    <dt>
-                        <p>会費はいくらですか？</p>
-                    </dt>
-                    <dd>
-                        <p>会費は0円です！輪読会で発表を担当すると本の購入代が出たり、Kaggleに参加すると計算リソース代も出たりします！</p>
-                    </dd>
+            <div class="faq-section">
+                <div class="section-header">
+                    <h2 class="section-title">よくある質問</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-description">KaiRAについてよくある質問にお答えします</p>
                 </div>
-                <div class="Qa">
-                    <dt>
-                        <p>プログラミング初心者なのですが、参加できますか？</p>
-                    </dt>
-                    <dd>
-                        <p>問題ありません！ただし勉強会はある程度Pythonが書けることを前提に進むので、並行して勉強するとより楽しめます。</p>
-                    </dd>
+                
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faqHeading1">
+                            <button class="accordion-button" type="button" data-toggle="collapse" data-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                                会費はいくらですか？
+                            </button>
+                        </h3>
+                        <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>会費は0円です！輪読会で発表を担当すると本の購入代が出たり、Kaggleに参加すると計算リソース代も出たりします！</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faqHeading2">
+                            <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                                プログラミング初心者なのですが、参加できますか？
+                            </button>
+                        </h3>
+                        <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>問題ありません！ただし勉強会はある程度Pythonが書けることを前提に進むので、並行して勉強するとより楽しめます。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faqHeading3">
+                            <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                                他大の学生ですが、参加できますか？
+                            </button>
+                        </h3>
+                        <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>はい、オンライン参加であれば参加可能です。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faqHeading4">
+                            <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                                事前に勉強してから参加したいのですが、何を勉強すればいいですか？
+                            </button>
+                        </h3>
+                        <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>オライリーの「<a href="https://www.oreilly.co.jp/books/9784873117584/">ゼロから作るDeepLearning</a>」を読むことをおすすめします。</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="Qa">
-                    <dt>
-                        <p>他大の学生ですが、参加できますか？</p>
-                    </dt>
-                    <dd>
-                        <p>はい、オンライン参加であれば参加可能です。</p>
-                    </dd>
-                </div>
-                <div class="Qa">
-                    <dt>
-                        <p>事前に勉強してから参加したいのですが、何を勉強すればいいですか？</p>
-                    </dt>
-                    <dd>
-                        <p>オライリーの「<a
-                                href="https://www.oreilly.co.jp/books/9784873117584/">ゼロから作るDeepLearning</a>」を読むことをおすすめします。
-                        </p>
-                    </dd>
-                </div>
-            </dl>
+            </div>
 
             <!-- 連絡先情報 -->
-            <h2>連絡先</h2>
-            <div class="list-border">
-                <ul>
-                    <li>代表：松田 拓巳</li>
-                    <li>X(旧Twitter)：<a href="https://twitter.com/kyoto_kaira">@kyoto_kaira</a></li>
-                    <li>E-mail：kyoto.kaira@gmail.com</li>
-                </ul>
+            <div class="contact-section">
+                <div class="section-header">
+                    <h2 class="section-title">連絡先</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-description">お問い合わせはこちらからお願いします</p>
+                </div>
+                
+                <div class="contact-cards">
+                    <div class="contact-card animate-on-scroll">
+                        <div class="contact-icon">👤</div>
+                        <h3 class="contact-title">代表</h3>
+                        <p class="contact-info">松田 拓巳</p>
+                    </div>
+                    
+                    <div class="contact-card animate-on-scroll">
+                        <div class="contact-icon">🐦</div>
+                        <h3 class="contact-title">X(旧Twitter)</h3>
+                        <p class="contact-info"><a href="https://twitter.com/kyoto_kaira">@kyoto_kaira</a></p>
+                    </div>
+                    
+                    <div class="contact-card animate-on-scroll">
+                        <div class="contact-icon">✉️</div>
+                        <h3 class="contact-title">E-mail</h3>
+                        <p class="contact-info">kyoto.kaira@gmail.com</p>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -148,10 +227,56 @@
         $('.bs-component [data-toggle="tooltip"]').tooltip();
     </script>
     <script>
-        fetch("https://kyoto-kaira.github.io/header.html")
+        fetch("./header.html")
             .then((response) => response.text())
             .then((data) => document.querySelector("#header").innerHTML = data);
+            
+        fetch("./footer.html")
+            .then((response) => response.text())
+            .then((data) => {
+                const footerElement = document.createElement('footer');
+                footerElement.innerHTML = data;
+                document.body.appendChild(footerElement);
+            });
+            
+        // Initialize accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const accordionButtons = document.querySelectorAll('.accordion-button');
+            accordionButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const isCollapsed = !this.classList.contains('collapsed');
+                    const targetId = this.getAttribute('data-target');
+                    const targetCollapse = document.querySelector(targetId);
+                    
+                    // Toggle collapsed class on button
+                    if (isCollapsed) {
+                        this.classList.add('collapsed');
+                    } else {
+                        this.classList.remove('collapsed');
+                    }
+                    
+                    // Toggle show class on collapse
+                    if (targetCollapse) {
+                        if (isCollapsed) {
+                            targetCollapse.classList.remove('show');
+                        } else {
+                            targetCollapse.classList.add('show');
+                        }
+                    }
+                });
+            });
+            
+            // Initialize process steps
+            const processSteps = document.querySelectorAll('.process-step');
+            processSteps.forEach(step => {
+                step.addEventListener('click', function() {
+                    processSteps.forEach(s => s.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
     </script>
+    <script src="./js/animation.js"></script>
 </body>
 
 </html>

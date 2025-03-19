@@ -1,0 +1,98 @@
+/* Modern Grid Layout System */
+:root {
+    --primary: #0071C3;
+    --primary-dark: #0055A2;
+    --text-light: #6c757d;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 4rem;
+}
+
+.main-content {
+    width: 100%;
+    padding: var(--spacing-lg) 0;
+}
+
+.grid-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.grid-full {
+    grid-column: span 12;
+}
+
+.grid-half {
+    grid-column: span 6;
+}
+
+.grid-third {
+    grid-column: span 4;
+}
+
+.grid-quarter {
+    grid-column: span 3;
+}
+
+.grid-two-thirds {
+    grid-column: span 8;
+}
+
+/* Section styling */
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.section-title {
+    color: var(--primary);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.section-divider {
+    height: 4px;
+    width: 60px;
+    background-color: var(--primary);
+    margin: 0 auto var(--spacing-lg);
+}
+
+.section-description {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+/* Responsive design */
+@media (max-width: 767.98px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-half, .grid-third, .grid-quarter, .grid-two-thirds {
+        grid-column: span 12;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-description {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .grid-third, .grid-quarter {
+        grid-column: span 6;
+    }
+}

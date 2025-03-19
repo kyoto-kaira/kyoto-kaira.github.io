@@ -1,0 +1,196 @@
+/* Footer Styles for KaiRA Website */
+:root {
+  --primary-dark: #0055A2;
+  --secondary: #f5f9ff;
+}
+
+.site-footer {
+  position: relative;
+  margin-top: var(--spacing-xl);
+  background-color: var(--primary-dark);
+  color: white;
+}
+
+.footer-wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.footer-wave svg {
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 100px;
+}
+
+.footer-content {
+  padding: var(--spacing-xl) 0 var(--spacing-lg);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--spacing-xl);
+}
+
+.footer-about {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  margin-bottom: var(--spacing-md);
+}
+
+.footer-logo img {
+  max-width: 120px;
+  height: auto;
+}
+
+.footer-description {
+  margin-bottom: var(--spacing-md);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.social-links {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: auto;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+.social-link img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) invert(1);
+}
+
+.footer-heading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  color: white;
+  position: relative;
+  padding-bottom: var(--spacing-sm);
+}
+
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--secondary);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: var(--spacing-sm);
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: white;
+  transform: translateX(5px);
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-info li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-sm);
+}
+
+.contact-icon {
+  margin-right: var(--spacing-sm);
+  font-size: 1rem;
+}
+
+.contact-text {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-bottom {
+  padding: var(--spacing-md) 0;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copyright {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .footer-about {
+    grid-column: span 2;
+    margin-bottom: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .footer-wave {
+    top: -50px;
+    height: 50px;
+  }
+  
+  .footer-wave svg {
+    height: 50px;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .footer-about {
+    grid-column: span 1;
+  }
+  
+  .footer-content {
+    padding: var(--spacing-lg) 0;
+  }
+}

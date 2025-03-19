@@ -1,0 +1,109 @@
+:root {
+  /* Color Variables */
+  --primary: #0071C3;
+  --primary-light: #2196F3;
+  --primary-dark: #0055A2;
+  --secondary: #f5f9ff;
+  --secondary-dark: #e0e9f5;
+  --text: #333333;
+  --text-light: #666666;
+  --text-dark: #111111;
+  --white: #ffffff;
+  --black: #000000;
+  --success: #28a745;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --info: #17a2b8;
+  --border-color: #e0e0e0;
+  
+  /* Spacing Variables */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+  
+  /* Border Variables */
+  --border-radius: 8px;
+  --border-radius-lg: 16px;
+  --border-radius-sm: 4px;
+  
+  /* Shadow Variables */
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --box-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --box-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  
+  /* Typography Variables */
+  --font-family: 'Noto Sans JP', sans-serif;
+  --font-size-base: 1rem;
+  --font-size-sm: 0.875rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-xxl: 2rem;
+  --font-size-xxxl: 3rem;
+  --line-height: 1.5;
+  
+  /* Animation Variables */
+  --transition-speed: 0.3s;
+  --transition-timing: ease;
+}
+
+/* Animation Classes */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.8s ease forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.8s ease forwards;
+}
+
+.bounce {
+  animation: bounce 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { 
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from { 
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}

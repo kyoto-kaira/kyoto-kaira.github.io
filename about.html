@@ -22,7 +22,12 @@
     <link rel="icon" href="./assets/images/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/variables.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/modern-grid.css">
+    <link rel="stylesheet" href="./css/hero.css">
+    <link rel="stylesheet" href="./css/profile-cards.css">
+    <link rel="stylesheet" href="./css/footer.css">
   
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,42 +38,73 @@
 
     <header id="header"></header>
 
-    <div class="attachment background-about">
-        <div class="attachment__container">
-            <h1 class="text-center">KaiRAについて</h1>
+    <div class="hero-section background-about">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text animate-on-scroll">
+                    <h1 class="hero-title slide-in-left">KaiRAについて</h1>
+                    <p class="hero-subtitle slide-in-left">AIを学びたい京都大学の学生による自主ゼミサークル</p>
+                </div>
+                <div class="hero-image">
+                    <img src="./assets/images/logo_KaiRA.png" class="img-fluid fade-in" alt="KaiRA">
+                    <div class="shape-decorator"></div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <main class="box">
-        <div class="container">
+    <main class="main-content">
+        <div class="grid-container">
                 <!-- 活動紹介 -->
-                <h2>サークルの活動について</h2>
-                <p>
-                    活動の中心は、AI・機械学習に関する本の輪読会と作業会です。<br>
-                    個人的に読みたい本があれば、サークル内で仲間を募って集まった人たちで勉強会を開くこともできます。<br>
-                    その他、論文読み会をしたり、個人やチームでモデル・ソフトを開発したり、kaggleやSIGNATEなどの機械学習コンペティションでチーム参加したりしています。<br>
-                    会費は原則無料で、書籍や計算リソース代<sub>※1</sub>の補助も行っています。
-                </p>
-
-                <h3 class="h3-left-line">輪読会</h3>
-                AI・機械学習に関する本を、担当者が発表し、質問しあうという形式で輪読を行っています。
-                <div class="list-border">
-                    <ul>
-                        <li>活動日：毎週木曜日<sub>※2</sub></li>
-                        <li>活動時間：18:30～ (平均2時間程度)</li>
-                        <li>場所：京都大学文学部教室<sub>※3</sub>＆オンライン</li>
-                    </ul>
+                <div class="section-header">
+                    <h2 class="section-title">サークルの活動について</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="activity-card animate-on-scroll">
+                    <div class="activity-content">
+                        <p>
+                            活動の中心は、AI・機械学習に関する本の輪読会と作業会です。<br>
+                            個人的に読みたい本があれば、サークル内で仲間を募って集まった人たちで勉強会を開くこともできます。<br>
+                            その他、論文読み会をしたり、個人やチームでモデル・ソフトを開発したり、kaggleやSIGNATEなどの機械学習コンペティションでチーム参加したりしています。<br>
+                            会費は原則無料で、書籍や計算リソース代<sub>※1</sub>の補助も行っています。
+                        </p>
+                    </div>
                 </div>
 
-                <h3 class="h3-left-line">作業会</h3>
-                Kaggle解法・ライブラリの内部実装読みや、輪読会で学んだ内容の実装など、AIのプログラミングに関するテーマを各回で設定して行います。
+                <div class="activity-grid">
+                    <div class="activity-card animate-on-scroll">
+                        <div class="activity-content">
+                            <h3 class="activity-name">輪読会</h3>
+                            <p class="activity-text">
+                                AI・機械学習に関する本を、担当者が発表し、質問しあうという形式で輪読を行っています。
+                            </p>
+                            <div class="list-border">
+                                <ul>
+                                    <li>活動日：毎週木曜日<sub>※2</sub></li>
+                                    <li>活動時間：18:30～ (平均2時間程度)</li>
+                                    <li>場所：京都大学文学部教室<sub>※3</sub>＆オンライン</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="list-border">
-                    <ul>
-                        <li>活動日：週一回　参加者の予定を調整して開催<sub>※2</sub></li>
-                        <li>活動時間：2時間程度</li>
-                        <li>場所：京都大学文学部教室<sub>※3</sub>＆オンライン</li>
-                    </ul>
+                    <div class="activity-card animate-on-scroll">
+                        <div class="activity-content">
+                            <h3 class="activity-name">作業会</h3>
+                            <p class="activity-text">
+                                Kaggle解法・ライブラリの内部実装読みや、輪読会で学んだ内容の実装など、AIのプログラミングに関するテーマを各回で設定して行います。
+                            </p>
+                            <div class="list-border">
+                                <ul>
+                                    <li>活動日：週一回　参加者の予定を調整して開催<sub>※2</sub></li>
+                                    <li>活動時間：2時間程度</li>
+                                    <li>場所：京都大学文学部教室<sub>※3</sub>＆オンライン</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <p>
@@ -85,85 +121,159 @@
                 </p>
                 
                 <!-- メンバープロフィール -->
-                <h2>会長</h2>
-                <div class="profile mx-auto">
-                    <img class="profile__img" src="assets/images/matsuda.jpg" style="object-fit: cover;">
-                    <!-- 画像が潰れる場合 -->
-                    <!-- <img class="profile__img" src="assets/images/matsuda.jpg" style="object-fit: cover;"> -->
-                    <div class="profile__name">松田 拓巳</div>
-                    <div class="profile__title text-center">京都大学 理学部 地球物理学教室 物理気候学研究室</div>
-                    <p>
-                        理学部で深層学習を用いた気象分野のアルゴリズム開発に関する研究を行っています。
-                        松尾研発スタートアップ「Deeepcraft」の創業メンバーで、AI開発・プロジェクトマネージャーを担当しています。
-                        また株式会社AVILENでE資格講座等の教材・問題作成やAI開発の経験もし、日々鍛錬しています。
-                        AIを"知っている"だけではなく、AIを"つくれる"学生たちをKaiRAから増やしていきたいと思っています。
-                    </p>
-                </div>
-                <h2>副会長</h2>
-                <div class="profile mx-auto">
-                    <img class="profile__img" src="assets/images/yamashita.jpg">
-                    <div class="profile__name">山下 素数</div>
-                    <div class="profile__title text-center">京都大学 理学部 数理科学系</div>
-                    <p>大学では主に数学を勉強しています。機械学習では幅広い分野に興味があります。AtCoderやKaggleもやっています。</p>
-                </div>
-                <h2>会計</h2>
-                <div class="profile mx-auto">
-                    <img class="profile__img" src="assets/images/miyamae.jpg">
-                    <div class="profile__name">宮前 明生</div>
-                    <div class="profile__title text-center">京都大学 工学部 情報学科 数理工学コース</div>
-                    <p>最近はベイズ理論に興味があります。</p>
-                </div>
-                <h2>広報</h2>
-                <div class="profile mx-auto">
-                    <img class="profile__img" src="assets/images/chiba.jpg">
-                    <div class="profile__name">千葉 一世</div>
-                    <div class="profile__title text-center">京都大学 理学部</div>
-                    <p>理学部では数学系を目指しています。AIに関してほとんどわからない状態からKaiRAに入り勉強を始めました。今は強化学習に興味があります。</p>
+                <div class="profile-section">
+                    <div class="profile-header">
+                        <h2 class="profile-title">運営メンバー</h2>
+                        <div class="section-divider"></div>
+                        <p class="profile-description">KaiRAの活動を支える運営メンバーをご紹介します</p>
+                    </div>
+                    
+                    <div class="profile-grid">
+                        <div class="profile-card animate-on-scroll">
+                            <div class="profile-image">
+                                <img src="assets/images/matsuda.jpg" alt="松田 拓巳">
+                            </div>
+                            <div class="profile-content">
+                                <h3 class="profile-name">松田 拓巳</h3>
+                                <div class="profile-role">会長</div>
+                                <p class="profile-bio">
+                                    理学部で深層学習を用いた気象分野のアルゴリズム開発に関する研究を行っています。
+                                    松尾研発スタートアップ「Deeepcraft」の創業メンバーで、AI開発・プロジェクトマネージャーを担当しています。
+                                    AIを"知っている"だけではなく、AIを"つくれる"学生たちをKaiRAから増やしていきたいと思っています。
+                                </p>
+                                <div class="profile-social">
+                                    <a href="#" class="social-link">X</a>
+                                    <a href="#" class="social-link">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-card animate-on-scroll">
+                            <div class="profile-image">
+                                <img src="assets/images/yamashita.jpg" alt="山下 素数">
+                            </div>
+                            <div class="profile-content">
+                                <h3 class="profile-name">山下 素数</h3>
+                                <div class="profile-role">副会長</div>
+                                <p class="profile-bio">
+                                    京都大学 理学部 数理科学系。大学では主に数学を勉強しています。機械学習では幅広い分野に興味があります。AtCoderやKaggleもやっています。
+                                </p>
+                                <div class="profile-social">
+                                    <a href="#" class="social-link">X</a>
+                                    <a href="#" class="social-link">GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-card animate-on-scroll">
+                            <div class="profile-image">
+                                <img src="assets/images/miyamae.jpg" alt="宮前 明生">
+                            </div>
+                            <div class="profile-content">
+                                <h3 class="profile-name">宮前 明生</h3>
+                                <div class="profile-role">会計</div>
+                                <p class="profile-bio">
+                                    京都大学 工学部 情報学科 数理工学コース。最近はベイズ理論に興味があります。
+                                </p>
+                                <div class="profile-social">
+                                    <a href="#" class="social-link">X</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-card animate-on-scroll">
+                            <div class="profile-image">
+                                <img src="assets/images/chiba.jpg" alt="千葉 一世">
+                            </div>
+                            <div class="profile-content">
+                                <h3 class="profile-name">千葉 一世</h3>
+                                <div class="profile-role">広報</div>
+                                <p class="profile-bio">
+                                    京都大学 理学部。理学部では数学系を目指しています。AIに関してほとんどわからない状態からKaiRAに入り勉強を始めました。今は強化学習に興味があります。
+                                </p>
+                                <div class="profile-social">
+                                    <a href="#" class="social-link">X</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- 歴代会長プロフィール -->
-                <h2>初代会長</h2>
-                <div class="profile-old mx-auto">
-                    <img class="profile__img" src="assets/images/kaneko.png">
-                    <div class="profile__name">金子 英樹</div>
-                    <div class="profile__title text-center">
-                        京都大学 農学部<br>
-                        （2017年度～2018年度）
+                <div class="profile-section">
+                    <div class="profile-header">
+                        <h2 class="profile-title">歴代会長</h2>
+                        <div class="section-divider"></div>
+                        <p class="profile-description">KaiRAの歴史を築いてきた歴代会長をご紹介します</p>
                     </div>
-                    <p>
-                        農学部で画像認識に関する研究をしています。
-                        以前よりコンピュータ・サイエンスや機械学習、深層学習に興味を持ち、独学で勉強してきました。
-                        Microsoft Developmentを始めとする数々のIT企業で機械学習に関するインターンやアルバイトを重ね、日々修行しております。
-                        2017年に、同じ分野に興味のある学生と勉強をすべくKaiRAを設立しました。
-                    </p>
+                    
+                    <div class="profile-grid">
+                        <div class="profile-card animate-on-scroll">
+                            <div class="profile-image">
+                                <img src="assets/images/kaneko.png" alt="金子 英樹">
+                            </div>
+                            <div class="profile-content">
+                                <h3 class="profile-name">金子 英樹</h3>
+                                <div class="profile-role">初代会長（2017年度～2018年度）</div>
+                                <p class="profile-bio">
+                                    農学部で画像認識に関する研究をしています。
+                                    以前よりコンピュータ・サイエンスや機械学習、深層学習に興味を持ち、独学で勉強してきました。
+                                    Microsoft Developmentを始めとする数々のIT企業で機械学習に関するインターンやアルバイトを重ね、日々修行しております。
+                                    2017年に、同じ分野に興味のある学生と勉強をすべくKaiRAを設立しました。
+                                </p>
+                                <div class="profile-social">
+                                    <a href="#" class="social-link">X</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- 顧問プロフィール -->
-                <h2>技術顧問</h2>
-                <div class="profile mx-auto">
-                    <a href="https://hkashima.github.io/index.html"><img class="profile__img" src="assets/images/kashima.jpg"></a>
-                    <div class="profile__name">鹿島 久嗣</div>
-                    <div class="profile__title text-center">
-                        京都大学 大学院情報学研究科 知能情報学専攻 教授<br>
+                <div class="profile-section">
+                    <div class="profile-header">
+                        <h2 class="profile-title">技術顧問</h2>
+                        <div class="section-divider"></div>
+                        <p class="profile-description">KaiRAの活動を支援してくださる技術顧問の先生方をご紹介します</p>
                     </div>
-                    <p>
-                        コンピュータを用いたデータ解析技術の研究と開発を行っている研究者です。
-                        「機械学習」と呼ばれるコンピュータ科学、人工知能の一分野を専門としています。
-                        特にグラフやネットワーク構造をもったデータにおける、予測モデリングを得意としています。
-                        近ごろはクラウドソーシングやヒューマンコンピュテーションによる人間と機械の協調問題解決に取り組んでいます。
-                    </p>
-                </div>
-                <div class="profile mx-auto">
-                    <a href="https://kojima-r.github.io/kojima/"><img class="profile__img" src="assets/images/kojima.jpg"></a>
-                    <div class="profile__name">小島 諒介</div>
-                    <div class="profile__title text-center">
-                        京都大学医学研究科 医学研究科附属医療DX教育研究センター 准教授<br>
-                        京都大学医学研究科 大学院医学研究科人間健康科学系専攻バイオメディカルデータサイエンス分野
+                    
+                    <div class="profile-grid">
+                        <div class="profile-card animate-on-scroll">
+                            <div class="profile-image">
+                                <a href="https://hkashima.github.io/index.html"><img src="assets/images/kashima.jpg" alt="鹿島 久嗣"></a>
+                            </div>
+                            <div class="profile-content">
+                                <h3 class="profile-name">鹿島 久嗣</h3>
+                                <div class="profile-role">京都大学 大学院情報学研究科 知能情報学専攻 教授</div>
+                                <p class="profile-bio">
+                                    コンピュータを用いたデータ解析技術の研究と開発を行っている研究者です。
+                                    「機械学習」と呼ばれるコンピュータ科学、人工知能の一分野を専門としています。
+                                    特にグラフやネットワーク構造をもったデータにおける、予測モデリングを得意としています。
+                                    近ごろはクラウドソーシングやヒューマンコンピュテーションによる人間と機械の協調問題解決に取り組んでいます。
+                                </p>
+                                <div class="profile-social">
+                                    <a href="https://hkashima.github.io/index.html" class="social-link">Web</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-card animate-on-scroll">
+                            <div class="profile-image">
+                                <a href="https://kojima-r.github.io/kojima/"><img src="assets/images/kojima.jpg" alt="小島 諒介"></a>
+                            </div>
+                            <div class="profile-content">
+                                <h3 class="profile-name">小島 諒介</h3>
+                                <div class="profile-role">京都大学医学研究科 医学研究科附属医療DX教育研究センター 准教授</div>
+                                <p class="profile-bio">
+                                    人工知能・機械学習技術の実問題への展開、特に時系列データ処理に関する研究に取り組んでいます。世の中の多くのデータは潜在的に時系列の情報を含んでいますが、問題に固有の背景知識・ノイズなどの要因により、未だ確立された技術が存在しないのが現状です。
+                                    実問題を通してそういった問題を解決するための技術の開発に取り組んでいます。
+                                </p>
+                                <div class="profile-social">
+                                    <a href="https://kojima-r.github.io/kojima/" class="social-link">Web</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <p>
-                        人工知能・機械学習技術の実問題への展開、特に時系列データ処理に関する研究に取り組んでいます。世の中の多くのデータは潜在的に時系列の情報を含んでいますが、問題に固有の背景知識・ノイズなどの要因により、未だ確立された技術が存在しないのが現状です。
-                        実問題を通してそういった問題を解決するための技術の開発に取り組んでいます。
-                    </p>
                 </div>
                 
                 <!-- スポンサー一覧 -->
@@ -208,9 +318,18 @@
     $('.bs-component [data-toggle="tooltip"]').tooltip();
 </script>
 <script>
-    fetch("https://kyoto-kaira.github.io/header.html")
+    fetch("./header.html")
         .then((response) => response.text())
         .then((data) => document.querySelector("#header").innerHTML = data);
+        
+    fetch("./footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+            const footerElement = document.createElement('footer');
+            footerElement.innerHTML = data;
+            document.body.appendChild(footerElement);
+        });
 </script>
+<script src="./js/animation.js"></script>
 </body>
 </html>

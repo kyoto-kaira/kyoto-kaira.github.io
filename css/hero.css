@@ -1,0 +1,128 @@
+/* Hero section styles */
+:root {
+  --primary: #0071C3;
+  --primary-dark: #0055A2;
+  --secondary: #f5f9ff;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+}
+
+.hero-section {
+  padding: var(--spacing-xl) 0;
+  position: relative;
+  background-color: var(--secondary);
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0,113,195,0.7) 0%, rgba(0,84,144,0.4) 100%);
+  z-index: -1;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  padding-right: var(--spacing-xl);
+  color: white;
+  max-width: 600px;
+}
+
+.hero-image {
+  flex: 1;
+  position: relative;
+  text-align: center;
+  min-width: 300px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-lg);
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: var(--spacing-xl);
+  color: rgba(255,255,255,0.9);
+}
+
+.hero-cta {
+  margin-top: var(--spacing-lg);
+}
+
+.shape-decorator {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  top: -50px;
+  right: -50px;
+  z-index: -1;
+}
+
+@media (max-width: 991.98px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-text {
+    padding-right: 0;
+    margin-bottom: var(--spacing-xl);
+    max-width: 100%;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+/* Remove old attachment styles */
+.attachment {
+  padding: 0;
+  position: relative;
+}
+
+.attachment__container {
+  background-color: transparent;
+  padding: 0;
+}
