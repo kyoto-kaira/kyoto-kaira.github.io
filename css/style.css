@@ -365,3 +365,112 @@ h2 {
     width: 2em;
     height: 2em;
 }
+
+/* 歴代会長の装飾 */
+.accordion .card {
+    border: none;
+    margin: 0;
+}
+
+.accordion .card-header {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.accordion .btn-link {
+    color: #0071C3;
+    text-decoration: none;
+    width: 100%;
+    text-align: left;
+    padding: 0.5em 0;
+    position: relative;
+    padding-left: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+}
+
+.accordion .btn-link::before {
+    content: "▶";
+    position: absolute;
+    left: 0.5rem;
+    color: #0071C3;
+}
+
+/* 開いているときは▼を表示 */
+.accordion .btn-link:not(.collapsed)::before {
+    content: "▼";
+}
+
+.accordion .card-body {
+    padding: 1rem 0;
+}
+
+/* 下線を1本にするためのスタイル */
+.accordion .card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #0071C3;
+}
+
+/* 最後の下線を非表示にする */
+.accordion .card:last-child::after {
+    display: none;
+}
+
+/* 上下の線の間隔を調整 */
+.accordion + h2,
+h2 + .accordion {
+    margin-top: 1rem;
+}
+
+/* 歴代会長見出し専用のスタイル */
+.president-heading .btn-link {
+    color: #0071C3;
+    text-decoration: none;
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    position: relative;
+    padding-left: 2.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    border: none;
+    line-height: 1;
+}
+
+.president-heading .btn-link::before {
+    content: "▶";
+    position: absolute;
+    left: 0.8rem;
+    color: #0071C3;
+    font-size: 1.5rem;
+}
+
+.president-heading .btn-link:not(.collapsed)::before {
+    content: "▼";
+}
+
+/* 通常のアコーディオンのスタイル（歴代会長以外に適用） */
+.accordion .btn-link:not(.president-heading .btn-link) {
+    /* 他のアコーディオンボタンのスタイル */
+    font-size: 1rem;
+    /* ... その他のスタイル ... */
+}
+
+/* 上下の要素との間隔のみ維持 */
+.accordion {
+    margin: 0;
+    line-height: 1;
+}
+
+/* 上下の要素との間隔のみ小さく設定 */
+.accordion + h2,
+h2 + .accordion {
+    margin-top: 0.5rem;
+}
