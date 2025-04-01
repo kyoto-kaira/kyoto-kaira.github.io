@@ -262,7 +262,40 @@ h2 {
     margin: 1rem auto 0;
     letter-spacing:.1rem;
 }
-
+/***　歴代会長の装飾 ***/
+.president-item {
+    margin-bottom: -1px;
+}
+.president-toggle {
+    display: block;
+    padding: 1em;
+    color: #0071C3;
+    text-decoration: none;
+    border-top: solid 1px #0071C3;
+    border-bottom: solid 1px #0071C3;
+    position: relative;
+    font-weight: bold;
+}
+.president-toggle:hover {
+    text-decoration: none;
+    color: #0071C3;
+    background: #f8f9fa;
+}
+.president-toggle::after {
+    content: "▼";
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #0071C3;
+    font-size: 0.8em;
+}
+.president-toggle[aria-expanded="true"]::after {
+    content: "▲";
+}
+.president-item .collapse {
+    border-bottom: solid 1px #0071C3;
+}
 
 /*** 入会方法の装飾 ***/
 .step-wrap1 {
