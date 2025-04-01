@@ -233,12 +233,14 @@ h2 {
     text-align:center;
     font-weight:bold;
     font-size:1.2rem;
+    line-height: 1.5;
     margin: 1rem auto 0; 
     letter-spacing:.1rem;
 }
 .profile__title {
     font-size: 0.8rem;
     color: #666;    
+    line-height: 1.5;
     margin: 0 auto 0.5rem;
 }
 
