@@ -140,8 +140,13 @@
     </script>
     <script>
         fetch("https://kyoto-kaira.github.io/header.html")
-            .then((response) => response.text())
-            .then((data) => document.querySelector("#header").innerHTML = data);
+        .then((response) => response.text())
+        .then((data) => {
+            // パスの書き換え
+            data = data.replaceAll('./', '../');
+            // header要素に挿入
+            document.querySelector("#header").innerHTML = data;
+        });
     </script>
 </body>
 
