@@ -91,37 +91,37 @@ header{
 
 /*** 背景画像 ***/
 .background-title::before {
-    background-image: url(../assets/images/background_home.jpg);
+    background-image: url(../assets/images/background/home.jpg);
 }
 .background-about::before {
-    background-image: url(../assets/images/background_about.jpg);
+    background-image: url(../assets/images/background/about.jpg);
 }
 .background-news::before {
-    background-image: url(../assets/images/background_events.jpg);
+    background-image: url(../assets/images/background/events.jpg);
 }
 .background-journal::before {
-    background-image: url(../assets/images/background_collection_of_journals.jpg);
+    background-image: url(../assets/images/background/collection_of_journals.jpg);
 }
 .background-contact::before {
-    background-image: url(../assets/images/background_contact.webp);
+    background-image: url(../assets/images/background/contact.webp);
 }
 .background-works::before {
-    background-image: url(../assets/images/background_works.jpg);
+    background-image: url(../assets/images/background/works.jpg);
 }
 .background-nf2020::before {
-    background-image: url(../assets/images/background_nf2020.jpg);
+    background-image: url(../assets/images/background/nf2020.jpg);
 }
 .background-nf2021::before {
-    background-image: url(../assets/images/background_nf2021.webp);
+    background-image: url(../assets/images/background/nf2021.webp);
 }
 .background-nf2022::before {
-    background-image: url(../assets/images/background_nf2022.webp);
+    background-image: url(../assets/images/background/nf2022.webp);
 }
 .background-nf2023::before {
-    background-image: url(../assets/images/background_nf2023.jpg);
+    background-image: url(../assets/images/background/nf2023.jpg);
 }
 .background-nf2024::before {
-    background-image: url(../assets/images/background_nf2024.jpg);
+    background-image: url(../assets/images/background/nf2024.jpg);
 }
 
 body {
