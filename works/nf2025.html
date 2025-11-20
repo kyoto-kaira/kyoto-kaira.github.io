@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DX5GXFJ6EH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-DX5GXFJ6EH');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="2024年度11月祭のKaiRA特設サイト">
+    <meta property="og:title" content="NF2024｜京都大学人工知能研究会KaiRA">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="./works/nf2024.html">
+
+    <title>京都大学人工知能研究会 KaiRA</title>
+    <link rel="icon" href="../assets/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5714e39970.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header id="header"></header>
+
+    <div class="attachment background-nf2024">
+        <div class="attachment__container">
+            <h1 class="text-center">NF2024</h1>
+        </div>
+    </div>
+    <main class="box">
+        <div class="container">
+            <h2>サークル紹介</h2>
+            <p>
+                <b>京都大学人工知能研究会 KaiRA</b>は、AIについて学んでいるサークルです。
+            </p>
+            <p>
+                <b>毎週木曜日に勉強会</b>を行っており、今期は大規模言語モデルについての本の輪読と、物体検出モデルの論文読みをしています。
+                読みたい本・論文があれば、人を集めてみんなで読むことも可能です!
+            </p>
+            <p>
+                <b>週に一度コード読み・実装会</b>も行っており、各回でテーマを決めて、<b>Kaggleの上位解法を読んだり</b>、<b>ライブラリのコードを読んだり</b>などをしています。
+            </p>
+            <p>
+                活動の中心は毎週木曜日の勉強会とコード読み・実装会ですが、<b>制作物を作ったり</b>、<b>チームを組んでkaggleなどの機械学習コンペティションに参加したり</b>もしています。
+            </p>
+            <p>
+                <b>スポンサー</b>として株式会社Ristさんと株式会社スクラムサインさんが付いてくださっており、<b>サークルメンバーに対して本の購入補助や計算機代の補助</b>もしています。
+            </p>
+            <p>
+                11月祭の展示で興味を持った方がいればぜひ一緒に勉強しましょう！
+            </p>
+
+            <h2>会誌</h2>
+            <p>
+                11月祭に向けてサークルメンバーで会誌を作成しました。少しでもAIの技術について興味を持っていただけたら幸いです。
+            </p>
+            <p>
+                今年の会誌は主に、AIデモの内容について、使われている技術や実験内容を書きました。
+            </p>
+            <p><a href="../assets/docs/NF_2024.pdf">
+                <img src="../assets/images/NF_2024_thumb.png" height="300" class="border border-dark">
+            </a></p>
+            <div class="list-border">
+                <ul>
+                    <li>第1章：カメラ入力を用いた強化学習によるライントレーサの実現</li>
+                    <li>第2章：目線で操るマウスカーソル</li>
+                    <li>第3章：KaiRAくんを動かそう</li>
+                    <li>第4章：最強じゃんけんAI</li>
+                    <li>第5章：京大シラバス検索RAGシステム-システム概要編</li>
+                    <li>第6章：京大シラバス検索RAGシステム-検索手法編</li>
+                    <li>第7章：お絵描き予測AI</li>
+                    <li>参考文献</li>
+                </ul>
+            </div>
+            <h2>デモ</h2>
+            <p>
+                11月祭会場ではAIに関するデモを行っていますが、一部のデモはオンラインでもご覧になれます。
+                ぜひ楽しんでいってください！！
+            </p>
+
+            <h3 class="h3-left-line">京大シラバス検索RAGシステム</h3>
+            <p><img src="../assets/nf2024/RAG.png" class="img-fluid"></p>
+            <p>
+                RAGとは、大規模言語モデルの生成に外部データの検索機能を組み合わせる手法です。
+                今回は、京都大学の科目情報が書かれたシラバスのデータを用いて、検索した内容に合致する授業とその授業シラバスの要約を生成します。
+            </p>
+            <p>
+                <a href="https://ku-syllabus-search-rag.streamlit.app/" class="btn btn-primary btn-md" target="_blank"><i class="fa-solid fa-arrow-right"></i> 京大シラバス検索RAGシステムで授業を探す</a><br>
+                <a href="https://github.com/kyoto-kaira/syllabus-search-RAG"><i class="fa-brands fa-github fa-lg"></i></a>
+            </p>
+
+            <h3 class="h3-left-line">お絵描き予測AI</h3>
+            <p><img src="../assets/nf2024/draw_forecast.png" class="img-fluid"></p>
+            <p>
+                Quick, Draw！というGoogleのウェブアプリで集められたデータセットを用いて、線画を生成するモデルを学習させました。
+                人間が書いた途中までの絵から、完成形を予想し続きを描いてくれるAIです。
+            </p>
+            <p>
+                <a href="https://draw-forecast-ai.streamlit.app/" class="btn btn-primary btn-md" target="_blank"><i class="fa-solid fa-arrow-right"></i> お絵描きAIを試す</a>
+                <a href="https://github.com/kyoto-kaira/draw-forecast-ai"><i class="fa-brands fa-github fa-lg"></i></a>
+            </p>
+
+            <h3 class="h3-left-line">手書きフォント生成AI</h3>
+            <p><img src="../assets/nf2024/personal_font.png" class="img-fluid"></p>
+            <p>
+                一部のひらがなの書き方から、その人の筆跡を学習し、筆跡を真似たひらがなを生成するAIです。
+            </p>
+            <p>
+                <a href="https://huggingface.co/spaces/kyoto-kaira/personalized-font-ai" class="btn btn-primary btn-md" target="_blank"><i class="fa-solid fa-arrow-right"></i> 手書きフォント生成AIを試す</a><br>
+                <a href="https://github.com/kyoto-kaira/personalized-font-ai"><i class="fa-brands fa-github fa-lg"></i></a>
+            </p>
+            <h3 class="h3-left-line">最強じゃんけんAI</h3>
+            <p><img src="../assets/nf2024/janken.png" class="img-fluid"></p>
+            <p>
+                骨格推定モデル「MediaPipe」を使用し、人間が出した手の動きからじゃんけんの手を予測するAIとなっています。
+            </p>
+            <p>
+                <a href="https://github.com/kyoto-kaira/no-lose-janken-ai"><i class="fa-brands fa-github fa-lg"></i></a>
+            </p>
+
+            <h3 class="h3-left-line">目線で操るマウスカーソル</h3>
+            <p><img src="../assets/nf2024/eye_track.png" class="img-fluid"></p>
+            <p>
+                プログラミングなどのキーボードを操作しながら、マウスカーソルも動かしたい事は多々ありますが、そのたびにマウスを操作するのは面倒です。
+                そこで、手を動かさずに目線だけでカーソルを操作できる新しいインターフェースを作成しました。
+            </p>
+            <p>
+                <a href="https://github.com/kyoto-kaira/eye-track-cursor"><i class="fa-brands fa-github fa-lg"></i></a>
+            </p>
+            
+            <h3 class="h3-left-line">KaiRAくんを動かそう</h3>
+            <p><img src="../assets/nf2024/moving_kaira.png" class="img-fluid"></p>
+            <p>
+                当サークルのマスコットキャラクターであるKaiRAくんに、自然言語を用いて指示を出し、動かしてみましょう。
+            </p>
+            <p>
+                <a href="https://github.com/kyoto-kaira/moving-kaira-kun"><i class="fa-brands fa-github fa-lg"></i></a>
+            </p>
+        </div>
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $('.bs-component [data-toggle="popover"]').popover();
+        $('.bs-component [data-toggle="tooltip"]').tooltip();
+    </script>
+    <script type="text/javascript">
+        $(window).on("scroll", function () {
+            $("attachment").css("left", -$(window).scrollLeft());
+        });
+    </script>
+    <script>
+        fetch("../header.html")
+        .then((response) => response.text())
+        .then((data) => {
+            // パスの書き換え
+            data = data.replaceAll('./', '../');
+            // header要素に挿入
+            document.querySelector("#header").innerHTML = data;
+        });
+    </script>
+</body>
+
+</html>
