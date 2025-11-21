@@ -584,6 +584,6 @@ h2 + .accordion {
 
 /* コンテンツがバナーに隠れないよう下部余白を強制確保 */
 body{
-    padding-bottom: calc(var(--banner-h, 20vh) + 16px) !important;
+    padding-bottom: calc(var(--banner-h, 20vh)) !important;
 }
 
