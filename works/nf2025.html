@@ -12,10 +12,10 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="2024年度11月祭のKaiRA特設サイト">
-    <meta property="og:title" content="NF2024｜京都大学人工知能研究会KaiRA">
+    <meta name="description" content="2025年度11月祭のKaiRA特設サイト">
+    <meta property="og:title" content="NF2025｜京都大学人工知能研究会KaiRA">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="./works/nf2024.html">
+    <meta property="og:url" content="./works/nf2025.html">
 
     <title>京都大学人工知能研究会 KaiRA</title>
     <link rel="icon" href="../assets/images/favicon.ico">
@@ -32,9 +32,9 @@
 <body>
     <header id="header"></header>
 
-    <div class="attachment background-nf2024">
+    <div class="attachment background-nf2025">
         <div class="attachment__container">
-            <h1 class="text-center">NF2024</h1>
+            <h1 class="text-center">NF2025</h1>
         </div>
     </div>
     <main class="box">
@@ -44,14 +44,17 @@
                 <b>京都大学人工知能研究会 KaiRA</b>は、AIについて学んでいるサークルです。
             </p>
             <p>
-                <b>毎週木曜日に勉強会</b>を行っており、今期は大規模言語モデルについての本の輪読と、物体検出モデルの論文読みをしています。
+                <b>毎週木曜日に勉強会</b>を行っており、今期は強化学習と数理最適化についての本の輪読をしています。
                 読みたい本・論文があれば、人を集めてみんなで読むことも可能です!
             </p>
             <p>
-                <b>週に一度コード読み・実装会</b>も行っており、各回でテーマを決めて、<b>Kaggleの上位解法を読んだり</b>、<b>ライブラリのコードを読んだり</b>などをしています。
+                <b>週に一度実装会</b>も行っており、各回でテーマを決めて、<b>輪読会の内容を実装したり</b>しています。
             </p>
             <p>
-                活動の中心は毎週木曜日の勉強会とコード読み・実装会ですが、<b>制作物を作ったり</b>、<b>チームを組んでkaggleなどの機械学習コンペティションに参加したり</b>もしています。
+                <b>月に一度論文読み会</b>も行っており、各回でテーマを決めて、<b>最新のAI論文を発表したり</b>しています。
+            </p>
+            <p>
+                活動の中心は毎週木曜日の勉強会と実装会ですが、<b>制作物を作ったり</b>、<b>チームを組んでkaggleなどの機械学習コンペティションに参加したり</b>もしています。
             </p>
             <p>
                 <b>スポンサー</b>として株式会社Ristさんと株式会社スクラムサインさんが付いてくださっており、<b>サークルメンバーに対して本の購入補助や計算機代の補助</b>もしています。
@@ -67,18 +70,18 @@
             <p>
                 今年の会誌は主に、AIデモの内容について、使われている技術や実験内容を書きました。
             </p>
-            <p><a href="../assets/docs/NF_2024.pdf">
-                <img src="../assets/images/NF_2024_thumb.png" height="300" class="border border-dark">
+            <p><a href="../assets/docs/NF_2025.pdf">
+                <img src="../assets/images/NF_2025_thumb.png" height="300" class="border border-dark">
             </a></p>
             <div class="list-border">
                 <ul>
-                    <li>第1章：カメラ入力を用いた強化学習によるライントレーサの実現</li>
-                    <li>第2章：目線で操るマウスカーソル</li>
-                    <li>第3章：KaiRAくんを動かそう</li>
-                    <li>第4章：最強じゃんけんAI</li>
-                    <li>第5章：京大シラバス検索RAGシステム-システム概要編</li>
-                    <li>第6章：京大シラバス検索RAGシステム-検索手法編</li>
-                    <li>第7章：お絵描き予測AI</li>
+                    <li>第1章：ニューラルネットワーク入門</li>
+                    <li>第2章：画像生成入門</li>
+                    <li>第3章：事前学習済みTransformerを用いた化学反応収率のベイズ最適化</li>
+                    <li>第4章：Agenticな京大シラバス検索・時間割作成システム</li>
+                    <li>第5章：音楽と自然言語の類似度測定システムの開発</li>
+                    <li>第6章：顔認識で操作するゲーム</li>
+                    <li>第7章：歩くKaiRA君：強化学習を用いた二足歩行ロボットの歩行制御</li>
                     <li>参考文献</li>
                 </ul>
             </div>
@@ -88,63 +91,42 @@
                 ぜひ楽しんでいってください！！
             </p>
 
-            <h3 class="h3-left-line">京大シラバス検索RAGシステム</h3>
-            <p><img src="../assets/nf2024/RAG.png" class="img-fluid"></p>
+            <h3 class="h3-left-line">顔認識で操作するゲーム</h3>
+            <p><img src="../assets/nf2025/face_recognition.png" class="img-fluid"></p>
             <p>
-                RAGとは、大規模言語モデルの生成に外部データの検索機能を組み合わせる手法です。
-                今回は、京都大学の科目情報が書かれたシラバスのデータを用いて、検索した内容に合致する授業とその授業シラバスの要約を生成します。
+                MediaPipe Face Meshによる顔のランドマーク検出機能と、Pyxelゲームエンジンの組み合わせにより、表情を介したゲーム操作を実現します。
             </p>
             <p>
-                <a href="https://ku-syllabus-search-rag.streamlit.app/" class="btn btn-primary btn-md" target="_blank"><i class="fa-solid fa-arrow-right"></i> 京大シラバス検索RAGシステムで授業を探す</a><br>
-                <a href="https://github.com/kyoto-kaira/syllabus-search-RAG"><i class="fa-brands fa-github fa-lg"></i></a>
+                <a href="https://github.com/kyoto-kaira/mediapipe-pyxel-demo"><i class="fa-brands fa-github fa-lg"></i></a>
             </p>
 
-            <h3 class="h3-left-line">お絵描き予測AI</h3>
-            <p><img src="../assets/nf2024/draw_forecast.png" class="img-fluid"></p>
+            <h3 class="h3-left-line">歩くKaiRA君</h3>
+            <p><img src="../assets/nf2025/kaira_kun.png" class="img-fluid"></p>
             <p>
-                Quick, Draw！というGoogleのウェブアプリで集められたデータセットを用いて、線画を生成するモデルを学習させました。
-                人間が書いた途中までの絵から、完成形を予想し続きを描いてくれるAIです。
+                当サークルのマスコットキャラクターであるKaiRAくんが、目標に向かって動くようにアシストしましょう。
             </p>
             <p>
-                <a href="https://draw-forecast-ai.streamlit.app/" class="btn btn-primary btn-md" target="_blank"><i class="fa-solid fa-arrow-right"></i> お絵描きAIを試す</a>
-                <a href="https://github.com/kyoto-kaira/draw-forecast-ai"><i class="fa-brands fa-github fa-lg"></i></a>
+                <a href="https://github.com/kyoto-kaira/rl_kaira_kun"><i class="fa-brands fa-github fa-lg"></i></a>
             </p>
 
-            <h3 class="h3-left-line">手書きフォント生成AI</h3>
-            <p><img src="../assets/nf2024/personal_font.png" class="img-fluid"></p>
+            <h3 class="h3-left-line">Music Mapping</h3>
+            <p><img src="../assets/nf2025/music_mapping.png" class="img-fluid"></p>
             <p>
-                一部のひらがなの書き方から、その人の筆跡を学習し、筆跡を真似たひらがなを生成するAIです。
+                音楽と自然言語の類似度を測定し、音楽を可視化するシステムです。
             </p>
             <p>
-                <a href="https://huggingface.co/spaces/kyoto-kaira/personalized-font-ai" class="btn btn-primary btn-md" target="_blank"><i class="fa-solid fa-arrow-right"></i> 手書きフォント生成AIを試す</a><br>
-                <a href="https://github.com/kyoto-kaira/personalized-font-ai"><i class="fa-brands fa-github fa-lg"></i></a>
+                <a href="https://music-mapping.vercel.app/" class="btn btn-primary btn-md" target="_blank"><i class="fa-solid fa-arrow-right"></i> Music Mappingを試す</a><br>
+                <a href="https://github.com/kyoto-kaira/music-mapping-web"><i class="fa-brands fa-github fa-lg"></i></a>
+                <a href="https://github.com/kyoto-kaira/music-mapping-api"><i class="fa-brands fa-github fa-lg"></i></a>
             </p>
-            <h3 class="h3-left-line">最強じゃんけんAI</h3>
-            <p><img src="../assets/nf2024/janken.png" class="img-fluid"></p>
+            <h3 class="h3-left-line">Agenticな京大シラバス検索・時間割作成システム</h3>
+            <p><img src="../assets/nf2025/agentic_syllabus.png" class="img-fluid"></p>
             <p>
-                骨格推定モデル「MediaPipe」を使用し、人間が出した手の動きからじゃんけんの手を予測するAIとなっています。
-            </p>
-            <p>
-                <a href="https://github.com/kyoto-kaira/no-lose-janken-ai"><i class="fa-brands fa-github fa-lg"></i></a>
-            </p>
-
-            <h3 class="h3-left-line">目線で操るマウスカーソル</h3>
-            <p><img src="../assets/nf2024/eye_track.png" class="img-fluid"></p>
-            <p>
-                プログラミングなどのキーボードを操作しながら、マウスカーソルも動かしたい事は多々ありますが、そのたびにマウスを操作するのは面倒です。
-                そこで、手を動かさずに目線だけでカーソルを操作できる新しいインターフェースを作成しました。
+                ユーザーから提示される履修希望や興味・関心といった曖昧な要望を解釈し、
+                時間割の空きコマや履修要件といった複雑な制約条件を考慮しながら、学期全体の時間割を自律的に構築・提案するシステムです。
             </p>
             <p>
-                <a href="https://github.com/kyoto-kaira/eye-track-cursor"><i class="fa-brands fa-github fa-lg"></i></a>
-            </p>
-            
-            <h3 class="h3-left-line">KaiRAくんを動かそう</h3>
-            <p><img src="../assets/nf2024/moving_kaira.png" class="img-fluid"></p>
-            <p>
-                当サークルのマスコットキャラクターであるKaiRAくんに、自然言語を用いて指示を出し、動かしてみましょう。
-            </p>
-            <p>
-                <a href="https://github.com/kyoto-kaira/moving-kaira-kun"><i class="fa-brands fa-github fa-lg"></i></a>
+                <a href="https://github.com/kyoto-kaira/kulasis-ai-schedule"><i class="fa-brands fa-github fa-lg"></i></a>
             </p>
         </div>
     </main>
