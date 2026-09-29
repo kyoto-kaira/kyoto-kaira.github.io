@@ -2,95 +2,125 @@
 <html lang="ja">
 
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DX5GXFJ6EH"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-DX5GXFJ6EH');
-    </script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>作品｜京都大学人工知能研究会 KaiRA</title>
     <meta name="description" content="KaiRA内で取り組んだプロジェクトや、KaiRAメンバーが個人で取り組んだプロジェクトの紹介ページです。">
-    <meta name="google-site-verification" content="mRG3nr5LTpB5NGw5UONR-OBg8Y6awPCxtLr5LKN5UpQ" />
     <meta property="og:title" content="作品｜京都大学人工知能研究会KaiRA">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="./works.html">
-
-    <title>京都大学人工知能研究会 KaiRA</title>
+    <meta property="og:url" content="https://kyoto-kaira.github.io/works.html">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0f1418" media="(prefers-color-scheme: dark)">
     <link rel="icon" href="./assets/images/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/style.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/site.js" defer></script>
 </head>
 
-<body>
+<body data-page="works">
+    <header id="site-header" class="site-header"></header>
 
-    <header id="header"></header>
+    <main id="main">
+        <section class="page-hero">
+            <img class="page-hero__media" src="./assets/images/background/works.jpg" alt="">
+            <div class="container">
+                <p class="page-hero__eyebrow">Works</p>
+                <h1 class="page-hero__title">作品</h1>
+            </div>
+        </section>
 
-    <div class="attachment background-works">
-        <div class="attachment__container">
-            <h1 class="text-center">作品</h1>
-        </div>
-    </div>
+        <!-- このページの説明 -->
+        <section class="section">
+            <div class="container">
+                <div class="prose">
+                    <p>
+                        KaiRA内で取り組んだプロジェクトや、KaiRAメンバーが個人で取り組んだプロジェクトの紹介ページです。
+                        主にNF(京大11月祭)に向けた発表物を掲載しています。
+                        簡単に実行できて楽しめるデモも用意しているので、ぜひ遊んでみてください。
+                    </p>
+                    <p>
+                        これらをきっかけにしてサークル興味を持ってくださったら、<a href="./contact.html">入会案内</a>等でコンタクトを取っていただけるとうれしいです!
+                    </p>
+                </div>
+            </div>
+        </section>
 
-    <main class="box">
-        <div class="container">
-            <!-- このページの説明 -->
-            <p>
-                KaiRA内で取り組んだプロジェクトや、KaiRAメンバーが個人で取り組んだプロジェクトの紹介ページです。<br>
-                主にNF(京大11月祭)に向けた発表物を掲載しています。<br>
-                簡単に実行できて楽しめるデモも用意しているので、ぜひ遊んでみてください。<br>
-                これらをきっかけにしてサークル興味を持ってくださったら、<a href="./contact.html">入会案内</a>等でコンタクトを取っていただけるとうれしいです!<br>
-            </p>
+        <!-- NF -->
+        <section class="section section--subtle" aria-labelledby="nf-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">November Festival</p>
+                    <h2 class="section-title" id="nf-title">NF(京都大学11月祭)</h2>
+                    <p class="section-lead">
+                        KaiRAでは毎年ポスター展示や作品展示などの出展を行っています。
+                        出展に関するお知らせは<a href="https://twitter.com/kyoto_kaira">X(旧Twitter)</a>で行いますので、お越しになる際はご確認ください！
+                        2020年度以降はオンライン展示も行っており、以下からNF特設サイトへアクセスできます。
+                    </p>
+                </div>
 
-            <!-- NF -->
-            <h2>NF(京都大学11月祭)</h2>
-            <p>
-                KaiRAでは毎年ポスター展示や作品展示などの出展を行っています。<br>
-                出展に関するお知らせは<a href="https://twitter.com/kyoto_kaira">X(旧Twitter)</a>で行いますので、お越しになる際はご確認ください！<br>
-                2020年度以降はオンライン展示も行っており、以下からNF特設サイトへアクセスできます。<br>
-            </p>
-            <!-- NF特設サイトボタン -->
-            <h3 class="h3-left-line">2025年度</h3>
-            <p><a href="./works/nf2025.html" class="btn btn-primary btn-lg">2025年度NF特設サイト</a></p>
-            <!--<p><button class="btn btn-outline-secondary btn-lg">Coming Soon...</button></p>-->
-            <h3 class="h3-left-line">過去のNF特設サイト</h3>
-            <p>
-                <a href="./works/nf2024.html" class="btn btn-outline-secondary">2024年度NF特設サイト</a>
-                <a href="./works/nf2023.html" class="btn btn-outline-secondary">2023年度NF特設サイト</a>
-                <a href="./works/nf2022.html" class="btn btn-outline-secondary">2022年度NF特設サイト</a>
-                <a href="./works/nf2021.html" class="btn btn-outline-secondary">2021年度NF特設サイト</a>
-                <a href="./works/nf2020.html" class="btn btn-outline-secondary">2020年度NF特設サイト</a>
-            </p>
-            <p><a href="./works/collection_of_journals.html">過去の会誌一覧</a></p>
-        </div>
+                <!-- 最新年度（毎年ここを差し替え） -->
+                <article class="card card--interactive card--feature">
+                    <div class="card__media">
+                        <img src="./assets/images/background/nf2025.png" width="842" height="595" alt="" loading="lazy">
+                    </div>
+                    <div class="card__body">
+                        <p class="card__eyebrow">2025年度</p>
+                        <h3 class="card__title"><a class="card__link" href="./works/nf2025.html">2025年度NF特設サイト</a></h3>
+                        <p class="card__text">会誌のPDFと、オンラインで試せるAIデモを公開しています。</p>
+                        <span class="card__more">特設サイトを見る <svg class="icon icon--sm" aria-hidden="true"><use href="./assets/icons/sprite.svg#arrow-right"></use></svg></span>
+                    </div>
+                </article>
+
+                <div class="subsection mt-7">
+                    <h3 class="subsection-title">過去のNF特設サイト</h3>
+                    <div class="grid grid--3">
+                        <article class="card card--interactive">
+                            <div class="card__media"><img src="./assets/images/background/nf2024.jpg" alt="" loading="lazy"></div>
+                            <div class="card__body">
+                                <h4 class="card__title"><a class="card__link" href="./works/nf2024.html">2024年度NF特設サイト</a></h4>
+                            </div>
+                        </article>
+                        <article class="card card--interactive">
+                            <div class="card__media"><img src="./assets/images/background/nf2023.jpg" alt="" loading="lazy"></div>
+                            <div class="card__body">
+                                <h4 class="card__title"><a class="card__link" href="./works/nf2023.html">2023年度NF特設サイト</a></h4>
+                            </div>
+                        </article>
+                        <article class="card card--interactive">
+                            <div class="card__media"><img src="./assets/images/background/nf2022.webp" alt="" loading="lazy"></div>
+                            <div class="card__body">
+                                <h4 class="card__title"><a class="card__link" href="./works/nf2022.html">2022年度NF特設サイト</a></h4>
+                            </div>
+                        </article>
+                        <article class="card card--interactive">
+                            <div class="card__media"><img src="./assets/images/background/nf2021.webp" alt="" loading="lazy"></div>
+                            <div class="card__body">
+                                <h4 class="card__title"><a class="card__link" href="./works/nf2021.html">2021年度NF特設サイト</a></h4>
+                            </div>
+                        </article>
+                        <article class="card card--interactive">
+                            <div class="card__media"><img src="./assets/images/background/nf2020.jpg" alt="" loading="lazy"></div>
+                            <div class="card__body">
+                                <h4 class="card__title"><a class="card__link" href="./works/nf2020.html">2020年度NF特設サイト</a></h4>
+                            </div>
+                        </article>
+                        <article class="card card--interactive">
+                            <div class="card__media"><img src="./assets/images/background/collection_of_journals.jpg" alt="" loading="lazy"></div>
+                            <div class="card__body">
+                                <p class="card__eyebrow">Journals</p>
+                                <h4 class="card__title"><a class="card__link" href="./works/collection_of_journals.html">過去の会誌一覧</a></h4>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="./js/bootstrap.min.js"></script>
-
-    <script type="text/javascript">
-        $('.bs-component [data-toggle="popover"]').popover();
-        $('.bs-component [data-toggle="tooltip"]').tooltip();
-    </script>
-    <script>
-        fetch("./header.html")
-            .then((response) => response.text())
-            .then((data) => document.querySelector("#header").innerHTML = data);
-    </script>
+    <footer id="site-footer" class="site-footer"></footer>
 </body>
 
 </html>

@@ -1,0 +1,26 @@
+/* Prose — 本文の段落が続く領域。段落間の余白と読みやすい行長を担当 */
+.prose {
+  max-width: var(--prose-max, 44rem);
+  font-size: var(--text-md);
+}
+
+.prose > * + * {
+  margin-top: 1.1em;
+}
+
+.prose strong,
+.prose b {
+  background: linear-gradient(transparent 62%, var(--color-brand-tint) 62%);
+}
+
+.prose--wide {
+  --prose-max: none;
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-small {
+  font-size: var(--text-sm);
+}

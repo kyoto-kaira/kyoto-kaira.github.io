@@ -2,189 +2,168 @@
 <html lang="ja">
 
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DX5GXFJ6EH"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-DX5GXFJ6EH');
-    </script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>京都大学人工知能研究会 KaiRA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NF2020｜京都大学人工知能研究会 KaiRA</title>
+    <meta name="description" content="2020年度11月祭のKaiRA特設サイト">
+    <meta property="og:title" content="NF2020｜京都大学人工知能研究会KaiRA">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kyoto-kaira.github.io/works/nf2020.html">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0f1418" media="(prefers-color-scheme: dark)">
     <link rel="icon" href="../assets/images/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/style.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/site.js" defer></script>
 </head>
 
-<body>
+<body data-page="works">
+    <header id="site-header" class="site-header"></header>
 
-    <header id="header"></header>
-
-    <div class="attachment background-nf2020">
-        <div class="attachment__container">
-            <h1 class="text-center">NF2020</h1>
-        </div>
-    </div>
-    <main class="box">
-        <div class="container">
-            <h2>サークル活動</h2>
-            <p>
-                学期中の毎週の活動として輪読会を行っています。
-                輪読会では本を読んだり、中には各自が個人的に気になっていることについて発表したりと盛況しています。
-                今までの活動は<a href="../news.html">こちら</a>から。
-            </p>
-
-            <h2>Deep Learningについて</h2>
-            <p>
-                Deep Learningの基礎知識となる以下の事柄について<a href="../assets/docs/NF_2020.pdf"
-                    target="_blank">会誌</a>にまとめました。簡単に説明しているのでぜひ気軽にご覧になってください!
-            <div class="list-border">
-                <ul>
-                    <li>人工知能・機械学習・深層学習</li>
-                    <li>ニューラルネットワークと層構造</li>
-                    <li>学習</li>
-                    <li>損失関数</li>
-                    <li>勾配法</li>
-                    <li>誤差逆伝播法</li>
-                </ul>
+    <main id="main">
+        <section class="page-hero">
+            <img class="page-hero__media" src="../assets/images/background/nf2020.jpg" alt="">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="パンくずリスト">
+                    <ol>
+                        <li><a href="../works.html">作品</a></li>
+                        <li><span aria-current="page">NF2020</span></li>
+                    </ol>
+                </nav>
+                <p class="page-hero__eyebrow">京都大学11月祭</p>
+                <h1 class="page-hero__title">NF2020</h1>
             </div>
+        </section>
 
-            <h2>実例</h2>
-            <h3 class="h3-left-line">顔認識</h3>
-            <div class="row">
-                <div class="col-lg-6">
-                    <p><b>あなたは誰に似ているのか!?</b><br>
-                        画像を機械に読み取らせ、機械が学習した70人のうち最も似ている順に
-                        その名前を教えてくれます。※現在は公開を停止しています<br>
-                        デモ: <a
-                            href="https://colab.research.google.com/github/KYM384/FaceRecognition_kaira/blob/main/demo.ipynb"
-                            target="_blank">Google Colab</a><br>
-                        解説: <a href="https://github.com/KYM384/FaceRecognition_kaira"
-                            target="_blank">KYM384/FaceRecgnition_kaira</a>
-                    </p>
+        <section class="section" aria-labelledby="activity-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Activities</p>
+                    <h2 class="section-title" id="activity-title">サークル活動</h2>
                 </div>
-                <div class="col-lg-2">
-                    <p><img src="../assets/nf2020/Lenna.png" height="200"></p>
-                </div>
-                <div class="col-lg-4">
-                    <p><img src="../assets/nf2020/facerecog-results.png" height="200"></p>
+                <div class="prose">
+                    <p>学期中の毎週の活動として輪読会を行っています。
+                        輪読会では本を読んだり、中には各自が個人的に気になっていることについて発表したりと盛況しています。
+                        今までの活動は<a href="../news.html">こちら</a>から。</p>
                 </div>
             </div>
-
-            <h3 class="h3-left-line">人流推定</h3>
-            <div class="row">
-                <div class="col-lg-6">
-                    <p>
-                        <b>人の流れを把握したい</b><br>
-                        新型コロナウイルス感染症により以前と比べ混雑する状況は減りましたが、
-                        都市設計やイベントの運営者にとって人の流れを把握することは今だ大事に違いありません。
-                        カメラ一つでそれを把握出来たら、コストも少なくてすみます。
-                        今回はUSBカメラを用いてデモを行えます。<br>
-                        デモ: <a
-                            href="https://colab.research.google.com/github/hanebarla/62nf-kaira-peopleflow/blob/main/demo.ipynb"
-                            target="_blank">Google Colab</a><br>
-                        解説: <a href="https://github.com/hanebarla/62nf-kaira-peopleflow"
-                            target="_blank">hanebarla/62nf-kaira-peopleflow</a><br>
-                        元論文: <a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123600715.pdf">Estimating
-                            People Flows to
-                            Better Count Them in Crowded Scenes</a>
-                    </p>
+        </section>
+        <section class="section section--subtle" aria-labelledby="dl-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Journal</p>
+                    <h2 class="section-title" id="dl-title">Deep Learningについて</h2>
                 </div>
-                <div class="col-lg-6">
-                    <div class="row">
-                        <div class="col-lg-3"></div>
-                        <div class="col-lg-6">
-                            <p><img class="img-fluid" src="../assets/nf2020/demo-results-input.jpg"></p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <p><img class="img-fluid" src="../assets/nf2020/demo-results-heatmap.png"></p>
-                        </div>
-                        <div class="col-lg-6">
-                            <p><img class="img-fluid" src="../assets/nf2020/demo-results-quiver.png"></p>
+                <div class="journal">
+                    <a class="journal__cover" href="../assets/docs/NF_2020.pdf">
+                        <img src="../assets/images/NF_2020_thumb.png" alt="2020年度会誌の表紙" loading="lazy">
+                    </a>
+                    <div class="journal__body">
+                        <p>Deep Learningの基礎知識となる以下の事柄について<a href="../assets/docs/NF_2020.pdf" target="_blank" rel="noopener">会誌</a>にまとめました。簡単に説明しているのでぜひ気軽にご覧になってください!</p>
+                        <p class="journal__subtitle">目次</p>
+                        <ul class="contents-list">
+                            <li>人工知能・機械学習・深層学習</li>
+                            <li>ニューラルネットワークと層構造</li>
+                            <li>学習</li>
+                            <li>損失関数</li>
+                            <li>勾配法</li>
+                            <li>誤差逆伝播法</li>
+                        </ul>
+                        <div class="cluster">
+                            <a class="button button--primary" href="../assets/docs/NF_2020.pdf">
+                                <svg class="icon" aria-hidden="true"><use href="../assets/icons/sprite.svg#file"></use></svg>
+                                会誌を読む（PDF）
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-            <h3 class="h3-left-line">音声分離</h3>
-            <div class="row">
-                <div class="col-lg-6">
-                    <p>
-                        <b>Deep Attractor Network</b><br>
-                        <a href="https://arxiv.org/pdf/1611.08930.pdf">DEEP ATTRACTOR NETWORK FOR SINGLE-MICROPHONE
-                            SPEAKER SEPARATION</a>という論文で提案されている音声分離のモデルです。任意の種類の音声が混ざった入力音声を分離することができます。
-                    </p>
-                    <p>
-                        KaiRAメンバーの一人がこのモデルの実装に取り組み、
-                        <a href="https://github.com/karolpiczak/ESC-50">ESC-50</a>
-                        という環境音データセットを用いて2種類の環境音を分離させるモデルの構築、学習を行いました。
-                        <a
-                            href="https://colab.research.google.com/drive/1HCnVnLwGp8bMlnDwZybW1sY7L_gNMAC9#scrollTo=bc2Q3Q7J0JX6">Google
-                            Colaboratory</a>
-                        上で簡単に実行できます。また、実装したモデルについてまとめた
-                        <a href="https://qiita.com/KMASAHIRO/items/3b87fd67949f3445b23b">Qiita記事</a>
-                        や実装コードを載せた
-                        <a href="https://github.com/KMASAHIRO/DANet">Githubリポジトリ</a>
-                        もあります。
-                    </p>
+        </section>
+        <section class="section" aria-labelledby="example-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Examples</p>
+                    <h2 class="section-title" id="example-title">実例</h2>
                 </div>
-                <div class="col-lg-6">
-                    <p><img src="../assets/nf2020/DANet.png" height="400"></p>
+                <div class="subsection">
+                    <h3 class="subsection-title">顔認識</h3>
+                    <div class="split split--start">
+                        <div class="prose">
+                            <p><b>あなたは誰に似ているのか!?</b><br>
+                                画像を機械に読み取らせ、機械が学習した70人のうち最も似ている順にその名前を教えてくれます。※現在は公開を停止しています</p>
+                            <p>デモ: <a href="https://colab.research.google.com/github/KYM384/FaceRecognition_kaira/blob/main/demo.ipynb" target="_blank" rel="noopener">Google Colab</a><br>
+                                解説: <a href="https://github.com/KYM384/FaceRecognition_kaira" target="_blank" rel="noopener">KYM384/FaceRecgnition_kaira</a></p>
+                        </div>
+                        <div class="media-row">
+                            <img src="../assets/nf2020/Lenna.png" alt="入力画像の例" loading="lazy">
+                            <img src="../assets/nf2020/facerecog-results.png" alt="顔認識の結果" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">人流推定</h3>
+                    <div class="split split--start">
+                        <div class="prose">
+                            <p><b>人の流れを把握したい</b><br>
+                                新型コロナウイルス感染症により以前と比べ混雑する状況は減りましたが、都市設計やイベントの運営者にとって人の流れを把握することは今だ大事に違いありません。
+                                カメラ一つでそれを把握出来たら、コストも少なくてすみます。
+                                今回はUSBカメラを用いてデモを行えます。</p>
+                            <p>デモ: <a href="https://colab.research.google.com/github/hanebarla/62nf-kaira-peopleflow/blob/main/demo.ipynb" target="_blank" rel="noopener">Google Colab</a><br>
+                                解説: <a href="https://github.com/hanebarla/62nf-kaira-peopleflow" target="_blank" rel="noopener">hanebarla/62nf-kaira-peopleflow</a><br>
+                                元論文: <a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123600715.pdf">Estimating People Flows to Better Count Them in Crowded Scenes</a></p>
+                        </div>
+                        <div class="media-row">
+                            <img src="../assets/nf2020/demo-results-input.jpg" alt="入力映像" loading="lazy">
+                            <img src="../assets/nf2020/demo-results-heatmap.png" alt="推定結果のヒートマップ" loading="lazy">
+                            <img src="../assets/nf2020/demo-results-quiver.png" alt="推定された人の流れ" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">音声分離</h3>
+                    <div class="split split--start">
+                        <div class="prose">
+                            <p><b>Deep Attractor Network</b><br>
+                                <a href="https://arxiv.org/pdf/1611.08930.pdf">DEEP ATTRACTOR NETWORK FOR SINGLE-MICROPHONE SPEAKER SEPARATION</a>という論文で提案されている音声分離のモデルです。任意の種類の音声が混ざった入力音声を分離することができます。</p>
+                            <p>KaiRAメンバーの一人がこのモデルの実装に取り組み、
+                                <a href="https://github.com/karolpiczak/ESC-50">ESC-50</a>
+                                という環境音データセットを用いて2種類の環境音を分離させるモデルの構築、学習を行いました。
+                                <a href="https://colab.research.google.com/drive/1HCnVnLwGp8bMlnDwZybW1sY7L_gNMAC9#scrollTo=bc2Q3Q7J0JX6">Google Colaboratory</a>
+                                上で簡単に実行できます。また、実装したモデルについてまとめた
+                                <a href="https://qiita.com/KMASAHIRO/items/3b87fd67949f3445b23b">Qiita記事</a>
+                                や実装コードを載せた
+                                <a href="https://github.com/KMASAHIRO/DANet">Githubリポジトリ</a>
+                                もあります。</p>
+                        </div>
+                        <div class="media-row">
+                            <img src="../assets/nf2020/DANet.png" alt="Deep Attractor Networkの構造" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <div class="panel stack mt-6">
+                    <p>例として、風の音とカエルの鳴き声の分離について示します。</p>
+                    <p class="text-small text-secondary">テストデータでの推論結果(※音量が少し大きいので注意してください。)</p>
+                    <ul class="audio-list">
+                        <li><span class="audio-list__label">混合前のカエルの鳴き声</span><audio controls preload="none" src="../assets/nf2020/frog_before.wav"></audio></li>
+                        <li><span class="audio-list__label">混合前の風の音</span><audio controls preload="none" src="../assets/nf2020/wind_before.wav"></audio></li>
+                        <li><span class="audio-list__label">混合音声</span><audio controls preload="none" src="../assets/nf2020/input_data.wav"></audio></li>
+                        <li><span class="audio-list__label">分離後のカエルの鳴き声</span><audio controls preload="none" src="../assets/nf2020/frog_after.wav"></audio></li>
+                        <li><span class="audio-list__label">分離後の風の音</span><audio controls preload="none" src="../assets/nf2020/wind_after.wav"></audio></li>
+                    </ul>
                 </div>
             </div>
-
-
-            <div class="list-border">
-                <p>例として、風の音とカエルの鳴き声の分離について示します。</p>
-                <ul>
-                    <p>テストデータでの推論結果(※音量が少し大きいので注意してください。)</p>
-                    <figcaption>混合前のカエルの鳴き声</figcaption><audio controls=""
-                        src="../assets/nf2020/frog_before.wav"></audio>
-                    <figcaption>混合前の風の音</figcaption><audio controls="" src="../assets/nf2020/wind_before.wav"></audio>
-                    <figcaption>混合音声</figcaption><audio controls="" src="../assets/nf2020/input_data.wav"></audio>
-                    <figcaption>分離後のカエルの鳴き声</figcaption><audio controls=""
-                        src="../assets/nf2020/frog_after.wav"></audio>
-                    <figcaption>分離後の風の音</figcaption><audio controls="" src="../assets/nf2020/wind_after.wav"></audio>
-                </ul>
+        </section>
+        <section class="section section--subtle">
+            <div class="container">
+                <nav data-year-pager="2020"></nav>
             </div>
-        </div>
+        </section>
     </main>
 
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="../js/bootstrap.min.js"></script>
-
-    <script type="text/javascript">
-        $('.bs-component [data-toggle="popover"]').popover();
-        $('.bs-component [data-toggle="tooltip"]').tooltip();
-    </script>
-    <script>
-        fetch("../header.html")
-        .then((response) => response.text())
-        .then((data) => {
-            // パスの書き換え
-            data = data.replaceAll('./', '../');
-            // header要素に挿入
-            document.querySelector("#header").innerHTML = data;
-        });
-    </script>
+    <footer id="site-footer" class="site-footer"></footer>
 </body>
 
 </html>
