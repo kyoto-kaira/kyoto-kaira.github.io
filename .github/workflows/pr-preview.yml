@@ -1,0 +1,35 @@
+# PR ごとに gh-pages ブランチの pr-preview/pr-<番号>/ にプレビューをデプロイし、
+# PR がクローズされたら削除する。
+# プレビュー URL: https://kyoto-kaira.github.io/pr-preview/pr-<番号>/
+name: Deploy PR preview
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: gh-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy-preview:
+    runs-on: ubuntu-latest
+    # フォークからの PR は書き込み権限がないためスキップ
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy preview
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: .
+          preview-branch: gh-pages
+          umbrella-dir: pr-preview
