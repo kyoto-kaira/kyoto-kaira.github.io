@@ -1,0 +1,70 @@
+/* CTA band — ブランド色の面で行動を促す帯（入会案内への導線など） */
+.cta-band {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(2.5rem, 1.5rem + 4vw, 4.5rem) clamp(1.5rem, 1rem + 3vw, 4rem);
+  border-radius: var(--radius-xl);
+  background: var(--gradient-brand);
+  color: var(--color-on-brand);
+}
+
+.cta-band::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: linear-gradient(100deg, transparent 30%, #000 100%);
+  -webkit-mask-image: linear-gradient(100deg, transparent 30%, #000 100%);
+}
+
+.cta-band__inner {
+  display: grid;
+  gap: var(--space-5);
+  align-items: center;
+}
+
+@media (min-width: 48rem) {
+  .cta-band__inner {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--space-7);
+  }
+}
+
+.cta-band__eyebrow {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.cta-band__title {
+  margin-top: var(--space-2);
+  font-size: var(--text-3xl);
+}
+
+.cta-band__text {
+  margin-top: var(--space-3);
+  font-size: var(--text-md);
+  opacity: 0.92;
+}
+
+.cta-band a:not(.button) {
+  color: inherit;
+}
+
+/* Year pager — NF特設ページ下部の年度切り替え（js/site.js が描画） */
+.year-pager {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.year-pager__title {
+  font-size: var(--text-md);
+}

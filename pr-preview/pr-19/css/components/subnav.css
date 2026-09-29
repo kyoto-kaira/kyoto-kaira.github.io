@@ -1,0 +1,85 @@
+/* Subnav — ページ内目次（長いページの上部に置くチップ型のジャンプリンク）
+   .subnav--sticky でヘッダー直下に追従します。 */
+.subnav {
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.subnav--sticky {
+  position: sticky;
+  top: var(--header-height);
+  z-index: var(--z-sticky);
+  background: var(--color-header-bg);
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
+  backdrop-filter: saturate(180%) blur(16px);
+}
+
+.subnav__list {
+  display: flex;
+  gap: var(--space-2);
+  margin: 0;
+  padding: var(--space-2) var(--gutter);
+  overflow-x: auto;
+  list-style: none;
+  scrollbar-width: none;
+}
+
+.subnav__list::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 48rem) {
+  .subnav__list {
+    max-width: calc(var(--container-max) + var(--gutter) * 2);
+    margin-inline: auto;
+  }
+}
+
+.subnav__list.subnav__list--wrap {
+  flex-wrap: wrap;
+  max-width: none;
+  margin-inline: 0;
+  padding-inline: 0;
+  overflow: visible;
+}
+
+.subnav__list li {
+  flex: none;
+  margin: 0;
+}
+
+.subnav__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap-target);
+  padding-inline: var(--space-4);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-muted);
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  font-variant-numeric: tabular-nums;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color var(--duration-fast) var(--ease-out);
+}
+
+.subnav__link:hover {
+  background: var(--color-border);
+  color: var(--color-text);
+}
+
+.subnav__link:active {
+  transform: scale(0.97);
+}
+
+.subnav__link[aria-current="true"],
+.subnav__link[aria-current="page"] {
+  background: var(--color-accent-tint);
+  color: var(--color-accent-text);
+}
+
+/* 長いページで sticky subnav 分だけアンカー位置を下げる */
+.has-sticky-subnav {
+  scroll-padding-top: calc(var(--header-height) + 76px);
+}

@@ -1,0 +1,213 @@
+/* =========================================================================
+   Design tokens
+   -------------------------------------------------------------------------
+   サイト全体の色・文字・余白・角丸・影・動きの「唯一の定義元」です。
+   コンポーネントでは生の値（#0171C0 や 24px など）を直接書かず、
+   必ずここで定義した変数（var(--…)）を参照してください。
+
+   色の役割（1色に2つの意味を持たせない）
+     --color-accent-*  : 操作できるもの（リンク・ボタン・フォーカス・現在地）
+     --color-brand-*   : ブランドの「面」（ヒーロー・CTA帯・アイコンタイル）
+     それ以外          : ニュートラル（見出し・本文・区切り線など）
+   ========================================================================= */
+
+:root {
+  color-scheme: light dark;
+
+  /* ---- Primitive palette ------------------------------------------------ */
+  --blue-50: #eef6fc;
+  --blue-100: #d8eaf8;
+  --blue-200: #acd2f0;
+  --blue-300: #72b2e5;
+  --blue-400: #3b93d7;
+  --blue-500: #0171c0; /* KaiRA Blue — ブランドカラー */
+  --blue-600: #015fa2;
+  --blue-700: #014c82;
+  --blue-800: #033a63;
+  --blue-900: #062844;
+
+  --gray-0: #ffffff;
+  --gray-50: #f6f8fa;
+  --gray-100: #eef1f4;
+  --gray-200: #e1e6eb;
+  --gray-300: #c8d0d8;
+  --gray-400: #9aa5b1;
+  --gray-500: #6a7683;
+  --gray-600: #4d5965;
+  --gray-700: #36404a;
+  --gray-800: #20272f;
+  --gray-850: #171d23;
+  --gray-900: #0f1418;
+
+  /* ---- Semantic: surfaces & text --------------------------------------- */
+  --color-bg: var(--gray-0);
+  --color-bg-subtle: var(--gray-50);
+  --color-surface: var(--gray-0);
+  --color-surface-muted: var(--gray-100);
+  --color-border: var(--gray-200);
+  --color-border-strong: var(--gray-300);
+  --color-text: var(--gray-900);
+  --color-text-secondary: var(--gray-600);
+  --color-text-tertiary: var(--gray-500);
+  --color-header-bg: rgb(255 255 255 / 0.82);
+
+  /* ---- Semantic: interactive (accent) ---------------------------------- */
+  --color-accent-text: var(--blue-500);        /* リンク文字 */
+  --color-accent-text-hover: var(--blue-700);
+  --color-accent-fill: var(--blue-500);        /* 塗りボタン */
+  --color-accent-fill-hover: var(--blue-600);
+  --color-accent-fill-pressed: var(--blue-700);
+  --color-accent-tint: var(--blue-50);         /* 淡色ボタン背景 */
+  --color-accent-tint-hover: var(--blue-100);
+  --color-on-accent: var(--gray-0);
+  --color-focus-ring: var(--blue-400);
+
+  /* ---- Semantic: brand surfaces ---------------------------------------- */
+  --color-brand: var(--blue-500);
+  --color-brand-deep: var(--blue-800);
+  --color-brand-tint: var(--blue-50);
+  --color-brand-ink: var(--blue-700);          /* ブランド面上のアイコン */
+  --color-on-brand: var(--gray-0);
+  --gradient-brand: linear-gradient(135deg, var(--blue-500) 0%, var(--blue-700) 55%, var(--blue-900) 100%);
+  --gradient-brand-overlay: linear-gradient(120deg, rgb(1 113 192 / 0.92) 0%, rgb(3 58 99 / 0.86) 60%, rgb(6 40 68 / 0.8) 100%);
+
+  /* ロゴ画像（黒文字）をダークモードで反転させるためのフィルタ */
+  --logo-filter: none;
+
+  /* ---- Typography ------------------------------------------------------ */
+  --font-sans: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "Yu Gothic UI", Meiryo, system-ui, sans-serif;
+  /* 英字ラベル・日付・番号など「データ」的な情報に使う等幅書体 */
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --text-xs: 0.75rem;      /* 12 */
+  --text-sm: 0.875rem;     /* 14 */
+  --text-base: 1rem;       /* 16 */
+  --text-md: 1.0625rem;    /* 17 */
+  --text-lg: 1.25rem;      /* 20 */
+  --text-xl: 1.5rem;       /* 24 */
+  --text-2xl: clamp(1.625rem, 1.35rem + 1.1vw, 2rem);      /* 26 → 32 */
+  --text-3xl: clamp(1.875rem, 1.45rem + 1.9vw, 2.75rem);   /* 30 → 44 */
+  --text-display: clamp(2rem, 1.35rem + 2.9vw, 3.375rem);  /* 32 → 54 */
+
+  --leading-tight: 1.35;
+  --leading-snug: 1.55;
+  --leading-body: 1.85;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
+
+  --tracking-heading: 0.02em;
+  --tracking-label: 0.06em;
+
+  /* ---- Spacing (4px base) ---------------------------------------------- */
+  --space-1: 0.25rem;  /* 4 */
+  --space-2: 0.5rem;   /* 8 */
+  --space-3: 0.75rem;  /* 12 */
+  --space-4: 1rem;     /* 16 */
+  --space-5: 1.5rem;   /* 24 */
+  --space-6: 2rem;     /* 32 */
+  --space-7: 3rem;     /* 48 */
+  --space-8: 4rem;     /* 64 */
+  --space-9: 6rem;     /* 96 */
+
+  --space-section: clamp(3.5rem, 2.5rem + 4vw, 6rem);   /* セクション上下 */
+  --gutter: clamp(1rem, 0.6rem + 2vw, 2rem);            /* 画面端の余白 */
+
+  /* ---- Layout ---------------------------------------------------------- */
+  --container-max: 72rem;      /* 1152 */
+  --container-narrow: 48rem;   /* 768  読み物向け */
+  --header-height: 4rem;       /* 64 */
+  --tap-target: 44px;          /* HIG: 最小タップ領域 */
+
+  /* ---- Shape ----------------------------------------------------------- */
+  /* 理論・工学を扱う団体として、直線的でシャープな形を基本にする */
+  --radius-xs: 2px;
+  --radius-sm: 4px;   /* ボタン・チップ・入力部品 */
+  --radius-md: 6px;   /* 画像・小さなタイル */
+  --radius-lg: 8px;   /* カード・パネル */
+  --radius-xl: 12px;  /* 大きな面（CTA帯など） */
+  --radius-pill: 999px; /* 原則使わない（バッジ等の例外用） */
+
+  /* ---- Elevation ------------------------------------------------------- */
+  --shadow-sm: 0 1px 2px rgb(15 20 24 / 0.06);
+  --shadow-md: 0 2px 8px rgb(15 20 24 / 0.08);
+  --shadow-lg: 0 8px 24px rgb(6 40 68 / 0.12);
+
+  /* ---- Motion ---------------------------------------------------------- */
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  /* ---- Layers ---------------------------------------------------------- */
+  --z-sticky: 50;
+  --z-header: 100;
+  --z-overlay: 200;
+}
+
+/* ---- Dark appearance ---------------------------------------------------- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: var(--gray-900);
+    --color-bg-subtle: var(--gray-850);
+    --color-surface: var(--gray-850);
+    --color-surface-muted: var(--gray-800);
+    --color-border: #28313a;
+    --color-border-strong: #3a4550;
+    --color-text: #e9eef3;
+    --color-text-secondary: #aab5c0;
+    --color-text-tertiary: #8793a0;
+    --color-header-bg: rgb(15 20 24 / 0.78);
+
+    --color-accent-text: #62b3ec;
+    --color-accent-text-hover: #8cc8f2;
+    --color-accent-fill: var(--blue-500);
+    --color-accent-fill-hover: #1683cf;
+    --color-accent-fill-pressed: var(--blue-600);
+    --color-accent-tint: rgb(59 147 215 / 0.16);
+    --color-accent-tint-hover: rgb(59 147 215 / 0.26);
+    --color-focus-ring: #62b3ec;
+
+    --color-brand-tint: rgb(59 147 215 / 0.16);
+    --color-brand-ink: #8cc8f2;
+
+    --logo-filter: invert(1) hue-rotate(180deg) brightness(1.15);
+
+    --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+    --shadow-md: 0 4px 16px rgb(0 0 0 / 0.35);
+    --shadow-lg: 0 18px 48px rgb(0 0 0 / 0.45);
+  }
+}
+
+/* ---- Increased contrast ------------------------------------------------- */
+@media (prefers-contrast: more) {
+  :root {
+    --color-border: var(--gray-400);
+    --color-border-strong: var(--gray-600);
+    --color-text-secondary: var(--gray-700);
+    --color-text-tertiary: var(--gray-600);
+    --color-accent-text: var(--blue-700);
+    --color-accent-fill: var(--blue-700);
+    --color-accent-fill-hover: var(--blue-800);
+  }
+}
+
+@media (prefers-color-scheme: dark) and (prefers-contrast: more) {
+  :root {
+    --color-border: #5a6672;
+    --color-border-strong: #7d8994;
+    --color-text-secondary: #d0d8e0;
+    --color-text-tertiary: #b5c0ca;
+    --color-accent-text: #9fd2f5;
+    --color-accent-fill: var(--blue-600);
+    --color-accent-fill-hover: var(--blue-700);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-base: 0ms;
+  }
+}

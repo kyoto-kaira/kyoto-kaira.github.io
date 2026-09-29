@@ -1,0 +1,211 @@
+/* Site header — js/site.js が #site-header の中身を描画します。 */
+.skip-link {
+  position: absolute;
+  top: var(--space-2);
+  left: var(--space-2);
+  z-index: calc(var(--z-header) + 1);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sm);
+  background: var(--color-accent-fill);
+  color: var(--color-on-accent);
+  font-weight: var(--weight-bold);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: none;
+  color: var(--color-on-accent);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  min-height: var(--header-height);
+  background: var(--color-header-bg);
+  border-bottom: 1px solid var(--color-border);
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
+  backdrop-filter: saturate(180%) blur(16px);
+}
+
+.site-header__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  height: var(--header-height);
+}
+
+.site-header__brand {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap-target);
+  flex: none;
+}
+
+.site-header__logo {
+  width: auto;
+  height: 36px;
+  filter: var(--logo-filter);
+}
+
+.site-nav__list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav__list li + li {
+  margin-top: 0;
+}
+
+.site-nav__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap-target);
+  padding-inline: var(--space-4);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background-color var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out);
+}
+
+.site-nav__link:hover {
+  background: var(--color-surface-muted);
+  color: var(--color-text);
+}
+
+.site-nav__link[aria-current="page"] {
+  background: var(--color-accent-tint);
+  color: var(--color-accent-text);
+}
+
+.site-nav__toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: var(--tap-target);
+  height: var(--tap-target);
+  margin-right: calc(var(--space-2) * -1);
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-text);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.site-nav__toggle:hover {
+  background: var(--color-surface-muted);
+}
+
+.site-nav__toggle:active {
+  transform: scale(0.94);
+}
+
+.site-nav__toggle .icon {
+  --icon-size: 1.5rem;
+}
+
+.site-nav__toggle [data-icon="close"],
+.site-nav__toggle[aria-expanded="true"] [data-icon="menu"] {
+  display: none;
+}
+
+.site-nav__toggle[aria-expanded="true"] [data-icon="close"] {
+  display: block;
+}
+
+/* ---- Mobile: メニューボタン＋ドロップダウン ---------------------------- */
+@media (max-width: 47.99rem) {
+  .site-nav__toggle {
+    display: inline-flex;
+  }
+
+  .site-nav {
+    position: absolute;
+    inset: 100% 0 auto 0;
+    padding: var(--space-2) var(--gutter) var(--space-5);
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition:
+      opacity var(--duration-base) var(--ease-out),
+      transform var(--duration-base) var(--ease-out),
+      visibility 0s linear var(--duration-base);
+  }
+
+  .site-nav[data-open="true"] {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition-delay: 0s;
+  }
+
+  .site-nav__list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .site-nav__list li + li {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .site-nav__link {
+    width: 100%;
+    min-height: 52px;
+    padding-inline: var(--space-3);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-md);
+  }
+}
+
+/* ---- Announcement（お知らせバー）: js/site.js の SITE.announcement で表示 */
+.announcement {
+  background: var(--gradient-brand);
+  color: var(--color-on-brand);
+  font-size: var(--text-sm);
+}
+
+.announcement__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1) var(--space-4);
+  min-height: var(--tap-target);
+  padding-block: var(--space-2);
+  text-align: center;
+}
+
+.announcement__text {
+  font-weight: var(--weight-medium);
+}
+
+.announcement__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: 32px;
+  color: var(--color-on-brand);
+  font-weight: var(--weight-bold);
+}
+
+.announcement__link:hover {
+  color: var(--color-on-brand);
+  opacity: 0.85;
+}
