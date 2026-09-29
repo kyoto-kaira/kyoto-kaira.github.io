@@ -53,7 +53,7 @@
   align-items: center;
   min-height: var(--tap-target);
   padding-inline: var(--space-4);
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-sm);
   background: var(--color-surface-muted);
   color: var(--color-text);
   font-size: var(--text-sm);

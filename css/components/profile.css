@@ -16,7 +16,7 @@
   flex: none;
   width: var(--avatar-size, 7.5rem);
   height: var(--avatar-size, 7.5rem);
-  border-radius: 50%;
+  border-radius: var(--radius-md);
   object-fit: cover;
   background: var(--color-surface-muted);
   box-shadow: 0 0 0 1px var(--color-border);

@@ -70,3 +70,17 @@
 .subsection > .subsection-title {
   margin-bottom: var(--space-5);
 }
+
+/* 英字ラベル類は等幅書体で統一（データ・番号としての情報であることを示す） */
+.eyebrow,
+.hero__eyebrow,
+.page-hero__eyebrow,
+.card__eyebrow,
+.cta-band__eyebrow,
+.site-footer__heading,
+.step__label,
+.journal__subtitle,
+.audio-group__title {
+  font-family: var(--font-mono);
+  font-weight: 600;
+}

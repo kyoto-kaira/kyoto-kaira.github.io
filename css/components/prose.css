@@ -10,7 +10,7 @@
 
 .prose strong,
 .prose b {
-  background: linear-gradient(transparent 62%, var(--color-brand-tint) 62%);
+  color: var(--color-text);
 }
 
 .prose--wide {

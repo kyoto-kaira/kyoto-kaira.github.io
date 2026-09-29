@@ -1,22 +1,7 @@
 /* Quote — 創設者の言葉など、引用・メッセージ */
 .quote {
-  position: relative;
-  padding: var(--space-7) var(--space-6) var(--space-6);
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-}
-
-.quote::before {
-  content: "“";
-  position: absolute;
-  top: var(--space-2);
-  left: var(--space-5);
-  color: var(--color-brand);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 4.5rem;
-  line-height: 1;
-  opacity: 0.35;
+  padding: var(--space-2) 0 var(--space-2) var(--space-6);
+  border-left: 3px solid var(--color-brand);
 }
 
 .quote__text {

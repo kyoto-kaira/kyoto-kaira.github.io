@@ -6,9 +6,8 @@
   isolation: isolate;
   overflow: hidden;
   padding-block: clamp(3rem, 2rem + 5vw, 6.5rem);
-  background:
-    radial-gradient(60rem 30rem at 100% 0%, var(--color-brand-tint), transparent 70%),
-    var(--color-bg);
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
 }
 
 /* 方眼の背景パターン（装飾）。端まで伸ばし、操作要素は内側に置く */
@@ -20,10 +19,10 @@
   background-image:
     linear-gradient(to right, var(--color-border) 1px, transparent 1px),
     linear-gradient(to bottom, var(--color-border) 1px, transparent 1px);
-  background-size: 40px 40px;
-  mask-image: radial-gradient(ellipse 70% 80% at 30% 40%, #000 20%, transparent 75%);
-  -webkit-mask-image: radial-gradient(ellipse 70% 80% at 30% 40%, #000 20%, transparent 75%);
-  opacity: 0.55;
+  background-size: 32px 32px;
+  mask-image: linear-gradient(90deg, #000 0%, rgb(0 0 0 / 0.35) 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, rgb(0 0 0 / 0.35) 70%, transparent 100%);
+  opacity: 0.7;
 }
 
 .hero__eyebrow {
@@ -51,6 +50,13 @@
   margin-top: var(--space-6);
 }
 
+/* 狭い画面で縦に並んだときも、2つのボタンを同じ幅に揃える */
+@media (max-width: 30rem) {
+  .hero__actions .button {
+    flex: 1 1 100%;
+  }
+}
+
 .hero__media {
   position: relative;
 }
@@ -59,8 +65,8 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-lg);
+  border-radius: var(--radius-md);
+  box-shadow: 0 0 0 1px var(--color-border);
 }
 
 /* ---- Page hero（下層ページ） ----------------------------------------- */

@@ -39,7 +39,7 @@
 }
 
 .card__media--cover img {
-  filter: drop-shadow(0 6px 14px rgb(0 0 0 / 0.18));
+  filter: drop-shadow(0 2px 6px rgb(0 0 0 / 0.16));
 }
 
 /* 企業ロゴ等：常に白地に置く（ダークモードでも判読できるように） */
@@ -108,12 +108,7 @@
 }
 
 .card--interactive:hover {
-  border-color: var(--color-border-strong);
-  box-shadow: var(--shadow-md);
-}
-
-.card--interactive:hover .card__media img {
-  transform: scale(1.03);
+  border-color: var(--color-accent-text);
 }
 
 .card--interactive:active {

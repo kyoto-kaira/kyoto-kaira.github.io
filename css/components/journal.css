@@ -15,13 +15,13 @@
 .journal__cover {
   display: block;
   width: min(100%, 15rem);
-  border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-lg);
-  transition: transform var(--duration-base) var(--ease-out);
+  border-radius: var(--radius-xs);
+  box-shadow: 0 0 0 1px var(--color-border), var(--shadow-md);
+  transition: box-shadow var(--duration-base) var(--ease-out);
 }
 
 .journal__cover:hover {
-  transform: translateY(-3px);
+  box-shadow: 0 0 0 2px var(--color-accent-text), var(--shadow-md);
 }
 
 .journal__cover:active {
@@ -30,7 +30,7 @@
 
 .journal__cover img {
   width: 100%;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-xs);
 }
 
 .journal__body {

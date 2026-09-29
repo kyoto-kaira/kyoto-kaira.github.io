@@ -16,7 +16,7 @@
   min-width: var(--tap-target);
   padding: var(--space-2) var(--space-5);
   border: 1px solid var(--button-border);
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-sm);
   background: var(--button-bg);
   color: var(--button-fg);
   font-size: var(--text-base);

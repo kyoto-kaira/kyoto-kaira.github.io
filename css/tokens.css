@@ -77,6 +77,8 @@
   /* ---- Typography ------------------------------------------------------ */
   --font-sans: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Hiragino Sans",
     "Hiragino Kaku Gothic ProN", "Yu Gothic UI", Meiryo, system-ui, sans-serif;
+  /* 英字ラベル・日付・番号など「データ」的な情報に使う等幅書体 */
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
   --text-xs: 0.75rem;      /* 12 */
   --text-sm: 0.875rem;     /* 14 */
@@ -97,7 +99,7 @@
   --weight-bold: 700;
 
   --tracking-heading: 0.02em;
-  --tracking-label: 0.08em;
+  --tracking-label: 0.06em;
 
   /* ---- Spacing (4px base) ---------------------------------------------- */
   --space-1: 0.25rem;  /* 4 */
@@ -120,17 +122,18 @@
   --tap-target: 44px;          /* HIG: 最小タップ領域 */
 
   /* ---- Shape ----------------------------------------------------------- */
-  --radius-xs: 6px;
-  --radius-sm: 10px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
-  --radius-xl: 28px;
-  --radius-pill: 999px;
+  /* 理論・工学を扱う団体として、直線的でシャープな形を基本にする */
+  --radius-xs: 2px;
+  --radius-sm: 4px;   /* ボタン・チップ・入力部品 */
+  --radius-md: 6px;   /* 画像・小さなタイル */
+  --radius-lg: 8px;   /* カード・パネル */
+  --radius-xl: 12px;  /* 大きな面（CTA帯など） */
+  --radius-pill: 999px; /* 原則使わない（バッジ等の例外用） */
 
   /* ---- Elevation ------------------------------------------------------- */
   --shadow-sm: 0 1px 2px rgb(15 20 24 / 0.06);
-  --shadow-md: 0 4px 16px rgb(15 20 24 / 0.08), 0 1px 3px rgb(15 20 24 / 0.06);
-  --shadow-lg: 0 18px 48px rgb(6 40 68 / 0.16), 0 4px 12px rgb(6 40 68 / 0.08);
+  --shadow-md: 0 2px 8px rgb(15 20 24 / 0.08);
+  --shadow-lg: 0 8px 24px rgb(6 40 68 / 0.12);
 
   /* ---- Motion ---------------------------------------------------------- */
   --duration-fast: 120ms;
