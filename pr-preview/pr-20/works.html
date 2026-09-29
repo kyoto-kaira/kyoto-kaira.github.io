@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DX5GXFJ6EH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-DX5GXFJ6EH');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="KaiRA内で取り組んだプロジェクトや、KaiRAメンバーが個人で取り組んだプロジェクトの紹介ページです。">
+    <meta name="google-site-verification" content="mRG3nr5LTpB5NGw5UONR-OBg8Y6awPCxtLr5LKN5UpQ" />
+    <meta property="og:title" content="作品｜京都大学人工知能研究会KaiRA">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="./works.html">
+
+    <title>京都大学人工知能研究会 KaiRA</title>
+    <link rel="icon" href="./assets/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header id="header"></header>
+
+    <div class="attachment background-works">
+        <div class="attachment__container">
+            <h1 class="text-center">作品</h1>
+        </div>
+    </div>
+
+    <main class="box">
+        <div class="container">
+            <!-- このページの説明 -->
+            <p>
+                KaiRA内で取り組んだプロジェクトや、KaiRAメンバーが個人で取り組んだプロジェクトの紹介ページです。<br>
+                主にNF(京大11月祭)に向けた発表物を掲載しています。<br>
+                簡単に実行できて楽しめるデモも用意しているので、ぜひ遊んでみてください。<br>
+                これらをきっかけにしてサークル興味を持ってくださったら、<a href="./contact.html">入会案内</a>等でコンタクトを取っていただけるとうれしいです!<br>
+            </p>
+
+            <!-- NF -->
+            <h2>NF(京都大学11月祭)</h2>
+            <p>
+                KaiRAでは毎年ポスター展示や作品展示などの出展を行っています。<br>
+                出展に関するお知らせは<a href="https://twitter.com/kyoto_kaira">X(旧Twitter)</a>で行いますので、お越しになる際はご確認ください！<br>
+                2020年度以降はオンライン展示も行っており、以下からNF特設サイトへアクセスできます。<br>
+            </p>
+            <!-- NF特設サイトボタン -->
+            <h3 class="h3-left-line">2025年度</h3>
+            <p><a href="./works/nf2025.html" class="btn btn-primary btn-lg">2025年度NF特設サイト</a></p>
+            <!--<p><button class="btn btn-outline-secondary btn-lg">Coming Soon...</button></p>-->
+            <h3 class="h3-left-line">過去のNF特設サイト</h3>
+            <p>
+                <a href="./works/nf2024.html" class="btn btn-outline-secondary">2024年度NF特設サイト</a>
+                <a href="./works/nf2023.html" class="btn btn-outline-secondary">2023年度NF特設サイト</a>
+                <a href="./works/nf2022.html" class="btn btn-outline-secondary">2022年度NF特設サイト</a>
+                <a href="./works/nf2021.html" class="btn btn-outline-secondary">2021年度NF特設サイト</a>
+                <a href="./works/nf2020.html" class="btn btn-outline-secondary">2020年度NF特設サイト</a>
+            </p>
+            <p><a href="./works/collection_of_journals.html">過去の会誌一覧</a></p>
+        </div>
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $('.bs-component [data-toggle="popover"]').popover();
+        $('.bs-component [data-toggle="tooltip"]').tooltip();
+    </script>
+    <script>
+        fetch("./header.html")
+            .then((response) => response.text())
+            .then((data) => document.querySelector("#header").innerHTML = data);
+    </script>
+</body>
+
+</html>
