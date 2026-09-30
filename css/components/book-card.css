@@ -1,0 +1,130 @@
+/* Book card — 輪読本の紹介
+   -------------------------------------------------------------------------
+   「カードを目立たせる」のではなく「本を目立たせる」。
+   - 表紙がカードの主役。原本の比率のまま大きく表示（トリミング・角丸なし）
+   - 表紙そのものに紙らしい薄い影。カード全体には強い影を付けない
+   - 画像エリアとテキストエリアを明確に分ける
+
+   Book shelf — 見出し・リンク・カード群を1つのまとまりとして配置する。
+   冊数に合わせて幅が決まり、2冊しかないときに画面幅いっぱいへ広げない。 */
+
+.book-shelf {
+  --book-card-width: 320px;
+  --book-gap: var(--space-6);   /* 32px */
+  --book-cols: 2;
+
+  width: 100%;
+  max-width: calc(var(--book-card-width) * var(--book-cols) + var(--book-gap) * (var(--book-cols) - 1));
+}
+
+/* 冊数が増えたら自動で列を増やす（HTML側の変更は不要） */
+.book-shelf:has(.book-shelf__grid > :nth-child(3)) { --book-cols: 3; }
+.book-shelf:has(.book-shelf__grid > :nth-child(4)) { --book-cols: 4; }
+
+.book-shelf__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: var(--book-gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.book-shelf__grid > li {
+  margin: 0;
+}
+
+/* ---- Card ------------------------------------------------------------ */
+.book-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.book-card__cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 290px;
+  padding: var(--space-5) var(--space-5) 20px;
+  background: var(--color-surface-muted);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.book-card__cover img {
+  width: auto;
+  height: 240px;
+  max-width: 80%;
+  object-fit: contain;
+  box-shadow:
+    0 8px 20px rgb(15 23 42 / 0.12),
+    0 2px 6px rgb(15 23 42 / 0.08);
+  transition:
+    transform var(--duration-base) ease,
+    box-shadow var(--duration-base) ease;
+}
+
+.book-card:hover .book-card__cover img {
+  transform: translateY(-4px);
+  box-shadow:
+    0 12px 28px rgb(15 23 42 / 0.15),
+    0 3px 8px rgb(15 23 42 / 0.08);
+}
+
+.book-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-5);
+}
+
+.book-card__title {
+  font-size: var(--text-lg);
+  line-height: var(--leading-snug);
+}
+
+/* カード全体をリンクにする（タイトル内の <a> を全面に広げる） */
+.book-card__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.book-card__link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.book-card__link:hover {
+  color: inherit;
+}
+
+.book-card:has(.book-card__link:focus-visible) {
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.book-card__link:focus-visible {
+  outline: none;
+}
+
+.book-card__more {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin-top: auto;
+  color: var(--color-accent-text);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+}
+
+.book-card:hover .book-card__more {
+  text-decoration: underline;
+}
