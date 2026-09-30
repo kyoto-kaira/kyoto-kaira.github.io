@@ -7,7 +7,7 @@
 
    色の役割（1色に2つの意味を持たせない）
      --color-accent-*  : 操作できるもの（リンク・ボタン・フォーカス・現在地）
-     --color-brand-*   : ブランドの「面」（ヒーロー・CTA帯・アイコンタイル）
+     --color-brand-*   : ブランドの「面」（ヒーロー・アイコンタイル）。大面積の青はヒーローに限る
      それ以外          : ニュートラル（見出し・本文・区切り線など）
    ========================================================================= */
 
@@ -15,49 +15,55 @@
   color-scheme: light dark;
 
   /* ---- Primitive palette ------------------------------------------------ */
-  --blue-50: #eef6fc;
-  --blue-100: #d8eaf8;
-  --blue-200: #acd2f0;
-  --blue-300: #72b2e5;
-  --blue-400: #3b93d7;
-  --blue-500: #0171c0; /* KaiRA Blue — ブランドカラー */
-  --blue-600: #015fa2;
-  --blue-700: #014c82;
-  --blue-800: #033a63;
-  --blue-900: #062844;
+  /* ブランドの青（#0171C0 を軸にしたスケール） */
+  --blue-50: #f0f7fc;   /* 薄い青背景（現在地・淡色ボタン） */
+  --blue-100: #dcebf7;
+  --blue-200: #b3d4ee;
+  --blue-300: #7ab4e2;
+  --blue-400: #3a93d6;
+  --blue-450: #0f7ccf;  /* ヒーローのグラデーション起点 */
+  --blue-500: #0171c0;  /* KaiRA Blue — ブランドカラー */
+  --blue-600: #0b5ea8;
+  --blue-700: #0a4f8f;
+  --blue-800: #123b68;  /* ネイビー */
+  --blue-900: #0c2847;
 
+  /* ニュートラル（わずかに青みのあるグレー） */
   --gray-0: #ffffff;
-  --gray-50: #f6f8fa;
-  --gray-100: #eef1f4;
-  --gray-200: #e1e6eb;
-  --gray-300: #c8d0d8;
-  --gray-400: #9aa5b1;
-  --gray-500: #6a7683;
-  --gray-600: #4d5965;
-  --gray-700: #36404a;
-  --gray-800: #20272f;
-  --gray-850: #171d23;
-  --gray-900: #0f1418;
+  --gray-50: #f8fafc;
+  --gray-100: #f1f5f9;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #94a3b8;
+  --gray-500: #64748b;
+  --gray-600: #475569;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-850: #151c26;
+  --gray-900: #111827;
+  --gray-950: #0b1120;
 
   /* ---- Semantic: surfaces & text --------------------------------------- */
   --color-bg: var(--gray-0);
   --color-bg-subtle: var(--gray-50);
+  --color-bg-blue-subtle: var(--blue-50);
   --color-surface: var(--gray-0);
   --color-surface-muted: var(--gray-100);
   --color-border: var(--gray-200);
   --color-border-strong: var(--gray-300);
   --color-text: var(--gray-900);
-  --color-text-secondary: var(--gray-600);
+  --color-text-secondary: var(--gray-600);   /* 仕様: text-subtle */
   --color-text-tertiary: var(--gray-500);
-  --color-header-bg: rgb(255 255 255 / 0.82);
+  --color-nav-text: var(--gray-700);
+  --color-header-bg: rgb(255 255 255 / 0.92);
 
   /* ---- Semantic: interactive (accent) ---------------------------------- */
-  --color-accent-text: var(--blue-500);        /* リンク文字 */
-  --color-accent-text-hover: var(--blue-700);
+  --color-accent-text: var(--blue-500);        /* リンク文字・現在地 */
+  --color-accent-text-hover: var(--blue-600);
   --color-accent-fill: var(--blue-500);        /* 塗りボタン */
   --color-accent-fill-hover: var(--blue-600);
   --color-accent-fill-pressed: var(--blue-700);
-  --color-accent-tint: var(--blue-50);         /* 淡色ボタン背景 */
+  --color-accent-tint: var(--blue-50);         /* 淡色ボタン・現在地の背景 */
   --color-accent-tint-hover: var(--blue-100);
   --color-on-accent: var(--gray-0);
   --color-focus-ring: var(--blue-400);
@@ -66,19 +72,21 @@
   --color-brand: var(--blue-500);
   --color-brand-deep: var(--blue-800);
   --color-brand-tint: var(--blue-50);
-  --color-brand-ink: var(--blue-700);          /* ブランド面上のアイコン */
+  --color-brand-ink: var(--blue-500);          /* ブランド面上のアイコン */
   --color-on-brand: var(--gray-0);
-  --gradient-brand: linear-gradient(135deg, var(--blue-500) 0%, var(--blue-700) 55%, var(--blue-900) 100%);
-  --gradient-brand-overlay: linear-gradient(120deg, rgb(1 113 192 / 0.92) 0%, rgb(3 58 99 / 0.86) 60%, rgb(6 40 68 / 0.8) 100%);
+  /* ヒーロー共通の背景（写真は使わない） */
+  --gradient-hero: linear-gradient(135deg, var(--blue-450) 0%, var(--blue-600) 45%, var(--blue-800) 100%);
+  --hero-line: rgb(255 255 255 / 0.06);        /* ヒーローのグリッド線 */
 
   /* ロゴ画像（黒文字）をダークモードで反転させるためのフィルタ */
   --logo-filter: none;
 
   /* ---- Typography ------------------------------------------------------ */
-  --font-sans: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+  /* 英字は Inter、日本語は Noto Sans JP で描画される */
+  --font-sans: "Inter", "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Hiragino Sans",
     "Hiragino Kaku Gothic ProN", "Yu Gothic UI", Meiryo, system-ui, sans-serif;
-  /* 英字ラベル・日付・番号など「データ」的な情報に使う等幅書体 */
-  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  /* 番号など、ごく一部の技術的アクセントにだけ使う（英字ラベルには使わない） */
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
   --text-xs: 0.75rem;      /* 12 */
   --text-sm: 0.875rem;     /* 14 */
@@ -96,10 +104,11 @@
 
   --weight-regular: 400;
   --weight-medium: 500;
+  --weight-semibold: 600;
   --weight-bold: 700;
 
   --tracking-heading: 0.02em;
-  --tracking-label: 0.06em;
+  --tracking-label: 0.08em;   /* 英字ラベル（0.06〜0.1em の範囲で） */
 
   /* ---- Spacing (4px base) ---------------------------------------------- */
   --space-1: 0.25rem;  /* 4 */
@@ -122,18 +131,19 @@
   --tap-target: 44px;          /* HIG: 最小タップ領域 */
 
   /* ---- Shape ----------------------------------------------------------- */
-  /* 理論・工学を扱う団体として、直線的でシャープな形を基本にする */
-  --radius-xs: 2px;
-  --radius-sm: 4px;   /* ボタン・チップ・入力部品 */
-  --radius-md: 6px;   /* 画像・小さなタイル */
-  --radius-lg: 8px;   /* カード・パネル */
-  --radius-xl: 12px;  /* 大きな面（CTA帯など） */
-  --radius-pill: 999px; /* 原則使わない（バッジ等の例外用） */
+  /* 角丸は使うが、丸くしすぎない */
+  --radius-xs: 4px;      /* 書籍の表紙など小さな画像 */
+  --radius-sm: 8px;      /* ナビ項目・画像・小さなタイル */
+  --radius-button: 10px; /* ボタン */
+  --radius-md: 12px;     /* カード */
+  --radius-lg: 16px;     /* CTAカードなど大きな面 */
+  --radius-pill: 999px;  /* ステータス・タグなど小さな補助UIに限る */
 
   /* ---- Elevation ------------------------------------------------------- */
-  --shadow-sm: 0 1px 2px rgb(15 20 24 / 0.06);
-  --shadow-md: 0 2px 8px rgb(15 20 24 / 0.08);
-  --shadow-lg: 0 8px 24px rgb(6 40 68 / 0.12);
+  /* 影はごく控えめに。構造は基本的に枠線で表す */
+  --shadow-sm: 0 1px 2px rgb(15 23 42 / 0.04);
+  --shadow-md: 0 8px 30px rgb(15 23 42 / 0.04);
+  --shadow-lg: 0 12px 40px rgb(15 23 42 / 0.08);
 
   /* ---- Motion ---------------------------------------------------------- */
   --duration-fast: 120ms;
@@ -149,16 +159,18 @@
 /* ---- Dark appearance ---------------------------------------------------- */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: var(--gray-900);
+    --color-bg: var(--gray-950);
     --color-bg-subtle: var(--gray-850);
+    --color-bg-blue-subtle: rgb(58 147 214 / 0.12);
     --color-surface: var(--gray-850);
     --color-surface-muted: var(--gray-800);
-    --color-border: #28313a;
-    --color-border-strong: #3a4550;
-    --color-text: #e9eef3;
-    --color-text-secondary: #aab5c0;
-    --color-text-tertiary: #8793a0;
-    --color-header-bg: rgb(15 20 24 / 0.78);
+    --color-border: #243041;
+    --color-border-strong: #364356;
+    --color-text: #e8edf3;
+    --color-text-secondary: #a8b3c2;
+    --color-text-tertiary: #8592a3;
+    --color-nav-text: #cbd5e1;
+    --color-header-bg: rgb(11 17 32 / 0.9);
 
     --color-accent-text: #62b3ec;
     --color-accent-text-hover: #8cc8f2;
@@ -169,14 +181,14 @@
     --color-accent-tint-hover: rgb(59 147 215 / 0.26);
     --color-focus-ring: #62b3ec;
 
-    --color-brand-tint: rgb(59 147 215 / 0.16);
+    --color-brand-tint: rgb(59 147 215 / 0.14);
     --color-brand-ink: #8cc8f2;
 
     --logo-filter: invert(1) hue-rotate(180deg) brightness(1.15);
 
-    --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
-    --shadow-md: 0 4px 16px rgb(0 0 0 / 0.35);
-    --shadow-lg: 0 18px 48px rgb(0 0 0 / 0.45);
+    --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.3);
+    --shadow-md: 0 8px 30px rgb(0 0 0 / 0.25);
+    --shadow-lg: 0 12px 40px rgb(0 0 0 / 0.35);
   }
 }
 

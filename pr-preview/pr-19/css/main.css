@@ -31,7 +31,7 @@
 @import url("components/gallery.css") layer(components);
 @import url("components/embed.css") layer(components);
 @import url("components/journal.css") layer(components);
-@import url("components/subnav.css") layer(components);
+@import url("components/section-nav.css") layer(components);
 @import url("components/link-card.css") layer(components);
 @import url("components/cta.css") layer(components);
 

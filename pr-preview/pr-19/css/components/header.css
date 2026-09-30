@@ -176,7 +176,7 @@
 
 /* ---- Announcement（お知らせバー）: js/site.js の SITE.announcement で表示 */
 .announcement {
-  background: var(--gradient-brand);
+  background: var(--gradient-hero);
   color: var(--color-on-brand);
   font-size: var(--text-sm);
 }
