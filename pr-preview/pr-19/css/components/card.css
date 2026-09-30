@@ -32,17 +32,6 @@
   --card-media-fit: contain;
 }
 
-/* 書籍の表紙（縦長） */
-.card__media--cover {
-  --card-media-ratio: 4 / 3;
-  --card-media-fit: contain;
-  padding: var(--space-5);
-}
-
-.card__media--cover img {
-  filter: drop-shadow(0 2px 6px rgb(0 0 0 / 0.16));
-}
-
 /* 企業ロゴ等：常に白地に置く（ダークモードでも判読できるように） */
 .card__media--logo {
   --card-media-ratio: 16 / 7;
