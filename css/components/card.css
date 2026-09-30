@@ -8,7 +8,8 @@
   overflow: hidden;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
 }
 
 .card__media {
@@ -29,17 +30,6 @@
 /* スクリーンショット等、切り抜きたくない画像 */
 .card__media--contain {
   --card-media-fit: contain;
-}
-
-/* 書籍の表紙（縦長） */
-.card__media--cover {
-  --card-media-ratio: 4 / 3;
-  --card-media-fit: contain;
-  padding: var(--space-5);
-}
-
-.card__media--cover img {
-  filter: drop-shadow(0 2px 6px rgb(0 0 0 / 0.16));
 }
 
 /* 企業ロゴ等：常に白地に置く（ダークモードでも判読できるように） */
@@ -108,7 +98,8 @@
 }
 
 .card--interactive:hover {
-  border-color: var(--color-accent-text);
+  border-color: var(--blue-300);
+  box-shadow: var(--shadow-md);
 }
 
 .card--interactive:active {
@@ -155,5 +146,66 @@
 
   .card--feature .card__title {
     font-size: var(--text-2xl);
+  }
+}
+
+/* 文字タイル — 写真の代わりに、年度などをタイポグラフィで見せるメディア領域
+   .card__media--tile        : 淡い青の面（一覧用）
+   .card__media--tile-brand  : ヒーローと同じ青グラデーション（注目の1件だけに使う） */
+.card__media--tile,
+.card__media--tile-brand {
+  --card-media-ratio: 16 / 9;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: var(--space-1);
+  padding: var(--space-5);
+  background:
+    linear-gradient(rgb(1 113 192 / 0.06) 1px, transparent 1px) 0 0 / 24px 24px,
+    linear-gradient(90deg, rgb(1 113 192 / 0.06) 1px, transparent 1px) 0 0 / 24px 24px,
+    var(--color-bg-blue-subtle);
+  color: var(--color-brand-deep);
+}
+
+.card__media--tile-brand {
+  position: relative;
+  isolation: isolate;
+  padding: var(--space-7);
+  background: var(--gradient-hero);
+  color: var(--color-on-brand);
+}
+
+.card__media--tile-brand::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url("../../assets/decor/geometric.svg") right center / contain no-repeat;
+}
+
+.card__tile-label {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.card__tile-value {
+  font-size: 2.25rem;
+  font-weight: var(--weight-semibold);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.card__media--tile-brand .card__tile-value {
+  font-size: clamp(2.75rem, 2rem + 3vw, 4rem);
+}
+
+@media (prefers-color-scheme: dark) {
+  .card__media--tile {
+    color: var(--color-brand-ink);
   }
 }

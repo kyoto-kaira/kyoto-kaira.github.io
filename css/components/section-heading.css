@@ -31,17 +31,16 @@
   gap: var(--space-2);
   color: var(--color-text-secondary);
   font-size: var(--text-xs);
-  font-weight: var(--weight-bold);
+  font-weight: var(--weight-semibold);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
 }
 
-/* ブランドの小さな目印（面の役割なので青を使用） */
+/* 短く控えめな青線（ブランドの目印） */
 .eyebrow::before {
   content: "";
-  width: 1.25rem;
-  height: 3px;
-  border-radius: var(--radius-pill);
+  width: 1rem;
+  height: 2px;
   background: var(--color-brand);
 }
 
@@ -71,16 +70,16 @@
   margin-bottom: var(--space-5);
 }
 
-/* 英字ラベル類は等幅書体で統一（データ・番号としての情報であることを示す） */
+/* 英字ラベル類の共通書式：Inter・12px・600・字間 0.08em
+   （等幅書体や広すぎる字間は CLI 風・テンプレート風に見えるため使わない） */
 .eyebrow,
-.hero__eyebrow,
 .page-hero__eyebrow,
 .card__eyebrow,
-.cta-band__eyebrow,
 .site-footer__heading,
-.step__label,
 .journal__subtitle,
 .audio-group__title {
-  font-family: var(--font-mono);
-  font-weight: 600;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-label);
 }

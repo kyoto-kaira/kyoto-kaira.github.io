@@ -11,6 +11,7 @@
      <main id="main"> … </main>
      <footer id="site-footer" class="site-footer"></footer>
      <nav data-year-pager></nav>        … NF特設ページのみ（任意）
+     <div class="photo-strip" data-photo-strip> … 写真を自動で横に流す（任意）
    ========================================================================= */
 (function () {
   "use strict";
@@ -214,21 +215,21 @@
 
     var chips = SITE.nfYears.map(function (item) {
       var current = item.year === currentYear ? ' aria-current="page"' : "";
-      return '<li><a class="subnav__link" href="' + url(item.href) + '"' + current + ">NF" + item.year + "</a></li>";
+      return '<li><a class="section-nav__link" href="' + url(item.href) + '"' + current + ">NF" + item.year + "</a></li>";
     }).join("");
 
     pager.classList.add("year-pager");
     pager.setAttribute("aria-label", "他の年度のNF特設サイト");
     pager.innerHTML =
       '<h2 class="year-pager__title">他の年度のNF特設サイト</h2>' +
-      '<ul class="subnav__list subnav__list--wrap">' + chips + "</ul>" +
+      '<div class="section-nav section-nav--inline"><ul class="section-nav__list">' + chips + "</ul></div>" +
       '<a class="link-arrow" href="' + url("works/collection_of_journals.html") + '">過去の会誌一覧' + icon("arrow-right") + "</a>";
   }
 
   /* ---- ページ内目次の現在地ハイライト ----------------------------------- */
   /* 横スクロールするチップ列の中で、現在地のチップが見える位置までずらす */
   function keepChipVisible(link) {
-    var list = link.closest(".subnav__list");
+    var list = link.closest(".section-nav__list");
     if (!list) return;
     var listRect = list.getBoundingClientRect();
     var linkRect = link.getBoundingClientRect();
@@ -262,9 +263,49 @@
     Object.keys(map).forEach(function (id) { observer.observe(document.getElementById(id)); });
   }
 
+  /* ---- フォトストリップ（活動写真の自動横スクロール） --------------------
+     HTML の .photo-strip__group を複製して継ぎ目のない無限ループにする。
+     「視差効果を減らす」設定のときは何もしない（手で横スクロールできる列のまま）。 */
+  var STRIP_SPEED = 28; /* px/秒。ゆっくり・一定の速さ */
+
+  function setupPhotoStrips() {
+    var strips = document.querySelectorAll("[data-photo-strip]");
+    if (!strips.length) return;
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    Array.prototype.forEach.call(strips, function (strip) {
+      var track = strip.querySelector(".photo-strip__track");
+      var group = strip.querySelector(".photo-strip__group");
+      if (!track || !group) return;
+
+      /* 複製側は読み上げ・フォーカスの対象外にする */
+      var clone = group.cloneNode(true);
+      clone.setAttribute("aria-hidden", "true");
+      Array.prototype.forEach.call(clone.querySelectorAll("img"), function (img) { img.alt = ""; });
+      track.appendChild(clone);
+
+      function updateDuration() {
+        var width = group.getBoundingClientRect().width;
+        if (width > 0) strip.style.setProperty("--strip-duration", (width / STRIP_SPEED).toFixed(1) + "s");
+      }
+      updateDuration();
+      window.addEventListener("resize", updateDuration);
+
+      /* 画面外にあるときは止める */
+      if ("IntersectionObserver" in window) {
+        new IntersectionObserver(function (entries) {
+          strip.classList.toggle("is-offscreen", !entries[0].isIntersecting);
+        }).observe(strip);
+      }
+
+      strip.classList.add("is-running");
+    });
+  }
+
   setupAnalytics();
   renderHeader();
   renderFooter();
   renderYearPager();
   setupScrollSpy();
+  setupPhotoStrips();
 })();

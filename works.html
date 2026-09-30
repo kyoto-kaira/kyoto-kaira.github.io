@@ -15,7 +15,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Geist+Mono:wght@500&display=swap">
     <link rel="stylesheet" href="./css/main.css">
     <script src="./js/site.js" defer></script>
 </head>
@@ -24,8 +24,7 @@
     <header id="site-header" class="site-header"></header>
 
     <main id="main">
-        <section class="page-hero">
-            <img class="page-hero__media" src="./assets/images/background/works.jpg" alt="">
+        <section class="page-hero page-hero--geometric">
             <div class="container">
                 <p class="page-hero__eyebrow">Works</p>
                 <h1 class="page-hero__title">作品</h1>
@@ -63,8 +62,9 @@
 
                 <!-- 最新年度（毎年ここを差し替え） -->
                 <article class="card card--interactive card--feature">
-                    <div class="card__media">
-                        <img src="./assets/images/background/nf2025.png" width="842" height="595" alt="" loading="lazy">
+                    <div class="card__media card__media--tile-brand" aria-hidden="true">
+                        <span class="card__tile-label">November Festival</span>
+                        <span class="card__tile-value">NF2025</span>
                     </div>
                     <div class="card__body">
                         <p class="card__eyebrow">2025年度</p>
@@ -78,39 +78,38 @@
                     <h3 class="subsection-title">過去のNF特設サイト</h3>
                     <div class="grid grid--3">
                         <article class="card card--interactive">
-                            <div class="card__media"><img src="./assets/images/background/nf2024.jpg" alt="" loading="lazy"></div>
+                            <div class="card__media card__media--tile" aria-hidden="true"><span class="card__tile-label">NF</span><span class="card__tile-value">2024</span></div>
                             <div class="card__body">
                                 <h4 class="card__title"><a class="card__link" href="./works/nf2024.html">2024年度NF特設サイト</a></h4>
                             </div>
                         </article>
                         <article class="card card--interactive">
-                            <div class="card__media"><img src="./assets/images/background/nf2023.jpg" alt="" loading="lazy"></div>
+                            <div class="card__media card__media--tile" aria-hidden="true"><span class="card__tile-label">NF</span><span class="card__tile-value">2023</span></div>
                             <div class="card__body">
                                 <h4 class="card__title"><a class="card__link" href="./works/nf2023.html">2023年度NF特設サイト</a></h4>
                             </div>
                         </article>
                         <article class="card card--interactive">
-                            <div class="card__media"><img src="./assets/images/background/nf2022.webp" alt="" loading="lazy"></div>
+                            <div class="card__media card__media--tile" aria-hidden="true"><span class="card__tile-label">NF</span><span class="card__tile-value">2022</span></div>
                             <div class="card__body">
                                 <h4 class="card__title"><a class="card__link" href="./works/nf2022.html">2022年度NF特設サイト</a></h4>
                             </div>
                         </article>
                         <article class="card card--interactive">
-                            <div class="card__media"><img src="./assets/images/background/nf2021.webp" alt="" loading="lazy"></div>
+                            <div class="card__media card__media--tile" aria-hidden="true"><span class="card__tile-label">NF</span><span class="card__tile-value">2021</span></div>
                             <div class="card__body">
                                 <h4 class="card__title"><a class="card__link" href="./works/nf2021.html">2021年度NF特設サイト</a></h4>
                             </div>
                         </article>
                         <article class="card card--interactive">
-                            <div class="card__media"><img src="./assets/images/background/nf2020.jpg" alt="" loading="lazy"></div>
+                            <div class="card__media card__media--tile" aria-hidden="true"><span class="card__tile-label">NF</span><span class="card__tile-value">2020</span></div>
                             <div class="card__body">
                                 <h4 class="card__title"><a class="card__link" href="./works/nf2020.html">2020年度NF特設サイト</a></h4>
                             </div>
                         </article>
                         <article class="card card--interactive">
-                            <div class="card__media"><img src="./assets/images/background/collection_of_journals.jpg" alt="" loading="lazy"></div>
+                            <div class="card__media card__media--tile" aria-hidden="true"><span class="card__tile-label">Journals</span><span class="card__tile-value">2018–2024</span></div>
                             <div class="card__body">
-                                <p class="card__eyebrow">Journals</p>
                                 <h4 class="card__title"><a class="card__link" href="./works/collection_of_journals.html">過去の会誌一覧</a></h4>
                             </div>
                         </article>
