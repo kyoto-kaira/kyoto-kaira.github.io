@@ -70,6 +70,12 @@
 `index.html` の「〇〇年前期に勉強する本」セクションで、見出しと `<ul class="book-shelf__grid">` 内の `<li>`（`book-card`）を書き換えます。表紙画像は `assets/images/book/` に置きます。
 冊数に応じて列数（2〜4列）と全体の幅は自動で決まるので、`<li>` を増減するだけで済みます。表紙はトリミングせず原本の比率で表示されます。
 
+### トップページの活動写真（フォトストリップ）を差し替える
+`index.html` の `<ul class="photo-strip__group">` 内の `<li>` を増減します。写真は横に自動で流れ、ループ用の複製・速度の計算・一時停止ボタンは `js/site.js` が自動で行います。
+- 写真は `assets/images/strip/` に **高さ480pxのJPEG**（1枚50〜70KB程度）で置きます。元の大きな写真をそのまま使うと、トップページが重くなります。
+- `<img>` には実際の `width`／`height`（高さ480のときの幅）と、写真の内容がわかる `alt` を付けます。
+- 速さは `js/site.js` の `STRIP_SPEED`（px/秒）で変えられます。
+
 ### 運営メンバーを更新する
 `about.html` の「運営メンバー」内の `<article class="profile">` を編集します。写真は `assets/images/member/` に置きます。退任した会長は「歴代会長」の `<details class="disclosure">` に追加してください。
 連絡先の代表者名（`contact.html`）も忘れずに更新します。

@@ -29,7 +29,7 @@
 @import url("components/steps.css") layer(components);
 @import url("components/faq.css") layer(components);
 @import url("components/disclosure.css") layer(components);
-@import url("components/gallery.css") layer(components);
+@import url("components/photo-strip.css") layer(components);
 @import url("components/embed.css") layer(components);
 @import url("components/journal.css") layer(components);
 @import url("components/section-nav.css") layer(components);
