@@ -165,9 +165,6 @@
 }
 
 .feature__media {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
   width: 100%;
   max-width: 30rem;
   margin: 0;
@@ -176,29 +173,6 @@
 /* スライドの埋め込み：角丸は小さく、影は付けない */
 .feature__media .embed {
   border-radius: var(--radius-xs);
-}
-
-.feature__caption {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-1);
-}
-
-.feature__caption-meta {
-  color: var(--color-text-tertiary);
-  font-size: var(--text-xs);
-  font-weight: var(--weight-semibold);
-  letter-spacing: var(--tracking-label);
-}
-
-.feature__caption-title {
-  font-size: var(--text-base);
-  font-weight: var(--weight-bold);
-  line-height: var(--leading-snug);
-}
-
-.feature__caption .book__link {
-  margin-top: var(--space-2);
 }
 
 @media (min-width: 56rem) {
