@@ -61,30 +61,29 @@
 .news-item__media {
   display: flex;
   flex-wrap: wrap;
+  /* 高さの異なる画像が並んだとき、低い方の画像が行の高さまで引き伸ばされないようにする */
+  align-items: flex-start;
   gap: var(--space-3);
 }
+
+/* 画像は元の縦横比のまま表示する（枠の比率を固定して切り取ると、バナーの文字や表紙の端が欠けるため）。
+   角丸は角の内容が欠けない 2px にとどめる */
 
 /* 書籍の表紙 */
 .news-item__cover {
   width: 6.5rem;
-  aspect-ratio: 5 / 7;
-  object-fit: cover;
-  border-radius: var(--radius-xs);
+  height: auto;
+  border-radius: 2px;
   box-shadow: 0 0 0 1px var(--color-border), var(--shadow-sm);
 }
 
 /* 写真・バナー */
 .news-item__photo {
   width: min(100%, 19rem);
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: var(--radius-sm);
+  height: auto;
+  border-radius: 2px;
   box-shadow: 0 0 0 1px var(--color-border);
   background: var(--color-surface-muted);
-}
-
-.news-item__photo--wide {
-  aspect-ratio: 16 / 10;
 }
 
 /* ロゴ等（白地で表示） */

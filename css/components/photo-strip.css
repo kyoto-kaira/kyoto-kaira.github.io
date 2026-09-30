@@ -53,7 +53,9 @@
   display: block;
   width: auto;
   height: var(--strip-height);
-  border-radius: var(--radius-sm);
+  /* 写真をカード状の部品に見せないよう、角丸は輪郭をわずかに整える 2px にとどめ、影も付けない */
+  border-radius: 2px;
+  box-shadow: none;
   background: var(--color-surface-muted);
   object-fit: cover;
 }
