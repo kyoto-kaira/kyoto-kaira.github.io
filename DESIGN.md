@@ -4,6 +4,7 @@
 
 KaiRA Webサイト全体のデザインを、以下の方向で統一する。
 
+- 「AI学生団体らしさ」を記号で表すのではなく、情報設計を整理して、技術・研究を扱う団体らしい知性を感じるサイトにする
 - 京都大学のAI・機械学習系学生団体としての知的さを出す
 - 学生団体らしい親しみやすさは残す
 - SaaSや生成AI製LPのようなテンプレート感を避ける
@@ -99,6 +100,13 @@ Description
 
 を優先する。
 
+カードを使う場合も、カードの中にカードやピル型UIを多数入れない。
+
+既存コンポーネントでは、以下を使う。
+
+- 要点の列挙: `numbered-list`（番号 + 罫線）
+- 活動紹介: `activity-list`（縦並び + 細い罫線区切り）
+
 ---
 
 ## 3.3 タイポグラフィを主役にする
@@ -129,24 +137,34 @@ FAQ
 
 ---
 
-## 4.2 推奨カラー
+## 4.2 カラートークン
 
-```css
-:root {
-  --color-primary: #0171C0;
-  --color-primary-dark: #0B5EA8;
-  --color-navy: #123B68;
+色は `css/tokens.css` を唯一の定義元とする。
+コンポーネントやHTMLには生の値（`#0171C0` など）を直接書かず、`tokens.css` の変数を使う。
 
-  --color-text: #111827;
-  --color-text-subtle: #475569;
+ブランドカラー KaiRA Blue `#0171C0` は `--blue-500` として定義している。
 
-  --color-border: #E5E7EB;
+主な値と変数の対応:
 
-  --color-bg: #FFFFFF;
-  --color-bg-subtle: #F8FAFC;
-  --color-bg-blue-subtle: #F0F7FC;
-}
-```
+| 値 | Primitive | Semantic | 用途 |
+| --- | --- | --- | --- |
+| `#0171C0` | `--blue-500` | `--color-accent-text` / `--color-accent-fill` / `--color-brand` | ブランドカラー |
+| `#0B5EA8` | `--blue-600` | `--color-accent-text-hover` / `--color-accent-fill-hover` | hover時の青 |
+| `#123B68` | `--blue-800` | `--color-brand-deep` | ネイビー |
+| `#111827` | `--gray-900` | `--color-text` | 本文・見出し |
+| `#475569` | `--gray-600` | `--color-text-secondary` | 補足テキスト |
+| `#E5E7EB` | `--gray-200` | `--color-border` | 罫線 |
+| `#FFFFFF` | `--gray-0` | `--color-bg` | 背景 |
+| `#F8FAFC` | `--gray-50` | `--color-bg-subtle` | 薄いグレー背景 |
+| `#F0F7FC` | `--blue-50` | `--color-bg-blue-subtle` / `--color-accent-tint` | 薄い青背景 |
+
+コンポーネントでは役割ごとのSemanticトークンを使う。
+
+- `--color-accent-*`: 操作できるもの（リンク・ボタン・フォーカス・現在地）
+- `--color-brand-*`: ブランドの面（ヒーローなど）
+- それ以外: ニュートラル（見出し・本文・区切り線など）
+
+1つの色トークンに2つの役割を持たせない。
 
 ---
 
@@ -161,20 +179,27 @@ FAQ
 - 短い罫線
 - CTA
 
-大面積の青はヒーローなど一部のみ。
+青は強調に使うが、強調したい箇所をすべて青にはしない。
+
+大面積の青背景はヒーロー（ページ上部の帯）だけに使う。
+通常のコンテンツの背景は白〜薄いグレーを基本とする。
 
 ---
 
 # 5. フォント
 
-## 5.1 推奨
+## 5.1 書体の指定
+
+書体は `css/tokens.css` の `--font-sans` と `--font-mono` で指定する。
 
 ```css
 :root {
-  --font-sans: "Inter", "Noto Sans JP", sans-serif;
-  --font-mono: "Geist Mono", monospace;
+  --font-sans: "Inter", "Noto Sans JP", /* 以下システムフォント */ sans-serif;
+  --font-mono: "Geist Mono", /* 以下システム等幅フォント */ monospace;
 }
 ```
+
+`--font-sans` では、英字が Inter、日本語が Noto Sans JP で自動的に描画される。
 
 用途:
 
@@ -202,6 +227,7 @@ H O W   T O   J O I N
 ```
 
 英字見出し全体をCLI風にしない。
+英字ラベル（ABOUT など）には等幅書体を使わない。
 
 ---
 
@@ -209,11 +235,13 @@ H O W   T O   J O I N
 
 英字ラベル:
 
-```css
-letter-spacing: 0.06em〜0.10em;
-```
+- 書体: Inter
+- サイズ: 12px
+- ウェイト: 600
+- 字間: `0.08em`（`--tracking-label`）
 
-過度に広げない。
+字間は `0.06em〜0.10em` の範囲に収め、過度に広げない。
+広すぎる字間はCLI風・テンプレート風に見えるため使わない。
 
 ---
 
@@ -247,15 +275,22 @@ letter-spacing: 0.06em〜0.10em;
 
 ```css
 .page-hero {
-  background:
-    linear-gradient(
-      135deg,
-      #0F7CCF 0%,
-      #0B5EA8 45%,
-      #123B68 100%
-    );
+  /* linear-gradient(135deg, #0F7CCF 0%, #0B5EA8 45%, #123B68 100%) */
+  background: var(--gradient-hero);
 }
 ```
+
+全ページ共通で「青系グラデーション + ごく薄いグリッド + 右端に配置した抽象装飾」とする。
+
+ページごとに変えるのは装飾の種類だけとする。
+
+| クラス | 使用ページ |
+| --- | --- |
+| `page-hero--nodes` | About・トップ |
+| `page-hero--geometric` | 作品・NF・会誌 |
+| `page-hero--lines` | 入会案内・News |
+
+装飾画像は `assets/decor/*.svg` に置く。
 
 装飾はタイトルより目立たせない。
 
@@ -273,7 +308,7 @@ letter-spacing: 0.06em〜0.10em;
 
 ```css
 .global-nav a[aria-current="page"] {
-  color: var(--color-primary);
+  color: var(--color-accent-text);
 }
 ```
 
@@ -284,6 +319,7 @@ letter-spacing: 0.06em〜0.10em;
 ## 8.1 方針
 
 ページ内ジャンプはボタンではなく、セクションナビゲーションとして扱う。
+実装には `section-nav` コンポーネントを使う。
 
 避ける:
 
@@ -458,6 +494,12 @@ ACTIVITY EXAMPLE
 
 表紙にはごく薄いシャドウのみ可。
 
+実装には `book` コンポーネントを使う。
+
+- カード背景・枠線・角丸を使わない
+- 表紙をトリミングせず、原本の比率で表示する
+- 表紙の下端をそろえて並べる
+
 ---
 
 # 13. Aboutページ 活動内容
@@ -556,6 +598,9 @@ Athena採用ページのような、
 CTAは巨大な塗りボタンではなく、
 アウトラインや矢印ベースの軽い表現でもよい。
 
+実装には `join` セクション（見出し・説明文・活動写真・矢印リンク）を使う。
+カードの枠、大きな青いボタン、青い帯は使わない。
+
 ---
 
 # 16. FOLLOW / SNS
@@ -586,6 +631,8 @@ KaiRAのコードを公開しています
 程度にする。
 
 外枠を減らし、罫線・余白で区切る。
+
+SNS・外部サイトへのリンクには `link-list` コンポーネントを使う。
 
 ---
 
@@ -685,15 +732,21 @@ Q/Aラベルは小さくシンプルにする。
 
 # 20. 角丸
 
-推奨:
+角丸は `css/tokens.css` の変数を使う。
 
 ```css
---radius-sm: 4px;
---radius-md: 8px;
---radius-lg: 12px;
+--radius-xs: 4px;      /* 書籍の表紙など小さな画像 */
+--radius-sm: 8px;      /* ナビ項目・画像・小さなタイル */
+--radius-button: 10px; /* ボタン */
+--radius-md: 12px;     /* カード */
+--radius-lg: 16px;     /* CTAなど大きな面 */
+--radius-pill: 999px;  /* タグ・ステータスなど小さな補助UI */
 ```
 
-大きな `16px〜24px` の角丸は原則避ける。
+`16px`（`--radius-lg`）はCTAなどの大きな面に限って使う。
+16px を超える角丸は使わない。
+
+ピル型（`--radius-pill`）は、タグ・ステータスなどの小さな補助UIに限って使う。
 
 特に、
 
@@ -702,7 +755,7 @@ Q/Aラベルは小さくシンプルにする。
 - SNS
 - CTA
 
-で乱用しない。
+で大きな角丸を乱用しない。
 
 ---
 
@@ -715,11 +768,11 @@ Q/Aラベルは小さくシンプルにする。
 例:
 
 ```css
-box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+box-shadow: var(--shadow-md); /* 0 8px 30px rgb(15 23 42 / 0.04) */
 ```
 
 構造はシャドウではなく、
-余白と罫線で表現する。
+余白と1pxの薄い罫線で表現する。
 
 ---
 
@@ -737,7 +790,7 @@ box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
 色:
 
 ```css
-border-color: #E5E7EB;
+border-color: var(--color-border); /* #E5E7EB */
 ```
 
 強い黒線は避ける。
@@ -776,9 +829,32 @@ PC:
 - STEPは縦並び
 - ページ内ナビは横スクロール可
 
+タップできる要素の大きさは、最小 44×44px（`--tap-target`）とする。
+
 ---
 
-# 25. UIを追加する際の判断基準
+# 25. ボタン
+
+ボタンの重要度は、サイズではなくスタイルで示す。
+
+| クラス | 用途 |
+| --- | --- |
+| `button--primary` | 最も重要な操作。1画面に1〜2個まで |
+| `button--tinted` | カード内の主操作 |
+| `button--secondary` | 補助的な操作 |
+
+---
+
+# 26. 実装ルール
+
+- 色・文字・余白・角丸・影は `css/tokens.css` の変数を使い、生の値（`#0171C0`、`24px` など）をコンポーネントやHTMLに直接書かない
+- インライン `style=""` は使わず、既存のクラスか新しいコンポーネントで表現する
+- 高コントラスト設定（`prefers-contrast: more`）と動きを減らす設定（`prefers-reduced-motion: reduce`）には `css/tokens.css` で対応している。新しい色や動きを追加する場合は、これらの設定での値も `tokens.css` に定義する
+- ダークモードには対応していない（`color-scheme: light`）
+
+---
+
+# 27. UIを追加する際の判断基準
 
 新しい要素を追加する場合は、以下を確認する。
 
@@ -792,7 +868,7 @@ PC:
 
 ---
 
-# 26. 避ける典型パターン
+# 28. 避ける典型パターン
 
 以下は原則避ける。
 
@@ -829,7 +905,7 @@ Description
 
 ---
 
-# 27. 最終的な目標
+# 29. 最終的な目標
 
 KaiRAのWebサイトは、
 
