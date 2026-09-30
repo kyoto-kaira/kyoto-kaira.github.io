@@ -1,0 +1,85 @@
+/* Section heading — セクション冒頭の「英字ラベル＋見出し＋リード文」 */
+.section-heading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 46rem;
+  margin-bottom: var(--space-7);
+}
+
+.section-heading--flush {
+  margin-bottom: 0;
+}
+
+.section-heading--center {
+  align-items: center;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.section-heading--row {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  max-width: none;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text-secondary);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+/* 短く控えめな青線（ブランドの目印） */
+.eyebrow::before {
+  content: "";
+  width: 1rem;
+  height: 2px;
+  background: var(--color-brand);
+}
+
+.section-heading--center .eyebrow::before {
+  display: none;
+}
+
+.section-title {
+  font-size: var(--text-2xl);
+}
+
+.section-lead {
+  color: var(--color-text-secondary);
+  font-size: var(--text-md);
+}
+
+/* セクション内の小見出し */
+.subsection-title {
+  font-size: var(--text-lg);
+}
+
+.subsection + .subsection {
+  margin-top: var(--space-8);
+}
+
+.subsection > .subsection-title {
+  margin-bottom: var(--space-5);
+}
+
+/* 英字ラベル類の共通書式：Inter・12px・600・字間 0.08em
+   （等幅書体や広すぎる字間は CLI 風・テンプレート風に見えるため使わない） */
+.eyebrow,
+.page-hero__eyebrow,
+.card__eyebrow,
+.site-footer__heading,
+.journal__subtitle,
+.audio-group__title {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-label);
+}

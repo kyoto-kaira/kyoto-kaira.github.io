@@ -1,0 +1,188 @@
+/* Editorial — 内容ごとに見せ方を変えるための、カードに頼らないレイアウト部品
+   .spread       : 写真を主役にした見開き（NFなど）
+   .logo-wall    : ロゴを主役にした並び（スポンサーなど） */
+
+/* ---- Spread ------------------------------------------------------------ */
+.spread {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.spread__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: 26rem;
+}
+
+.spread__text .prose {
+  color: var(--color-text-secondary);
+}
+
+.spread__action {
+  padding-top: var(--space-2);
+}
+
+.spread__media {
+  margin: 0;
+}
+
+.spread__media img {
+  width: 100%;
+  border-radius: var(--radius-xs);
+  background: var(--color-surface-muted);
+}
+
+@media (min-width: 56rem) {
+  .spread {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 8fr);
+    column-gap: clamp(3rem, 1rem + 5vw, 6rem);
+    align-items: end;
+  }
+}
+
+/* ---- Logo wall --------------------------------------------------------- */
+.logo-wall {
+  display: grid;
+  gap: var(--space-7) var(--space-6);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 40rem) {
+  .logo-wall {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.logo-wall__item {
+  position: relative;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* ロゴは常に白地に置く（ダークモードでも判読できるように） */
+.logo-wall__logo {
+  aspect-ratio: 16 / 7;
+  overflow: hidden;
+  padding: var(--space-6) var(--space-7);
+  background: var(--gray-0);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--duration-base) var(--ease-out);
+}
+
+.logo-wall__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.logo-wall__name {
+  font-size: var(--text-md);
+}
+
+.logo-wall__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.logo-wall__link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.logo-wall__item:hover .logo-wall__logo {
+  border-color: var(--blue-300);
+}
+
+.logo-wall__item:hover .logo-wall__link {
+  color: var(--color-accent-text);
+}
+
+.logo-wall__item:has(.logo-wall__link:focus-visible) {
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 4px;
+  border-radius: var(--radius-sm);
+}
+
+.logo-wall__link:focus-visible {
+  outline: none;
+}
+
+.logo-wall__text {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  line-height: var(--leading-snug);
+}
+
+/* ---- Feature ----------------------------------------------------------- */
+/* 活動の紹介記事：左に活動の説明、右に実際の資料（スライド等）を小さめに置く。
+   カードの枠で囲まず、左右の区切りも余白だけで表す。狭い画面では説明 → 資料の順に1カラム。 */
+.feature {
+  display: grid;
+  gap: var(--space-7);
+}
+
+.feature__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: 28rem;
+}
+
+.feature__text .prose {
+  color: var(--color-text-secondary);
+}
+
+/* 開催情報：罫線で区切った短い一覧 */
+.feature__meta {
+  display: grid;
+  margin: 0;
+  border-top: 1px solid var(--color-border);
+  font-size: var(--text-sm);
+}
+
+.feature__meta-row {
+  display: grid;
+  grid-template-columns: 4rem minmax(0, 1fr);
+  gap: var(--space-4);
+  padding-block: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.feature__meta dt {
+  color: var(--color-text-tertiary);
+  font-weight: var(--weight-semibold);
+}
+
+.feature__meta dd {
+  margin: 0;
+}
+
+.feature__media {
+  width: 100%;
+  max-width: 30rem;
+  margin: 0;
+}
+
+/* スライドの埋め込み：角丸は小さく、影は付けない */
+.feature__media .embed {
+  border-radius: var(--radius-xs);
+}
+
+@media (min-width: 56rem) {
+  .feature {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 30rem);
+    column-gap: clamp(3rem, 1rem + 5vw, 6rem);
+    align-items: center;
+  }
+
+  .feature__media {
+    justify-self: end;
+  }
+}
