@@ -1,0 +1,41 @@
+/* =========================================================================
+   KaiRA Design System — エントリーポイント
+   各ページはこのファイルだけを読み込みます。
+   新しいコンポーネントを追加したら、ここに @import を1行足してください。
+
+   レイヤー順（後ろほど優先）:
+     tokens → base → layout → components → utilities
+   ========================================================================= */
+@layer tokens, base, layout, components, utilities;
+
+@import url("tokens.css") layer(tokens);
+@import url("base.css") layer(base);
+@import url("layout.css") layer(layout);
+
+@import url("components/icon.css") layer(components);
+@import url("components/button.css") layer(components);
+@import url("components/header.css") layer(components);
+@import url("components/footer.css") layer(components);
+@import url("components/hero.css") layer(components);
+@import url("components/section-heading.css") layer(components);
+@import url("components/card.css") layer(components);
+@import url("components/book-card.css") layer(components);
+@import url("components/numbered-list.css") layer(components);
+@import url("components/activity-list.css") layer(components);
+@import url("components/profile.css") layer(components);
+@import url("components/lists.css") layer(components);
+@import url("components/prose.css") layer(components);
+@import url("components/quote.css") layer(components);
+@import url("components/news.css") layer(components);
+@import url("components/steps.css") layer(components);
+@import url("components/faq.css") layer(components);
+@import url("components/disclosure.css") layer(components);
+@import url("components/photo-strip.css") layer(components);
+@import url("components/embed.css") layer(components);
+@import url("components/journal.css") layer(components);
+@import url("components/section-nav.css") layer(components);
+@import url("components/link-card.css") layer(components);
+@import url("components/cta.css") layer(components);
+@import url("components/editorial.css") layer(components);
+
+@import url("utilities.css") layer(utilities);
