@@ -1,0 +1,114 @@
+/* Button
+   - 重要度は「サイズ」ではなく「スタイル」で示します（同じ行のボタンは同じサイズ）。
+   - 塗り（--primary）は1画面につき1〜2個まで。カード内の操作は --tinted / --secondary を使います。
+   - どのボタンも最小 44×44px のタップ領域を確保します。 */
+.button {
+  --button-bg: var(--color-surface);
+  --button-bg-hover: var(--color-surface-muted);
+  --button-fg: var(--color-text);
+  --button-border: var(--color-border-strong);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: var(--tap-target);
+  min-width: var(--tap-target);
+  padding: var(--space-2) var(--space-5);
+  border: 1px solid var(--button-border);
+  border-radius: var(--radius-button);
+  background: var(--button-bg);
+  color: var(--button-fg);
+  font-size: var(--text-base);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background-color var(--duration-fast) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-out);
+}
+
+.button:hover {
+  background: var(--button-bg-hover);
+  color: var(--button-fg);
+}
+
+/* 押下状態：指を置いた瞬間に反応させる */
+.button:active {
+  transform: scale(0.97);
+}
+
+.button--primary {
+  --button-bg: var(--color-accent-fill);
+  --button-bg-hover: var(--color-accent-fill-hover);
+  --button-fg: var(--color-on-accent);
+  --button-border: transparent;
+}
+
+.button--primary:active {
+  background: var(--color-accent-fill-pressed);
+}
+
+.button--tinted {
+  --button-bg: var(--color-accent-tint);
+  --button-bg-hover: var(--color-accent-tint-hover);
+  --button-fg: var(--color-accent-text);
+  --button-border: transparent;
+}
+
+.button--secondary {
+  /* 既定値そのまま（中立の枠線ボタン） */
+}
+
+/* ブランド面（青背景）の上に置くボタン */
+.button--inverse {
+  --button-bg: var(--gray-0);
+  --button-bg-hover: var(--blue-50);
+  --button-fg: var(--blue-700);
+  --button-border: transparent;
+}
+
+.button--inverse-outline {
+  --button-bg: transparent;
+  --button-bg-hover: var(--color-on-brand-tint);
+  --button-fg: var(--gray-0);
+  --button-border: var(--color-on-brand-border);
+}
+
+/* 余白を詰めた版。タップ領域 44px は維持します。 */
+.button--compact {
+  padding-inline: var(--space-4);
+  font-size: var(--text-sm);
+}
+
+.button--block {
+  width: 100%;
+}
+
+/* 文字リンク＋矢印。本文中の「もっと見る」系に。 */
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: var(--tap-target);
+  font-weight: var(--weight-bold);
+  text-decoration: none;
+}
+
+.link-arrow .icon {
+  transition: transform var(--duration-base) var(--ease-out);
+}
+
+.link-arrow:hover {
+  text-decoration: underline;
+}
+
+.link-arrow:hover .icon {
+  transform: translateX(3px);
+}
