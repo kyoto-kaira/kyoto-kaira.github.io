@@ -20,9 +20,31 @@
 ├── .github/workflows/      本番・PRプレビューのデプロイ（GitHub Actions）
 ├── assets/icons/sprite.svg 共通アイコン（SVGスプライト）
 ├── assets/decor/           ヒーローの抽象装飾（nodes / geometric / lines）
-├── assets/                 画像・PDF・音声
+├── assets/images/          画像（内訳は下記）
+├── assets/nfYYYY/          各年度のNF特設ページで使う作品画像・音声
+├── assets/docs/            会誌のPDF
 └── _templates/page.html    新規ページのひな形（公開対象外）
 ```
+
+### 画像の置き場所と命名規則
+
+```
+assets/images/
+├── brand/            KaiRAのロゴ、favicon、apple-touch-icon、SNS共有用画像（og-image.jpg）
+├── logo/             外部サービス・協賛企業のロゴ（x, github, qiita, rist …）
+├── advisor/          顧問の先生の写真
+├── member/           運営メンバーの写真
+├── past-president/   歴代会長の写真
+├── book/             輪読本の表紙
+├── journal/          会誌の表紙（nfYYYY.png）
+├── photo/            活動写真の元画像（ニュース・紹介文で使う）
+└── strip/            トップページのフォトストリップ用に高さ480pxへ縮小した写真
+```
+
+- ファイル名は英小文字・数字・ハイフンだけで付けます（例: `deep-learning-2.jpg`）。大文字やアンダースコアは使いません。
+- 拡張子は小文字にし、JPEGは `.jpg` に統一します。
+- 行事の写真は `nfYYYY-a.jpg`（11月祭）や `YYYYMMDD-a.jpg`（日付）のように、年度または日付がわかる名前にします。
+- フォトストリップに載せる写真は、`photo/` の元画像と同じ名前で縮小版を `strip/` に置きます。
 
 ## よくある更新作業
 
@@ -41,7 +63,7 @@
 - 速さは `js/site.js` の `STRIP_SPEED`（px/秒）で変えられます。
 
 ### 運営メンバーを更新する
-`about.html` の「運営メンバー」内の `<article class="profile">` を編集します。写真は `assets/images/member/` に置きます。退任した会長は「歴代会長」の `<details class="disclosure">` に追加してください。
+`about.html` の「運営メンバー」内の `<article class="profile">` を編集します。写真は `assets/images/member/` に置きます。退任した会長は「歴代会長」の `<details class="disclosure">` に追加し、写真を `assets/images/past-president/` へ移してください。
 連絡先の代表者名（`contact.html`）も忘れずに更新します。
 
 ### NF特設ページを追加する（毎年）

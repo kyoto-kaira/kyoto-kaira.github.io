@@ -107,7 +107,7 @@
     header.innerHTML =
       '<div class="container site-header__bar">' +
         '<a class="site-header__brand" href="' + url("index.html") + '">' +
-          '<img class="site-header__logo" src="' + url("assets/images/logo/KaiRA.png") +
+          '<img class="site-header__logo" src="' + url("assets/images/brand/kaira-logo.png") +
           '" width="87" height="36" alt="' + escapeHtml(SITE.name) + '">' +
         "</a>" +
         '<button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="メニューを開く">' +
@@ -191,7 +191,7 @@
       '<div class="container">' +
         '<div class="site-footer__grid">' +
           "<div>" +
-            '<img class="site-footer__logo" src="' + url("assets/images/logo/KaiRA.png") +
+            '<img class="site-footer__logo" src="' + url("assets/images/brand/kaira-logo.png") +
             '" width="106" height="44" alt="' + escapeHtml(SITE.name) + '">' +
             '<p class="site-footer__tagline">' + escapeHtml(SITE.tagline) + "</p>" +
             '<p class="site-footer__mail"><a class="site-footer__link" href="mailto:' + SITE.email + '">' +
