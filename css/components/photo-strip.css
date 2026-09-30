@@ -4,7 +4,7 @@
    js/site.js がそれを複製して2列にし、トラック全体を -50% まで動かすことで
    継ぎ目のない無限ループにする。速度（px/秒）から所要時間も自動計算する。
 
-   - hover 中（hover できる端末）と、一時停止ボタンで停止
+   - hover 中（hover できる端末）は停止
    - 画面外にあるときは停止（省電力）
    - 「視差効果を減らす」設定や JS 無効時は流さず、手で横スクロールできる列になる */
 
@@ -74,7 +74,6 @@
   }
 }
 
-.photo-strip.is-paused .photo-strip__track,
 .photo-strip.is-offscreen .photo-strip__track {
   animation-play-state: paused;
 }
@@ -83,27 +82,4 @@
   .photo-strip__viewport:hover .photo-strip__track {
     animation-play-state: paused;
   }
-}
-
-/* ---- 一時停止／再生ボタン -------------------------------------------- */
-.photo-strip__controls {
-  display: none;
-  justify-content: flex-end;
-  /* 帯は画面端まで広げるが、ボタンは本文と同じ幅の内側に置く */
-  max-width: calc(var(--container-max) + var(--gutter) * 2);
-  margin: var(--space-3) auto 0;
-  padding-inline: var(--gutter);
-}
-
-.photo-strip.is-running .photo-strip__controls {
-  display: flex;
-}
-
-.photo-strip__toggle [data-icon="play"],
-.photo-strip.is-paused .photo-strip__toggle [data-icon="pause"] {
-  display: none;
-}
-
-.photo-strip.is-paused .photo-strip__toggle [data-icon="play"] {
-  display: block;
 }
