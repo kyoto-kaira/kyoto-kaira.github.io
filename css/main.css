@@ -19,8 +19,9 @@
 @import url("components/hero.css") layer(components);
 @import url("components/section-heading.css") layer(components);
 @import url("components/card.css") layer(components);
-@import url("components/book-card.css") layer(components);
-@import url("components/feature.css") layer(components);
+@import url("components/book.css") layer(components);
+@import url("components/numbered-list.css") layer(components);
+@import url("components/activity-list.css") layer(components);
 @import url("components/profile.css") layer(components);
 @import url("components/lists.css") layer(components);
 @import url("components/prose.css") layer(components);
@@ -33,7 +34,8 @@
 @import url("components/embed.css") layer(components);
 @import url("components/journal.css") layer(components);
 @import url("components/section-nav.css") layer(components);
-@import url("components/link-card.css") layer(components);
+@import url("components/link-list.css") layer(components);
 @import url("components/cta.css") layer(components);
+@import url("components/editorial.css") layer(components);
 
 @import url("utilities.css") layer(utilities);
