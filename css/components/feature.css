@@ -10,7 +10,7 @@
   place-items: center;
   width: 3rem;
   height: 3rem;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   background: var(--color-brand-tint);
   color: var(--color-brand-ink);
 }

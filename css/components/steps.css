@@ -23,7 +23,7 @@
   padding: var(--space-6);
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
 }
 
 .step__label {
@@ -32,22 +32,18 @@
   gap: var(--space-3);
   color: var(--color-text-secondary);
   font-size: var(--text-xs);
-  font-weight: var(--weight-bold);
+  font-weight: var(--weight-semibold);
   letter-spacing: var(--tracking-label);
 }
 
+/* 番号だけ等幅書体（技術的なアクセント）：STEP 01 */
 .step__label::after {
-  content: counter(step);
-  display: grid;
-  place-items: center;
-  width: 2rem;
-  height: 2rem;
-  border-radius: var(--radius-sm);
-  background: var(--color-brand-tint);
-  color: var(--color-brand-ink);
+  content: counter(step, decimal-leading-zero);
+  color: var(--color-brand);
   font-family: var(--font-mono);
-  font-size: var(--text-base);
-  letter-spacing: 0;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.04em;
 }
 
 .step__title {
