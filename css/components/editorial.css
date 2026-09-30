@@ -119,3 +119,96 @@
   font-size: var(--text-sm);
   line-height: var(--leading-snug);
 }
+
+/* ---- Feature ----------------------------------------------------------- */
+/* 活動の紹介記事：左に活動の説明、右に実際の資料（スライド等）を小さめに置く。
+   カードの枠で囲まず、左右の区切りも余白だけで表す。狭い画面では説明 → 資料の順に1カラム。 */
+.feature {
+  display: grid;
+  gap: var(--space-7);
+}
+
+.feature__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: 28rem;
+}
+
+.feature__text .prose {
+  color: var(--color-text-secondary);
+}
+
+/* 開催情報：罫線で区切った短い一覧 */
+.feature__meta {
+  display: grid;
+  margin: 0;
+  border-top: 1px solid var(--color-border);
+  font-size: var(--text-sm);
+}
+
+.feature__meta-row {
+  display: grid;
+  grid-template-columns: 4rem minmax(0, 1fr);
+  gap: var(--space-4);
+  padding-block: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.feature__meta dt {
+  color: var(--color-text-tertiary);
+  font-weight: var(--weight-semibold);
+}
+
+.feature__meta dd {
+  margin: 0;
+}
+
+.feature__media {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  width: 100%;
+  max-width: 30rem;
+  margin: 0;
+}
+
+/* スライドの埋め込み：角丸は小さく、影は付けない */
+.feature__media .embed {
+  border-radius: var(--radius-xs);
+}
+
+.feature__caption {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.feature__caption-meta {
+  color: var(--color-text-tertiary);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-label);
+}
+
+.feature__caption-title {
+  font-size: var(--text-base);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-snug);
+}
+
+.feature__caption .book__link {
+  margin-top: var(--space-2);
+}
+
+@media (min-width: 56rem) {
+  .feature {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 30rem);
+    column-gap: clamp(3rem, 1rem + 5vw, 6rem);
+    align-items: center;
+  }
+
+  .feature__media {
+    justify-self: end;
+  }
+}
