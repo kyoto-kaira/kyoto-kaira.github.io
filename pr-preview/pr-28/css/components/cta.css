@@ -50,13 +50,6 @@
   clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%);
 }
 
-.join__caption {
-  margin-top: var(--space-3);
-  color: var(--color-text-tertiary);
-  font-size: var(--text-xs);
-  text-align: right;
-}
-
 @media (min-width: 56rem) {
   .join__inner {
     grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
@@ -71,10 +64,6 @@
   .join__media img {
     aspect-ratio: 16 / 11;
     clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
-  }
-
-  .join__caption {
-    padding-inline-end: max(var(--gutter), (100vw - var(--container-max)) / 2);
   }
 }
 
