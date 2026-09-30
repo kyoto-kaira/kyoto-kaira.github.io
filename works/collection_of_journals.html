@@ -2,148 +2,178 @@
 <html lang="ja">
 
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DX5GXFJ6EH"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-DX5GXFJ6EH');
-    </script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>過去の会誌一覧｜京都大学人工知能研究会 KaiRA</title>
     <meta name="description" content="過去にNF(京都大学11月祭)で作成した会誌を無料公開しています。">
-    <meta name="google-site-verification" content="mRG3nr5LTpB5NGw5UONR-OBg8Y6awPCxtLr5LKN5UpQ" />
     <meta property="og:title" content="過去の会誌一覧｜京都大学人工知能研究会KaiRA">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="./collection_of_journals.html">
-
-    <title>京都大学人工知能研究会 KaiRA</title>
+    <meta property="og:url" content="https://kyoto-kaira.github.io/works/collection_of_journals.html">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0f1418" media="(prefers-color-scheme: dark)">
     <link rel="icon" href="../assets/images/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/style.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Geist+Mono:wght@500&display=swap">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/site.js" defer></script>
 </head>
 
-<body>
+<body data-page="works">
+    <header id="site-header" class="site-header"></header>
 
-    <header id="header"></header>
+    <main id="main">
+        <section class="page-hero page-hero--geometric">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="パンくずリスト">
+                    <ol>
+                        <li><a href="../works.html">作品</a></li>
+                        <li><span aria-current="page">過去の会誌一覧</span></li>
+                    </ol>
+                </nav>
+                <p class="page-hero__eyebrow">Journals</p>
+                <h1 class="page-hero__title">過去の会誌一覧</h1>
+            </div>
+        </section>
 
-    <div class="attachment background-journal">
-        <div class="attachment__container">
-            <h1 class="text-center">過去の会誌</h1>
-        </div>
-    </div>
-    <main class="box">
-        <div class="container">
-            <p>
-                過去にNF(京都大学11月祭)で作成した会誌を無料公開しています。<br>
-                画像をクリックすると会誌をPDF形式で見ることができます。
-            </p>
-
-            <h2>2024年度 11月祭配布</h2>
-            <p><a href="../assets/docs/NF_2024.pdf" target="_blank">
-                    <img src="../assets/images/NF_2024_thumb.png" class="border border-dark img-fluid" width="321"
-                        height="455" title="ダウンロード">
-                </a></p>
-            <p>以下のような内容について書かれています。</p>
-            <ul>
-                <li>カメラ入力を用いた強化学習によるライントレーサの実現</li>
-                <li>目線で操るマウスカーソル</li>
-                <li>KaiRAくんを動かそう</li>
-                <li>最強じゃんけんAI</li>
-                <li>京大シラバス検索RAGシステム</li>
-                <li>お絵描き予測AI</li>
-            </ul>
-
-            <h2>2023年度 11月祭配布</h2>
-            <p><a href="../assets/docs/NF_2023.pdf" target="_blank">
-                    <img src="../assets/images/NF_2023_thumb.png" class="border border-dark img-fluid" width="321"
-                        height="455" title="ダウンロード">
-                </a></p>
-            <p>以下のような内容について書かれています。</p>
-            <ul>
-                <li>AIの歴史と未来</li>
-                <li>ChatGPT</li>
-                <li>ゲームAI ~オセロ・将棋AI~</li>
-                <li>画像生成</li>
-                <li>説明可能なAI(XAI)</li>
-            </ul>
-
-            <h2>2022年度 11月祭配布</h2>
-            <p><a href="../assets/docs/NF_2022.pdf" target="_blank">
-                    <img src="../assets/images/NF_2022_thumb.png" class="border border-dark img-fluid" width="321"
-                        height="455" title="ダウンロード">
-                </a></p>
-            <p>以下のような内容について書かれています。</p>
-            <ul>
-                <li>深層学習入門</li>
-                <li>BERT の解説と実用上のTips</li>
-                <li>強化学習の方策勾配法を用いた交通制御シミュレーションの改良</li>
-                <li>アニメスタイルへのリアルタイム映像変換</li>
-                <li>3D KaiRA 君への姿勢推定技術の適用について</li>
-            </ul>
-            <p>正誤表は<a href="../works/nf2022.html">こちら</a></p>
-
-            <h2>2021年度 11月祭配布</h2>
-            <p><a href="../assets/docs/NF_2021.pdf" target="_blank">
-                    <img src="../assets/images/NF_2021_thumb.png" class="border border-dark img-fluid" width="321"
-                        height="455">
-                </a></p>
-            <p>以下のような内容について書かれています。</p>
-            <ul>
-                <li>Deep Learning入門</li>
-                <li><a href="../works/nf2021.html" target="_blank">2021年度NF</a>で公開した音声変換モデルのしくみ</li>
-                <li>Spiking Neural Networkの紹介</li>
-            </ul>
-
-            <h2>2020年度 11月祭(2021年3月開催)配布</h2>
-            <p><a href="../assets/docs/NF_2020.pdf" target="_blank">
-                    <img src="../assets/images/NF_2020_thumb.png" class="border border-dark img-fluid" width="321"
-                        height="455">
-                </a></p>
-            <p>Deep Learningの入門知識を簡単な数式を用いて書いています。</p>
-
-            <h2>2019年度 11月祭配布</h2>
-            <p><a href="../assets/docs/NF_2019.pdf" target="_blank">
-                    <img src="../assets/images/NF_2019_thumb.png" class="border border-dark img-fluid">
-                </a></p>
-
-            <h2>2018年度 11月祭配布</h2>
-            <p><a href="../assets/docs/NF_2018.pdf" target="_blank">
-                    <img src="../assets/images/NF_2018_thumb.png" width="450" class="border border-dark img-fluid">
-                </a></p>
-        </div>
+        <section class="section">
+            <div class="container">
+                <div class="prose">
+                    <p>過去にNF(京都大学11月祭)で作成した会誌を無料公開しています。</p>
+                    <p>表紙の画像をクリックすると会誌をPDF形式で見ることができます。</p>
+                </div>
+                <div class="mt-7">
+                <article class="journal" aria-labelledby="j2024">
+                    <a class="journal__cover" href="../assets/docs/NF_2024.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                        <img src="../assets/images/NF_2024_thumb.png" alt="" loading="lazy">
+                    </a>
+                    <div class="journal__body">
+                        <h2 class="journal__title" id="j2024">2024年度 11月祭配布</h2>
+                        <p class="text-secondary">以下のような内容について書かれています。</p>
+                        <ul class="contents-list">
+                            <li>カメラ入力を用いた強化学習によるライントレーサの実現</li>
+                            <li>目線で操るマウスカーソル</li>
+                            <li>KaiRAくんを動かそう</li>
+                            <li>最強じゃんけんAI</li>
+                            <li>京大シラバス検索RAGシステム</li>
+                            <li>お絵描き予測AI</li>
+                        </ul>
+                        <div class="cluster">
+                            <a class="button button--primary" href="../assets/docs/NF_2024.pdf" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="../assets/icons/sprite.svg#file"></use></svg>会誌を読む（PDF）</a>
+                            <a class="button button--secondary" href="./nf2024.html">NF2024特設サイト</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="journal" aria-labelledby="j2023">
+                    <a class="journal__cover" href="../assets/docs/NF_2023.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                        <img src="../assets/images/NF_2023_thumb.png" alt="" loading="lazy">
+                    </a>
+                    <div class="journal__body">
+                        <h2 class="journal__title" id="j2023">2023年度 11月祭配布</h2>
+                        <p class="text-secondary">以下のような内容について書かれています。</p>
+                        <ul class="contents-list">
+                            <li>AIの歴史と未来</li>
+                            <li>ChatGPT</li>
+                            <li>ゲームAI ~オセロ・将棋AI~</li>
+                            <li>画像生成</li>
+                            <li>説明可能なAI(XAI)</li>
+                        </ul>
+                        <div class="cluster">
+                            <a class="button button--primary" href="../assets/docs/NF_2023.pdf" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="../assets/icons/sprite.svg#file"></use></svg>会誌を読む（PDF）</a>
+                            <a class="button button--secondary" href="./nf2023.html">NF2023特設サイト</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="journal" aria-labelledby="j2022">
+                    <a class="journal__cover" href="../assets/docs/NF_2022.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                        <img src="../assets/images/NF_2022_thumb.png" alt="" loading="lazy">
+                    </a>
+                    <div class="journal__body">
+                        <h2 class="journal__title" id="j2022">2022年度 11月祭配布</h2>
+                        <p class="text-secondary">以下のような内容について書かれています。</p>
+                        <ul class="contents-list">
+                            <li>深層学習入門</li>
+                            <li>BERT の解説と実用上のTips</li>
+                            <li>強化学習の方策勾配法を用いた交通制御シミュレーションの改良</li>
+                            <li>アニメスタイルへのリアルタイム映像変換</li>
+                            <li>3D KaiRA 君への姿勢推定技術の適用について</li>
+                        </ul>
+                        <p class="journal__subtitle">正誤表</p>
+                        <ul class="contents-list">
+                            <li>p9. 式(1.3) (誤)x2,1 (正)x1,2</li>
+                            <li>p14. (誤)微少 (正)微小</li>
+                        </ul>
+                        <div class="cluster">
+                            <a class="button button--primary" href="../assets/docs/NF_2022.pdf" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="../assets/icons/sprite.svg#file"></use></svg>会誌を読む（PDF）</a>
+                            <a class="button button--secondary" href="./nf2022.html">NF2022特設サイト</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="journal" aria-labelledby="j2021">
+                    <a class="journal__cover" href="../assets/docs/NF_2021.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                        <img src="../assets/images/NF_2021_thumb.png" alt="" loading="lazy">
+                    </a>
+                    <div class="journal__body">
+                        <h2 class="journal__title" id="j2021">2021年度 11月祭配布</h2>
+                        <p class="text-secondary">以下のような内容について書かれています。</p>
+                        <ul class="contents-list">
+                            <li>Deep Learning入門</li>
+                            <li><a href="../works/nf2021.html">2021年度NF</a>で公開した音声変換モデルのしくみ</li>
+                            <li>Spiking Neural Networkの紹介</li>
+                        </ul>
+                        <div class="cluster">
+                            <a class="button button--primary" href="../assets/docs/NF_2021.pdf" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="../assets/icons/sprite.svg#file"></use></svg>会誌を読む（PDF）</a>
+                            <a class="button button--secondary" href="./nf2021.html">NF2021特設サイト</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="journal" aria-labelledby="j2020">
+                    <a class="journal__cover" href="../assets/docs/NF_2020.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                        <img src="../assets/images/NF_2020_thumb.png" alt="" loading="lazy">
+                    </a>
+                    <div class="journal__body">
+                        <h2 class="journal__title" id="j2020">2020年度 11月祭(2021年3月開催)配布</h2>
+                        <p class="text-secondary">Deep Learningの入門知識を簡単な数式を用いて書いています。</p>
+                        <div class="cluster">
+                            <a class="button button--primary" href="../assets/docs/NF_2020.pdf" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="../assets/icons/sprite.svg#file"></use></svg>会誌を読む（PDF）</a>
+                            <a class="button button--secondary" href="./nf2020.html">NF2020特設サイト</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="journal" aria-labelledby="j2019">
+                    <a class="journal__cover" href="../assets/docs/NF_2019.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                        <img src="../assets/images/NF_2019_thumb.png" alt="" loading="lazy">
+                    </a>
+                    <div class="journal__body">
+                        <h2 class="journal__title" id="j2019">2019年度 11月祭配布</h2>
+                        <div class="cluster">
+                            <a class="button button--primary" href="../assets/docs/NF_2019.pdf" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="../assets/icons/sprite.svg#file"></use></svg>会誌を読む（PDF）</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="journal" aria-labelledby="j2018">
+                    <a class="journal__cover" href="../assets/docs/NF_2018.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                        <img src="../assets/images/NF_2018_thumb.png" alt="" loading="lazy">
+                    </a>
+                    <div class="journal__body">
+                        <h2 class="journal__title" id="j2018">2018年度 11月祭配布</h2>
+                        <div class="cluster">
+                            <a class="button button--primary" href="../assets/docs/NF_2018.pdf" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="../assets/icons/sprite.svg#file"></use></svg>会誌を読む（PDF）</a>
+                        </div>
+                    </div>
+                </article>
+                </div>
+            </div>
+        </section>
+        <section class="section section--subtle">
+            <div class="container">
+                <nav data-year-pager="0"></nav>
+            </div>
+        </section>
     </main>
 
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="../js/bootstrap.min.js"></script>
-
-    <script type="text/javascript">
-        $('.bs-component [data-toggle="popover"]').popover();
-        $('.bs-component [data-toggle="tooltip"]').tooltip();
-    </script>
-    <script>
-        fetch("../header.html")
-        .then((response) => response.text())
-        .then((data) => {
-            // パスの書き換え
-            data = data.replaceAll('./', '../');
-            // header要素に挿入
-            document.querySelector("#header").innerHTML = data;
-        });
-    </script>
+    <footer id="site-footer" class="site-footer"></footer>
 </body>
 
 </html>
