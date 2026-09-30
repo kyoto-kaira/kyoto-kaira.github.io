@@ -57,9 +57,7 @@
   height: 100%;
   max-width: 100%;
   object-fit: contain;
-  box-shadow:
-    0 1px 2px rgb(15 23 42 / 0.08),
-    0 4px 12px rgb(15 23 42 / 0.06);
+  box-shadow: var(--shadow-cover);
   transition:
     transform var(--duration-base) ease,
     box-shadow var(--duration-base) ease;
@@ -67,9 +65,7 @@
 
 .book:hover .book__cover img {
   transform: translateY(-4px);
-  box-shadow:
-    0 2px 4px rgb(15 23 42 / 0.08),
-    0 10px 20px rgb(15 23 42 / 0.08);
+  box-shadow: var(--shadow-cover-hover);
 }
 
 /* 本文：細い罫線と通し番号で、ブックガイドの「項目」として区切る */

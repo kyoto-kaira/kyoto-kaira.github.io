@@ -54,7 +54,7 @@
   width: auto;
   height: var(--strip-height);
   /* 写真をカード状の部品に見せないよう、角丸は輪郭をわずかに整える 2px にとどめ、影も付けない */
-  border-radius: 2px;
+  border-radius: var(--radius-2xs);
   box-shadow: none;
   background: var(--color-surface-muted);
   object-fit: cover;
