@@ -291,26 +291,6 @@
       updateDuration();
       window.addEventListener("resize", updateDuration);
 
-      /* 一時停止／再生ボタン */
-      var controls = document.createElement("div");
-      controls.className = "photo-strip__controls";
-      controls.innerHTML =
-        '<button class="button button--secondary button--compact photo-strip__toggle" type="button" aria-pressed="false">' +
-          icon("pause").replace("<svg", '<svg data-icon="pause"') +
-          icon("play-arrow").replace("<svg", '<svg data-icon="play"') +
-          '<span class="photo-strip__toggle-label">一時停止</span>' +
-        "</button>";
-      strip.appendChild(controls);
-      var toggle = controls.querySelector("button");
-      var label = controls.querySelector(".photo-strip__toggle-label");
-      toggle.setAttribute("aria-label", "写真の自動スクロールを一時停止");
-      toggle.addEventListener("click", function () {
-        var paused = strip.classList.toggle("is-paused");
-        toggle.setAttribute("aria-pressed", String(paused));
-        label.textContent = paused ? "再生" : "一時停止";
-        toggle.setAttribute("aria-label", paused ? "写真の自動スクロールを再生" : "写真の自動スクロールを一時停止");
-      });
-
       /* 画面外にあるときは止める */
       if ("IntersectionObserver" in window) {
         new IntersectionObserver(function (entries) {
