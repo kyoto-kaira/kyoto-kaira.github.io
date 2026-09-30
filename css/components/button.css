@@ -76,9 +76,9 @@
 
 .button--inverse-outline {
   --button-bg: transparent;
-  --button-bg-hover: rgb(255 255 255 / 0.12);
+  --button-bg-hover: var(--color-on-brand-tint);
   --button-fg: var(--gray-0);
-  --button-border: rgb(255 255 255 / 0.6);
+  --button-border: var(--color-on-brand-border);
 }
 
 /* 余白を詰めた版。タップ領域 44px は維持します。 */

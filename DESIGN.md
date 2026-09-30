@@ -181,7 +181,11 @@ FAQ
 
 青は強調に使うが、強調したい箇所をすべて青にはしない。
 
-大面積の青背景はヒーロー（ページ上部の帯）だけに使う。
+大面積の青背景（`--gradient-hero`）は、以下の箇所だけに使う。
+
+- ヒーロー（ページ上部の帯）
+- 全ページ上部のお知らせバー（`.announcement`。`js/site.js` の `SITE.announcement` を設定したときだけ表示する）
+- 作品ページ（`works.html`）のカード画像のうち、写真の代わりに表示するブランドタイル（`card__media--tile-brand`）
 通常のコンテンツの背景は白〜薄いグレーを基本とする。
 
 ---
@@ -735,6 +739,8 @@ Q/Aラベルは小さくシンプルにする。
 角丸は `css/tokens.css` の変数を使う。
 
 ```css
+--radius-2xs: 2px;       /* 写真・ニュースの画像（輪郭をわずかに整える） */
+--radius-indicator: 3px; /* 現在地を示す下線・縦線 */
 --radius-xs: 4px;      /* 書籍の表紙など小さな画像 */
 --radius-sm: 8px;      /* ナビ項目・画像・小さなタイル */
 --radius-button: 10px; /* ボタン */
@@ -765,11 +771,17 @@ Q/Aラベルは小さくシンプルにする。
 
 使用する場合も極小。
 
-例:
+影は `css/tokens.css` の変数を使う。
 
 ```css
-box-shadow: var(--shadow-md); /* 0 8px 30px rgb(15 23 42 / 0.04) */
+--shadow-sm: 0 1px 2px rgb(15 23 42 / 0.04);    /* カードの通常時 */
+--shadow-md: 0 8px 30px rgb(15 23 42 / 0.04);   /* カードのhover時・メニュー */
+--shadow-lg: 0 12px 40px rgb(15 23 42 / 0.08);
+--shadow-cover: 0 1px 2px rgb(15 23 42 / 0.08), 0 4px 12px rgb(15 23 42 / 0.06);        /* 書籍の表紙 */
+--shadow-cover-hover: 0 2px 4px rgb(15 23 42 / 0.08), 0 10px 20px rgb(15 23 42 / 0.08); /* 書籍の表紙のhover時 */
 ```
+
+`--shadow-cover` と `--shadow-cover-hover` は、書籍の表紙だけに使う。
 
 構造はシャドウではなく、
 余白と1pxの薄い罫線で表現する。
@@ -842,12 +854,24 @@ PC:
 | `button--primary` | 最も重要な操作。1画面に1〜2個まで |
 | `button--tinted` | カード内の主操作 |
 | `button--secondary` | 補助的な操作 |
+| `button--inverse` | ブランド面（青背景）の上の主操作 |
+| `button--inverse-outline` | ブランド面（青背景）の上の補助的な操作 |
+
+`button--primary` の個数の例外として、同じ種類の項目を並べた一覧（会誌一覧 `works/collection_of_journals.html` など）では、各項目の主操作に `button--primary` を1つずつ使ってよい。
+
+大きさ・幅は、以下の修飾クラスで変える。
+
+| クラス | 用途 |
+| --- | --- |
+| `button--compact` | 左右の余白と文字を小さくした版（タップ領域 44px は維持する） |
+| `button--block` | 幅を親要素いっぱいに広げる |
 
 ---
 
 # 26. 実装ルール
 
 - 色・文字・余白・角丸・影は `css/tokens.css` の変数を使い、生の値（`#0171C0`、`24px` など）をコンポーネントやHTMLに直接書かない
+  - 例外: `mask-image` のグラデーションに使う `#000` や `rgb(0 0 0 / 0.9)` は透明度の指定にだけ使われ、画面に色として表示されないため、直接書いてよい
 - インライン `style=""` は使わず、既存のクラスか新しいコンポーネントで表現する
 - 高コントラスト設定（`prefers-contrast: more`）と動きを減らす設定（`prefers-reduced-motion: reduce`）には `css/tokens.css` で対応している。新しい色や動きを追加する場合は、これらの設定での値も `tokens.css` に定義する
 - ダークモードには対応していない（`color-scheme: light`）
