@@ -127,8 +127,8 @@
             </div>
         </section>
 
-        <!-- 今期の輪読本（学期ごとに更新：<li> を増減するだけで列数は自動調整） -->
-        <section class="section section--subtle" aria-labelledby="books-title">
+        <!-- 今期の輪読本（学期ごとに更新：<li class="book"> を増減するだけで列数は自動調整） -->
+        <section class="section" aria-labelledby="books-title">
             <div class="container">
                 <div class="book-shelf">
                     <div class="section-heading section-heading--row">
@@ -142,34 +142,28 @@
                         </a>
                     </div>
 
-                    <ul class="book-shelf__grid">
-                        <li>
-                            <article class="book-card">
-                                <div class="book-card__cover">
-                                    <img src="./assets/images/book/zerokara.jpg" alt="" loading="lazy">
-                                </div>
-                                <div class="book-card__body">
-                                    <h3 class="book-card__title">
-                                        <a class="book-card__link" href="https://www.oreilly.co.jp/books/9784873117584/" target="_blank" rel="noopener">ゼロから作るDeep Learning</a>
-                                    </h3>
-                                    <span class="book-card__more">本の詳細 <svg class="icon icon--sm" aria-hidden="true"><use href="./assets/icons/sprite.svg#external"></use></svg></span>
-                                </div>
-                            </article>
+                    <ol class="book-shelf__list">
+                        <li class="book">
+                            <a class="book__cover" href="https://www.oreilly.co.jp/books/9784873117584/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                                <img src="./assets/images/book/zerokara.jpg" alt="" loading="lazy">
+                            </a>
+                            <div class="book__body">
+                                <h3 class="book__title" id="book-1">ゼロから作るDeep Learning</h3>
+                                <p class="book__meta">斎藤 康毅 著<span class="book__sep" aria-hidden="true">／</span><span class="book__publisher">オライリー・ジャパン</span></p>
+                                <a class="book__link" href="https://www.oreilly.co.jp/books/9784873117584/" target="_blank" rel="noopener" aria-describedby="book-1">本の詳細 <svg class="icon icon--sm" aria-hidden="true"><use href="./assets/icons/sprite.svg#external"></use></svg></a>
+                            </div>
                         </li>
-                        <li>
-                            <article class="book-card">
-                                <div class="book-card__cover">
-                                    <img src="./assets/images/book/image_recogintion_basic.jpeg" alt="" loading="lazy">
-                                </div>
-                                <div class="book-card__body">
-                                    <h3 class="book-card__title">
-                                        <a class="book-card__link" href="https://www.ohmsha.co.jp/book/9784274231841/" target="_blank" rel="noopener">深層学習による画像認識の基礎</a>
-                                    </h3>
-                                    <span class="book-card__more">本の詳細 <svg class="icon icon--sm" aria-hidden="true"><use href="./assets/icons/sprite.svg#external"></use></svg></span>
-                                </div>
-                            </article>
+                        <li class="book">
+                            <a class="book__cover" href="https://www.ohmsha.co.jp/book/9784274231841/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                                <img src="./assets/images/book/image_recogintion_basic.jpeg" alt="" loading="lazy">
+                            </a>
+                            <div class="book__body">
+                                <h3 class="book__title" id="book-2">深層学習による画像認識の基礎</h3>
+                                <p class="book__meta">菅沼 雅徳 著<span class="book__sep" aria-hidden="true">／</span><span class="book__publisher">オーム社</span></p>
+                                <a class="book__link" href="https://www.ohmsha.co.jp/book/9784274231841/" target="_blank" rel="noopener" aria-describedby="book-2">本の詳細 <svg class="icon icon--sm" aria-hidden="true"><use href="./assets/icons/sprite.svg#external"></use></svg></a>
+                            </div>
                         </li>
-                    </ul>
+                    </ol>
                 </div>
             </div>
         </section>
