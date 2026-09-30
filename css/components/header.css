@@ -52,7 +52,7 @@
 .site-nav__list {
   display: flex;
   align-items: center;
-  gap: var(--space-1);
+  gap: var(--space-3); /* 見た目の間隔 36px（section-nav と同じ） */
   margin: 0;
   padding: 0;
   list-style: none;
@@ -62,31 +62,39 @@
   margin-top: 0;
 }
 
+/* 見た目はページ内ナビ（section-nav.css）と揃える：
+   背景は透明、hover で青文字、現在地は青文字＋ヘッダー下端の下線 */
 .site-nav__link {
+  position: relative;
   display: inline-flex;
   align-items: center;
-  min-height: var(--tap-target);
-  padding-inline: var(--space-4);
-  border-radius: var(--radius-sm);
-  color: var(--color-text-secondary);
-  font-size: var(--text-sm);
-  font-weight: var(--weight-bold);
-  letter-spacing: 0.04em;
+  height: var(--header-height);
+  padding-inline: var(--space-3);
+  color: var(--color-nav-text);
+  font-size: 0.9375rem; /* 15px — section-nav と同じ */
+  font-weight: var(--weight-semibold);
   text-decoration: none;
   white-space: nowrap;
-  transition:
-    background-color var(--duration-fast) var(--ease-out),
-    color var(--duration-fast) var(--ease-out);
+  transition: color var(--duration-base) var(--ease-out);
 }
 
 .site-nav__link:hover {
-  background: var(--color-surface-muted);
-  color: var(--color-text);
+  color: var(--color-accent-text);
 }
 
 .site-nav__link[aria-current="page"] {
-  background: var(--color-accent-tint);
   color: var(--color-accent-text);
+}
+
+.site-nav__link[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  right: var(--space-3);
+  bottom: -1px; /* ヘッダーの下線に重ねる */
+  left: var(--space-3);
+  height: 3px;
+  border-radius: 3px 3px 0 0;
+  background: var(--color-accent-fill);
 }
 
 .site-nav__toggle {
@@ -167,10 +175,21 @@
 
   .site-nav__link {
     width: 100%;
+    height: auto;
     min-height: 52px;
     padding-inline: var(--space-3);
-    border-radius: var(--radius-sm);
     font-size: var(--text-md);
+  }
+
+  /* 縦並びでは下線の代わりに左端のバーで現在地を示す */
+  .site-nav__link[aria-current="page"]::after {
+    top: 14px;
+    right: auto;
+    bottom: 14px;
+    left: 0;
+    width: 3px;
+    height: auto;
+    border-radius: 0 3px 3px 0;
   }
 }
 
