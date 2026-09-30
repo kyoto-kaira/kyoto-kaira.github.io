@@ -12,7 +12,7 @@
    ========================================================================= */
 
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
 
   /* ---- Primitive palette ------------------------------------------------ */
   /* ブランドの青（#0171C0 を軸にしたスケール） */
@@ -156,42 +156,6 @@
   --z-overlay: 200;
 }
 
-/* ---- Dark appearance ---------------------------------------------------- */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-bg: var(--gray-950);
-    --color-bg-subtle: var(--gray-850);
-    --color-bg-blue-subtle: rgb(58 147 214 / 0.12);
-    --color-surface: var(--gray-850);
-    --color-surface-muted: var(--gray-800);
-    --color-border: #243041;
-    --color-border-strong: #364356;
-    --color-text: #e8edf3;
-    --color-text-secondary: #a8b3c2;
-    --color-text-tertiary: #8592a3;
-    --color-nav-text: #cbd5e1;
-    --color-header-bg: rgb(11 17 32 / 0.9);
-
-    --color-accent-text: #62b3ec;
-    --color-accent-text-hover: #8cc8f2;
-    --color-accent-fill: var(--blue-500);
-    --color-accent-fill-hover: #1683cf;
-    --color-accent-fill-pressed: var(--blue-600);
-    --color-accent-tint: rgb(59 147 215 / 0.16);
-    --color-accent-tint-hover: rgb(59 147 215 / 0.26);
-    --color-focus-ring: #62b3ec;
-
-    --color-brand-tint: rgb(59 147 215 / 0.14);
-    --color-brand-ink: #8cc8f2;
-
-    --logo-filter: invert(1) hue-rotate(180deg) brightness(1.15);
-
-    --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.3);
-    --shadow-md: 0 8px 30px rgb(0 0 0 / 0.25);
-    --shadow-lg: 0 12px 40px rgb(0 0 0 / 0.35);
-  }
-}
-
 /* ---- Increased contrast ------------------------------------------------- */
 @media (prefers-contrast: more) {
   :root {
@@ -202,18 +166,6 @@
     --color-accent-text: var(--blue-700);
     --color-accent-fill: var(--blue-700);
     --color-accent-fill-hover: var(--blue-800);
-  }
-}
-
-@media (prefers-color-scheme: dark) and (prefers-contrast: more) {
-  :root {
-    --color-border: #5a6672;
-    --color-border-strong: #7d8994;
-    --color-text-secondary: #d0d8e0;
-    --color-text-tertiary: #b5c0ca;
-    --color-accent-text: #9fd2f5;
-    --color-accent-fill: var(--blue-600);
-    --color-accent-fill-hover: var(--blue-700);
   }
 }
 
