@@ -93,14 +93,31 @@
                     </ul>
                 </div>
 
-                <!-- 活動の様子 -->
-                <ul class="gallery" aria-label="活動の様子">
-                    <li><img src="./assets/images/picture/20231005.jpg" width="2048" height="1254" alt="輪読会の様子" loading="lazy"></li>
-                    <li><img src="./assets/images/picture/202302.jpg" width="1600" height="980" alt="活動の様子" loading="lazy"></li>
-                    <li><img src="./assets/images/picture/20220714.jpg" width="1200" height="735" alt="活動の様子" loading="lazy"></li>
-                    <li><img src="./assets/images/picture/AAAILT.jpg" width="3200" height="1960" alt="AAAI論文読みLT会の様子" loading="lazy"></li>
-                </ul>
+            </div>
 
+            <!-- 活動の様子（写真は assets/images/strip/ に高さ480pxのJPEGで置き、下の <li> を増減する。複製とループは site.js が行う） -->
+            <div class="photo-strip mt-7" data-photo-strip role="region" aria-label="活動の様子">
+                <div class="photo-strip__viewport">
+                    <div class="photo-strip__track">
+                        <ul class="photo-strip__group">
+                        <li><img src="./assets/images/strip/20231005.jpg" width="784" height="480" alt="輪読会の様子" loading="lazy" decoding="async"></li>
+                        <li><img src="./assets/images/strip/nf25-a.jpg" width="640" height="480" alt="2025年度11月祭の展示の様子" loading="lazy" decoding="async"></li>
+                        <li><img src="./assets/images/strip/202302.jpg" width="784" height="480" alt="輪読会の様子" loading="lazy" decoding="async"></li>
+                        <li><img src="./assets/images/strip/nf24-a.jpg" width="640" height="480" alt="2024年度11月祭の展示の様子" loading="lazy" decoding="async"></li>
+                        <li><img src="./assets/images/strip/AAAILT.jpg" width="784" height="480" alt="AAAI論文読みLT会の様子" loading="lazy" decoding="async"></li>
+                        <li><img src="./assets/images/strip/nf23-a.jpg" width="634" height="480" alt="2023年度11月祭の展示の様子" loading="lazy" decoding="async"></li>
+                        <li><img src="./assets/images/strip/20220714.jpg" width="784" height="480" alt="輪読会の様子" loading="lazy" decoding="async"></li>
+                        <li><img src="./assets/images/strip/nf25-b.jpg" width="640" height="480" alt="2025年度11月祭でのデモ展示の様子" loading="lazy" decoding="async"></li>
+                        <li><img src="./assets/images/strip/nf17-b.jpg" width="640" height="480" alt="11月祭でのポスター展示" loading="lazy" decoding="async"></li>
+                        <li><img src="./assets/images/strip/nf24-b.jpg" width="640" height="480" alt="2024年度11月祭の展示の様子" loading="lazy" decoding="async"></li>
+                        <li><img src="./assets/images/strip/nf23-b.jpg" width="638" height="480" alt="2023年度11月祭の展示の様子" loading="lazy" decoding="async"></li>
+                        <li><img src="./assets/images/strip/nf17-a.jpg" width="640" height="480" alt="11月祭で配布した会誌" loading="lazy" decoding="async"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container stack stack--xl mt-7">
                 <!-- docswell埋め込み -->
                 <div class="embed">
                     <script async class="docswell-embed"

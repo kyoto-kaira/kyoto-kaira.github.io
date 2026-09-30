@@ -11,6 +11,7 @@
      <main id="main"> … </main>
      <footer id="site-footer" class="site-footer"></footer>
      <nav data-year-pager></nav>        … NF特設ページのみ（任意）
+     <div class="photo-strip" data-photo-strip> … 写真を自動で横に流す（任意）
    ========================================================================= */
 (function () {
   "use strict";
@@ -262,9 +263,69 @@
     Object.keys(map).forEach(function (id) { observer.observe(document.getElementById(id)); });
   }
 
+  /* ---- フォトストリップ（活動写真の自動横スクロール） --------------------
+     HTML の .photo-strip__group を複製して継ぎ目のない無限ループにする。
+     「視差効果を減らす」設定のときは何もしない（手で横スクロールできる列のまま）。 */
+  var STRIP_SPEED = 28; /* px/秒。ゆっくり・一定の速さ */
+
+  function setupPhotoStrips() {
+    var strips = document.querySelectorAll("[data-photo-strip]");
+    if (!strips.length) return;
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    Array.prototype.forEach.call(strips, function (strip) {
+      var track = strip.querySelector(".photo-strip__track");
+      var group = strip.querySelector(".photo-strip__group");
+      if (!track || !group) return;
+
+      /* 複製側は読み上げ・フォーカスの対象外にする */
+      var clone = group.cloneNode(true);
+      clone.setAttribute("aria-hidden", "true");
+      Array.prototype.forEach.call(clone.querySelectorAll("img"), function (img) { img.alt = ""; });
+      track.appendChild(clone);
+
+      function updateDuration() {
+        var width = group.getBoundingClientRect().width;
+        if (width > 0) strip.style.setProperty("--strip-duration", (width / STRIP_SPEED).toFixed(1) + "s");
+      }
+      updateDuration();
+      window.addEventListener("resize", updateDuration);
+
+      /* 一時停止／再生ボタン */
+      var controls = document.createElement("div");
+      controls.className = "photo-strip__controls";
+      controls.innerHTML =
+        '<button class="button button--secondary button--compact photo-strip__toggle" type="button" aria-pressed="false">' +
+          icon("pause").replace("<svg", '<svg data-icon="pause"') +
+          icon("play-arrow").replace("<svg", '<svg data-icon="play"') +
+          '<span class="photo-strip__toggle-label">一時停止</span>' +
+        "</button>";
+      strip.appendChild(controls);
+      var toggle = controls.querySelector("button");
+      var label = controls.querySelector(".photo-strip__toggle-label");
+      toggle.setAttribute("aria-label", "写真の自動スクロールを一時停止");
+      toggle.addEventListener("click", function () {
+        var paused = strip.classList.toggle("is-paused");
+        toggle.setAttribute("aria-pressed", String(paused));
+        label.textContent = paused ? "再生" : "一時停止";
+        toggle.setAttribute("aria-label", paused ? "写真の自動スクロールを再生" : "写真の自動スクロールを一時停止");
+      });
+
+      /* 画面外にあるときは止める */
+      if ("IntersectionObserver" in window) {
+        new IntersectionObserver(function (entries) {
+          strip.classList.toggle("is-offscreen", !entries[0].isIntersecting);
+        }).observe(strip);
+      }
+
+      strip.classList.add("is-running");
+    });
+  }
+
   setupAnalytics();
   renderHeader();
   renderFooter();
   renderYearPager();
   setupScrollSpy();
+  setupPhotoStrips();
 })();
