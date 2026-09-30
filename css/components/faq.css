@@ -33,25 +33,19 @@
 
 .faq__q::before,
 .faq__a::before {
-  display: grid;
-  place-items: center;
-  width: 2rem;
-  height: 2rem;
-  border-radius: var(--radius-sm);
   font-size: var(--text-sm);
-  font-weight: var(--weight-bold);
-  line-height: 1;
-  transform: translateY(-0.1em);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-label);
+  line-height: inherit;
 }
 
+/* 枠や塗りは使わず、文字ラベルとして示す */
 .faq__q::before {
   content: "Q";
-  background: var(--color-text);
-  color: var(--color-bg);
+  color: var(--color-brand);
 }
 
 .faq__a::before {
   content: "A";
-  background: var(--color-surface-muted);
-  color: var(--color-text);
+  color: var(--color-text-tertiary);
 }
