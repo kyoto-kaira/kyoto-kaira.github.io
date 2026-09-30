@@ -203,9 +203,3 @@
 .card__media--tile-brand .card__tile-value {
   font-size: clamp(2.75rem, 2rem + 3vw, 4rem);
 }
-
-@media (prefers-color-scheme: dark) {
-  .card__media--tile {
-    color: var(--color-brand-ink);
-  }
-}
