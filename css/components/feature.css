@@ -1,0 +1,30 @@
+/* Feature — アイコン＋見出し＋短文の要点タイル（トップページの特徴など） */
+.feature {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.feature__icon {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius-sm);
+  background: var(--color-brand-tint);
+  color: var(--color-brand-ink);
+}
+
+.feature__icon .icon {
+  --icon-size: 1.5rem;
+}
+
+.feature__title {
+  font-size: var(--text-md);
+}
+
+.feature__text {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  line-height: var(--leading-snug);
+}
