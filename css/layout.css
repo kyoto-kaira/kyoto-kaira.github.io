@@ -28,7 +28,12 @@
   padding-top: 0;
 }
 
-.section + .section:not(.section--subtle, .section--brand) {
+/* 直前のセクションの続きとして見せる（上の余白を半分にし、区切り線を入れない） */
+.section--continue {
+  padding-top: calc(var(--space-section) / 2);
+}
+
+.section + .section:not(.section--subtle, .section--brand, .section--continue) {
   border-top: 1px solid var(--color-border);
 }
 
