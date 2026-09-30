@@ -35,5 +35,6 @@
 @import url("components/section-nav.css") layer(components);
 @import url("components/link-card.css") layer(components);
 @import url("components/cta.css") layer(components);
+@import url("components/editorial.css") layer(components);
 
 @import url("utilities.css") layer(utilities);
