@@ -122,6 +122,26 @@
   text-underline-offset: 0.2em;
 }
 
+/* ---- Book archive — これまでに読んだ本 -----------------------------------
+   今期の本の下に、過去の輪読本の表紙を横に流して並べる。
+   流す仕組みは photo-strip を使い、表紙用の見た目は photo-strip--books で指定する。 */
+.book-archive {
+  margin-top: var(--space-8);
+}
+
+.book-archive__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-5);
+  margin-bottom: var(--space-4);
+}
+
+.book-archive__title {
+  font-size: var(--text-lg);
+}
+
 /* ---- Small screens: 1カラム。表紙を左、書誌情報を右に置く --------------- */
 @media (max-width: 560px) {
   .book-shelf {
