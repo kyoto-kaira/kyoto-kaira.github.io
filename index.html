@@ -148,16 +148,10 @@
         <section class="section section--continue" aria-labelledby="books-title">
             <div class="container">
                 <div class="book-shelf">
-                    <div class="section-heading section-heading--row">
-                        <div class="stack stack--sm">
-                            <p class="eyebrow">Books</p>
-                            <h2 class="section-title" id="books-title">2026年後期に読む本</h2>
-                            <p class="section-lead">※11月26日（NF終了後）からの開催となります。</p>
-                        </div>
-                        <a class="link-arrow" href="./news.html">
-                            過去の輪読本を見る
-                            <svg class="icon" aria-hidden="true"><use href="./assets/icons/sprite.svg#arrow-right"></use></svg>
-                        </a>
+                    <div class="section-heading">
+                        <p class="eyebrow">Books</p>
+                        <h2 class="section-title" id="books-title">2026年後期に読む本</h2>
+                        <p class="section-lead">※11月26日（NF終了後）からの開催となります。</p>
                     </div>
 
                     <ol class="book-shelf__list">
@@ -172,6 +166,49 @@
                             </div>
                         </li>
                     </ol>
+                </div>
+
+                <!-- これまでに読んだ本（表紙は assets/images/book-strip/ に高さ320pxのJPEGで置き、新しい順に <li> を並べる。複製とループは site.js が行う） -->
+                <div class="book-archive">
+                    <div class="book-archive__head">
+                        <h3 class="book-archive__title" id="book-archive-title">これまでに読んだ本</h3>
+                        <a class="link-arrow" href="./news.html">
+                            過去の輪読本を見る
+                            <svg class="icon" aria-hidden="true"><use href="./assets/icons/sprite.svg#arrow-right"></use></svg>
+                        </a>
+                    </div>
+                    <div class="photo-strip photo-strip--books" data-photo-strip role="region" aria-labelledby="book-archive-title">
+                        <div class="photo-strip__viewport">
+                            <div class="photo-strip__track">
+                                <ul class="photo-strip__group">
+                                    <li><img src="./assets/images/book-strip/image-recognition-basics.jpg" width="226" height="320" alt="深層学習による画像認識の基礎" loading="lazy" decoding="async"></li>
+                                    <li><img src="./assets/images/book-strip/zerokara-1.jpg" width="226" height="320" alt="ゼロから作るDeep Learning" loading="lazy" decoding="async"></li>
+                                    <li><img src="./assets/images/book-strip/optimization.jpg" width="200" height="277" alt="しっかり学ぶ数理最適化" loading="lazy" decoding="async"></li>
+                                    <li><img src="./assets/images/book-strip/zerokara-4.jpg" width="200" height="285" alt="ゼロから作るDeep Learning ❹ ―強化学習編" loading="lazy" decoding="async"></li>
+                                    <li><img src="./assets/images/book-strip/generative-2.jpg" width="225" height="320" alt="生成 Deep Learning 第2版" loading="lazy" decoding="async"></li>
+                                    <li><img src="./assets/images/book-strip/intro-llm-1.jpg" width="255" height="320" alt="大規模言語モデル入門" loading="lazy" decoding="async"></li>
+                                    <li><img src="./assets/images/book-strip/intro-llm-2.jpg" width="255" height="320" alt="大規模言語モデル入門Ⅱ" loading="lazy" decoding="async"></li>
+                                    <li><img src="./assets/images/book-strip/graph-neural-network.jpg" width="226" height="320" alt="グラフニューラルネットワーク" loading="lazy" decoding="async"></li>
+                                    <li><img src="./assets/images/book-strip/3d-point-cloud-processing.jpg" width="251" height="320" alt="詳解3次元点群処理" loading="lazy" decoding="async"></li>
+                                    <li><img src="./assets/images/book-strip/fundamentals-of-natural-language-processing.jpg" width="225" height="320" alt="IT Text 自然言語処理の基礎" loading="lazy" decoding="async"></li>
+                                    <li><img src="./assets/images/book-strip/learn-speech-recognition-with-python.jpg" width="251" height="320" alt="Pythonで学ぶ音声認識" loading="lazy" decoding="async"></li>
+                                    <li><img src="./assets/images/book-strip/causal-inference.jpg" width="219" height="320" alt="統計的因果推論の理論と実装" loading="lazy" decoding="async"></li>
+                                    <li><img src="./assets/images/book-strip/gaussian-process.jpg" width="224" height="320" alt="ガウス過程と機械学習" loading="lazy" decoding="async"></li>
+                                    <li><img src="./assets/images/book-strip/deep-learning-2.jpg" width="200" height="283" alt="深層学習 改訂第2版" loading="lazy" decoding="async"></li>
+                                    <li><img src="./assets/images/book-strip/pattern-recognition.jpg" width="225" height="320" alt="はじめてのパターン認識" loading="lazy" decoding="async"></li>
+                                    <li><img src="./assets/images/book-strip/kaggle-competition.jpg" width="249" height="320" alt="Kaggleコンペティション チャレンジブック" loading="lazy" decoding="async"></li>
+                                    <li><img src="./assets/images/book-strip/deep-rl-practice.jpg" width="249" height="320" alt="つくりながら学ぶ！深層強化学習" loading="lazy" decoding="async"></li>
+                                    <li><img src="./assets/images/book-strip/prml-1.jpg" width="215" height="320" alt="パターン認識と機械学習 上" loading="lazy" decoding="async"></li>
+                                    <li><img src="./assets/images/book-strip/generative.jpg" width="225" height="320" alt="生成 Deep Learning" loading="lazy" decoding="async"></li>
+                                    <li><img src="./assets/images/book-strip/pytorch.jpg" width="200" height="258" alt="つくりながら学ぶ！PyTorchによる発展ディープラーニング" loading="lazy" decoding="async"></li>
+                                    <li><img src="./assets/images/book-strip/zerokara-2.jpg" width="225" height="320" alt="ゼロから作るDeep Learning ❷ ―自然言語処理編" loading="lazy" decoding="async"></li>
+                                    <li><img src="./assets/images/book-strip/python-kyouka.jpg" width="223" height="320" alt="Pythonで学ぶ強化学習" loading="lazy" decoding="async"></li>
+                                    <li><img src="./assets/images/book-strip/deep-learning.jpg" width="240" height="320" alt="深層学習（Deep Learning 日本語版）" loading="lazy" decoding="async"></li>
+                                    <li><img src="./assets/images/book-strip/shoukai.jpg" width="249" height="320" alt="詳解ディープラーニング" loading="lazy" decoding="async"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
