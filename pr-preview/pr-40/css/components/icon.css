@@ -1,0 +1,22 @@
+/* Icon — assets/icons/sprite.svg のシンボルを <svg class="icon"><use href="…#name"></use></svg> で使います。
+   線の太さ・サイズを全アイコンで統一するため、個別に stroke 等を指定しないでください。 */
+.icon {
+  flex: none;
+  width: var(--icon-size, 1.25em);
+  height: var(--icon-size, 1.25em);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vertical-align: -0.2em;
+}
+
+/* ブランドロゴ（GitHub など）は塗りで描画 */
+.icon--fill {
+  fill: currentColor;
+  stroke: none;
+}
+
+.icon--sm { --icon-size: 1rem; }
+.icon--lg { --icon-size: 1.5rem; }

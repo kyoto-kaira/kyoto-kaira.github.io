@@ -1,0 +1,104 @@
+/* Join — ページ終盤の入会案内セクション
+   -------------------------------------------------------------------------
+   カードの枠や大きな青いボタンは使わず、見出し・余白・活動写真で構成する。
+   写真は左辺を斜めに切り抜き、広い画面では右側を画面端まで広げる。
+   青（--color-accent-*）はラベルの線とリンクにだけ使う。 */
+.join {
+  overflow-x: clip; /* 画面端まで広げた写真で横スクロールが出ないようにする */
+}
+
+.join__inner {
+  display: grid;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+.join__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-5);
+  max-width: 30rem;
+}
+
+.join__title {
+  font-size: var(--text-3xl);
+  line-height: var(--leading-tight);
+}
+
+.join__lead {
+  color: var(--color-text-secondary);
+  font-size: var(--text-md);
+}
+
+.join__text .arrow-link {
+  margin-top: var(--space-3);
+}
+
+.join__media {
+  position: relative;
+  margin: 0;
+}
+
+.join__media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: 55% 50%;
+  background: var(--color-surface-muted);
+  clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+@media (min-width: 56rem) {
+  .join__inner {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: clamp(3rem, 1rem + 4vw, 5rem);
+  }
+
+  /* 写真の右端を、コンテナの外側（画面の右端）まで広げる */
+  .join__media {
+    margin-inline-end: calc(-1 * max(var(--gutter), (100vw - var(--container-max)) / 2));
+  }
+
+  .join__media img {
+    aspect-ratio: 16 / 11;
+    clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+/* Arrow link — 塗りボタンより軽い導線。文字＋下線＋矢印で示す */
+.arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--tap-target);
+  padding-bottom: var(--space-1);
+  border-bottom: 1px solid currentColor;
+  color: var(--color-accent-text);
+  font-weight: var(--weight-bold);
+  text-decoration: none;
+}
+
+.arrow-link .icon {
+  transition: transform var(--duration-base) var(--ease-out);
+}
+
+.arrow-link:hover {
+  color: var(--color-accent-text-hover);
+}
+
+.arrow-link:hover .icon {
+  transform: translateX(4px);
+}
+
+/* Year pager — NF特設ページ下部の年度切り替え（js/site.js が描画） */
+.year-pager {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.year-pager__title {
+  font-size: var(--text-md);
+}
