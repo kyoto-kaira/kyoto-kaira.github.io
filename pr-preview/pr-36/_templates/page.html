@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!--
+  新規ページ用テンプレート（ルート直下に置く場合）。
+  works/ など1階層下に置く場合は "./" を "../" に置き換えてください。
+  _templates/ は GitHub Pages(Jekyll) の公開対象外です。
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ページ名｜京都大学人工知能研究会 KaiRA</title>
+    <meta name="description" content="ページの説明文">
+    <meta property="og:title" content="ページ名｜京都大学人工知能研究会KaiRA">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kyoto-kaira.github.io/xxx.html">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="./assets/images/brand/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/brand/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Geist+Mono:wght@500&display=swap">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/site.js" defer></script>
+</head>
+
+<!-- data-page はグローバルナビの id（home / about / news / works / contact） -->
+<body data-page="about">
+    <header id="site-header" class="site-header"></header>
+
+    <main id="main">
+        <!-- ヒーロー：写真は使わない。装飾は --nodes / --geometric / --lines から選ぶ -->
+        <section class="page-hero page-hero--nodes">
+            <div class="container">
+                <p class="page-hero__eyebrow">English label</p>
+                <h1 class="page-hero__title">ページ名</h1>
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="s1-title">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">Section</p>
+                    <h2 class="section-title" id="s1-title">見出し</h2>
+                    <p class="section-lead">リード文（任意）</p>
+                </div>
+                <div class="prose">
+                    <p>本文</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 背景色を切り替えて次のまとまりを示す -->
+        <section class="section section--subtle" aria-labelledby="s2-title">
+            <div class="container">
+                <div class="section-heading">
+                    <h2 class="section-title" id="s2-title">カードの一覧</h2>
+                </div>
+                <div class="grid grid--3">
+                    <article class="card">
+                        <div class="card__media"><img src="./assets/images/photo/xxx.jpg" alt="" loading="lazy"></div>
+                        <div class="card__body">
+                            <h3 class="card__title">タイトル</h3>
+                            <p class="card__text">説明</p>
+                            <div class="card__actions">
+                                <a class="button button--tinted button--compact" href="#">操作</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="site-footer" class="site-footer"></footer>
+</body>
+
+</html>

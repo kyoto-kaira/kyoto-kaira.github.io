@@ -1,0 +1,52 @@
+/* Numbered list — 番号・罫線・余白だけで要点を並べる編集的なリスト
+   アイコンやカードは使わない。番号は CSS カウンターで自動採番（01, 02 …）。
+
+   <ol class="numbered-list">
+     <li class="numbered-list__item">
+       <h3 class="numbered-list__title">見出し</h3>
+       <p class="numbered-list__text">1〜2行の説明</p>
+     </li>
+   </ol> */
+.numbered-list {
+  counter-reset: numbered;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--color-border);
+}
+
+.numbered-list__item {
+  counter-increment: numbered;
+  display: grid;
+  grid-template-columns: 2.25rem minmax(0, 1fr);
+  column-gap: var(--space-4);
+  row-gap: var(--space-1);
+  margin: 0;
+  padding-block: var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.numbered-list__item::before {
+  content: counter(numbered, decimal-leading-zero);
+  grid-row: 1 / span 2;
+  color: var(--color-brand);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.04em;
+  line-height: var(--leading-snug);
+}
+
+.numbered-list__title {
+  grid-column: 2;
+  font-size: var(--text-md);
+  line-height: var(--leading-snug);
+}
+
+.numbered-list__text {
+  grid-column: 2;
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  line-height: var(--leading-snug);
+}
