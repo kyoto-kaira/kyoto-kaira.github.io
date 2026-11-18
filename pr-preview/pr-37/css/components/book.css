@@ -1,0 +1,191 @@
+/* Book — 輪読本の紹介
+   -------------------------------------------------------------------------
+   「本をカードに入れて見せる」のではなく「本そのものを並べて見せる」。
+   大学の選書紹介や雑誌のブックガイドのような、編集的なレイアウトにする。
+   - カードの背景・枠線・角丸は使わない。表紙画像が主役
+   - 表紙は原本の比率のまま、下端をそろえて書棚に立てたように並べる
+   - 表紙にはごく薄い影だけを付け、hover では表紙だけを数px浮かせる
+   - 情報の階層は余白とタイポグラフィで作る（番号 → 書名 → 著者・出版社 → リンク）
+   - アクセント色（青）はリンクにだけ使う
+
+   Book shelf — 見出し・リンク・書籍群を1つのまとまりとして配置する。
+   冊数に合わせて幅が決まり、2冊しかないときに画面幅いっぱいへ広げない。 */
+
+.book-shelf {
+  --book-col-width: 300px;
+  --book-gap: var(--space-8);   /* 64px */
+  --book-cols: 2;
+  --book-cover-height: 260px;
+
+  width: 100%;
+  max-width: calc(var(--book-col-width) * var(--book-cols) + var(--book-gap) * (var(--book-cols) - 1));
+}
+
+/* 冊数が増えたら自動で列を増やす（HTML側の変更は不要） */
+.book-shelf:has(.book-shelf__list > :nth-child(3)) { --book-cols: 3; }
+.book-shelf:has(.book-shelf__list > :nth-child(4)) { --book-cols: 4; }
+
+.book-shelf__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+  gap: var(--space-7) var(--book-gap);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: book;
+}
+
+/* ---- Book ------------------------------------------------------------ */
+.book {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  counter-increment: book;
+}
+
+/* 表紙：高さをそろえ、下端（棚板）に揃えて左寄せで立てる */
+.book__cover {
+  display: flex;
+  align-items: flex-end;
+  height: var(--book-cover-height);
+  margin-bottom: var(--space-5);
+}
+
+.book__cover img {
+  display: block;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  box-shadow: var(--shadow-cover);
+  transition:
+    transform var(--duration-base) ease,
+    box-shadow var(--duration-base) ease;
+}
+
+.book:hover .book__cover img {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-cover-hover);
+}
+
+/* 本文：細い罫線と通し番号で、ブックガイドの「項目」として区切る */
+.book__body {
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border-strong);
+}
+
+.book__body::before {
+  content: counter(book, decimal-leading-zero);
+  margin-bottom: var(--space-2);
+  color: var(--color-text-tertiary);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label);
+}
+
+.book__title {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-heading);
+}
+
+.book__meta {
+  margin-top: var(--space-2);
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  line-height: var(--leading-snug);
+}
+
+.book__sep {
+  margin-inline: 0.35em;
+  color: var(--color-text-tertiary);
+}
+
+.book__link {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  gap: var(--space-1);
+  margin-top: var(--space-4);
+  color: var(--color-accent-text);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  text-decoration: none;
+}
+
+.book__link:hover {
+  color: var(--color-accent-text-hover);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+/* ---- Book archive — これまでに読んだ本 -----------------------------------
+   今期の本の下に、過去の輪読本の表紙を横に流して並べる。
+   流す仕組みは photo-strip を使い、表紙用の見た目は photo-strip--books で指定する。 */
+.book-archive {
+  margin-top: var(--space-8);
+}
+
+.book-archive__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-5);
+  margin-bottom: var(--space-4);
+}
+
+.book-archive__title {
+  font-size: var(--text-lg);
+}
+
+/* ---- Small screens: 1カラム。表紙を左、書誌情報を右に置く --------------- */
+@media (max-width: 560px) {
+  .book-shelf {
+    --book-cover-height: 168px;
+  }
+
+  .book-shelf__list {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .book {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-5);
+  }
+
+  .book + .book {
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .book__cover {
+    flex: none;
+    max-width: 42%;
+    margin-bottom: 0;
+  }
+
+  .book__body {
+    flex: 1;
+    min-width: 0;
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .book__sep {
+    display: none;
+  }
+
+  .book__publisher {
+    display: block;
+  }
+
+  .book__title {
+    font-size: var(--text-md);
+  }
+}
