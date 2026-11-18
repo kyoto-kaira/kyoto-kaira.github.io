@@ -34,6 +34,11 @@ body {
   font-weight: var(--weight-regular);
   line-height: var(--leading-body);
   font-feature-settings: "palt" 0;
+  /* 日本語を文節の区切りで改行する（Chrome/Edge 119 以降。他のブラウザは従来の改行）。
+     lang="ja" が必要。1 行に収まらない長い文節や URL は、はみ出さないよう途中で改行する。
+     break-word では flex/grid の子要素が文節の幅より縮まず画面からはみ出すため、anywhere を使う */
+  word-break: auto-phrase;
+  overflow-wrap: anywhere;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: clip;
@@ -65,6 +70,13 @@ dl,
 figure,
 blockquote {
   margin: 0;
+}
+
+/* 段落の最後の行に「す。」のような 1〜2 文字だけが残る改行を減らす */
+p,
+li,
+dd {
+  text-wrap: pretty;
 }
 
 ul,
