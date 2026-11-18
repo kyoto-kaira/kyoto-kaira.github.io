@@ -1,0 +1,81 @@
+/* Site footer — js/site.js が #site-footer の中身を描画します。 */
+.site-footer {
+  margin-top: auto;
+  padding-block: var(--space-8) var(--space-6);
+  background: var(--color-bg-subtle);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+}
+
+.site-footer__grid {
+  display: grid;
+  gap: var(--space-7);
+}
+
+@media (min-width: 48rem) {
+  .site-footer__grid {
+    grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr));
+  }
+}
+
+.site-footer__logo {
+  width: auto;
+  height: 44px;
+  filter: var(--logo-filter);
+}
+
+.site-footer__tagline {
+  margin-top: var(--space-4);
+  line-height: var(--leading-snug);
+}
+
+.site-footer__mail {
+  margin-top: var(--space-3);
+}
+
+.site-footer__heading {
+  margin-bottom: var(--space-2);
+  color: var(--color-text);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.site-footer__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer__list li + li {
+  margin-top: 0;
+}
+
+.site-footer__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-width: var(--tap-target);
+  min-height: var(--tap-target);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+.site-footer__link:hover {
+  color: var(--color-accent-text);
+  text-decoration: underline;
+}
+
+.site-footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-5);
+  margin-top: var(--space-7);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-tertiary);
+  font-size: var(--text-xs);
+}

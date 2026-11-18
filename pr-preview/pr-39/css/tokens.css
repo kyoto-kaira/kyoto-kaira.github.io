@@ -1,0 +1,185 @@
+/* =========================================================================
+   Design tokens
+   -------------------------------------------------------------------------
+   サイト全体の色・文字・余白・角丸・影・動きの「唯一の定義元」です。
+   コンポーネントでは生の値（#0171C0 や 24px など）を直接書かず、
+   必ずここで定義した変数（var(--…)）を参照してください。
+
+   色の役割（1色に2つの意味を持たせない）
+     --color-accent-*  : 操作できるもの（リンク・ボタン・フォーカス・現在地）
+     --color-brand-*   : ブランドの「面」（ヒーロー・アイコンタイル）。大面積の青はヒーローに限る
+     それ以外          : ニュートラル（見出し・本文・区切り線など）
+   ========================================================================= */
+
+:root {
+  color-scheme: light;
+
+  /* ---- Primitive palette ------------------------------------------------ */
+  /* ブランドの青（#0171C0 を軸にしたスケール） */
+  --blue-50: #f0f7fc;   /* 薄い青背景（現在地・淡色ボタン） */
+  --blue-100: #dcebf7;
+  --blue-200: #b3d4ee;
+  --blue-300: #7ab4e2;
+  --blue-400: #3a93d6;
+  --blue-450: #0f7ccf;  /* ヒーローのグラデーション起点 */
+  --blue-500: #0171c0;  /* KaiRA Blue — ブランドカラー */
+  --blue-600: #0b5ea8;
+  --blue-700: #0a4f8f;
+  --blue-800: #123b68;  /* ネイビー */
+  --blue-900: #0c2847;
+
+  /* ニュートラル（わずかに青みのあるグレー） */
+  --gray-0: #ffffff;
+  --gray-50: #f8fafc;
+  --gray-100: #f1f5f9;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #94a3b8;
+  --gray-500: #64748b;
+  --gray-600: #475569;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-850: #151c26;
+  --gray-900: #111827;
+  --gray-950: #0b1120;
+
+  /* ---- Semantic: surfaces & text --------------------------------------- */
+  --color-bg: var(--gray-0);
+  --color-bg-subtle: var(--gray-50);
+  --color-bg-blue-subtle: var(--blue-50);
+  --color-surface: var(--gray-0);
+  --color-surface-muted: var(--gray-100);
+  --color-border: var(--gray-200);
+  --color-border-strong: var(--gray-300);
+  --color-text: var(--gray-900);
+  --color-text-secondary: var(--gray-600);   /* 仕様: text-subtle */
+  --color-text-tertiary: var(--gray-500);
+  --color-nav-text: var(--gray-700);
+  --color-header-bg: rgb(255 255 255 / 0.92);
+
+  /* ---- Semantic: interactive (accent) ---------------------------------- */
+  --color-accent-text: var(--blue-500);        /* リンク文字・現在地 */
+  --color-accent-text-hover: var(--blue-600);
+  --color-accent-fill: var(--blue-500);        /* 塗りボタン */
+  --color-accent-fill-hover: var(--blue-600);
+  --color-accent-fill-pressed: var(--blue-700);
+  --color-accent-tint: var(--blue-50);         /* 淡色ボタン・現在地の背景 */
+  --color-accent-tint-hover: var(--blue-100);
+  --color-on-accent: var(--gray-0);
+  --color-focus-ring: var(--blue-400);
+
+  /* ---- Semantic: brand surfaces ---------------------------------------- */
+  --color-brand: var(--blue-500);
+  --color-brand-deep: var(--blue-800);
+  --color-brand-tint: var(--blue-50);
+  --color-brand-ink: var(--blue-500);          /* ブランド面上のアイコン */
+  --color-on-brand: var(--gray-0);
+  --color-on-brand-tint: rgb(255 255 255 / 0.12);   /* ブランド面上の淡い塗り（hover） */
+  --color-on-brand-border: rgb(255 255 255 / 0.6);  /* ブランド面上の枠線 */
+  --color-brand-grid-line: rgb(1 113 192 / 0.06);   /* 薄い青背景の上のグリッド線 */
+  /* ヒーロー共通の背景（写真は使わない） */
+  --gradient-hero: linear-gradient(135deg, var(--blue-450) 0%, var(--blue-600) 45%, var(--blue-800) 100%);
+  --hero-line: rgb(255 255 255 / 0.06);        /* ヒーローのグリッド線 */
+
+  /* ロゴ画像（黒文字）をダークモードで反転させるためのフィルタ */
+  --logo-filter: none;
+
+  /* ---- Typography ------------------------------------------------------ */
+  /* 英字は Inter、日本語は Noto Sans JP で描画される */
+  --font-sans: "Inter", "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "Yu Gothic UI", Meiryo, system-ui, sans-serif;
+  /* 番号など、ごく一部の技術的アクセントにだけ使う（英字ラベルには使わない） */
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --text-xs: 0.75rem;      /* 12 */
+  --text-sm: 0.875rem;     /* 14 */
+  --text-base: 1rem;       /* 16 */
+  --text-md: 1.0625rem;    /* 17 */
+  --text-lg: 1.25rem;      /* 20 */
+  --text-xl: 1.5rem;       /* 24 */
+  --text-2xl: clamp(1.625rem, 1.35rem + 1.1vw, 2rem);      /* 26 → 32 */
+  --text-3xl: clamp(1.875rem, 1.45rem + 1.9vw, 2.75rem);   /* 30 → 44 */
+  --text-display: clamp(2rem, 1.35rem + 2.9vw, 3.375rem);  /* 32 → 54 */
+
+  --leading-tight: 1.35;
+  --leading-snug: 1.55;
+  --leading-body: 1.85;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  --tracking-heading: 0.02em;
+  --tracking-label: 0.08em;   /* 英字ラベル（0.06〜0.1em の範囲で） */
+
+  /* ---- Spacing (4px base) ---------------------------------------------- */
+  --space-1: 0.25rem;  /* 4 */
+  --space-2: 0.5rem;   /* 8 */
+  --space-3: 0.75rem;  /* 12 */
+  --space-4: 1rem;     /* 16 */
+  --space-5: 1.5rem;   /* 24 */
+  --space-6: 2rem;     /* 32 */
+  --space-7: 3rem;     /* 48 */
+  --space-8: 4rem;     /* 64 */
+  --space-9: 6rem;     /* 96 */
+
+  --space-section: clamp(3.5rem, 2.5rem + 4vw, 6rem);   /* セクション上下 */
+  --gutter: clamp(1rem, 0.6rem + 2vw, 2rem);            /* 画面端の余白 */
+
+  /* ---- Layout ---------------------------------------------------------- */
+  --container-max: 72rem;      /* 1152 */
+  --container-narrow: 48rem;   /* 768  読み物向け */
+  --header-height: 4rem;       /* 64 */
+  --tap-target: 44px;          /* HIG: 最小タップ領域 */
+
+  /* ---- Shape ----------------------------------------------------------- */
+  /* 角丸は使うが、丸くしすぎない */
+  --radius-2xs: 2px;       /* 写真・ニュースの画像（輪郭をわずかに整える） */
+  --radius-indicator: 3px; /* 現在地を示す下線・縦線 */
+  --radius-xs: 4px;      /* 書籍の表紙など小さな画像 */
+  --radius-sm: 8px;      /* ナビ項目・画像・小さなタイル */
+  --radius-button: 10px; /* ボタン */
+  --radius-md: 12px;     /* カード */
+  --radius-lg: 16px;     /* CTAカードなど大きな面 */
+  --radius-pill: 999px;  /* ステータス・タグなど小さな補助UIに限る */
+
+  /* ---- Elevation ------------------------------------------------------- */
+  /* 影はごく控えめに。構造は基本的に枠線で表す */
+  --shadow-sm: 0 1px 2px rgb(15 23 42 / 0.04);
+  --shadow-md: 0 8px 30px rgb(15 23 42 / 0.04);
+  --shadow-lg: 0 12px 40px rgb(15 23 42 / 0.08);
+  /* 書籍の表紙（本の厚みを感じさせる程度の薄い影） */
+  --shadow-cover: 0 1px 2px rgb(15 23 42 / 0.08), 0 4px 12px rgb(15 23 42 / 0.06);
+  --shadow-cover-hover: 0 2px 4px rgb(15 23 42 / 0.08), 0 10px 20px rgb(15 23 42 / 0.08);
+
+  /* ---- Motion ---------------------------------------------------------- */
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  /* ---- Layers ---------------------------------------------------------- */
+  --z-sticky: 50;
+  --z-header: 100;
+  --z-overlay: 200;
+}
+
+/* ---- Increased contrast ------------------------------------------------- */
+@media (prefers-contrast: more) {
+  :root {
+    --color-border: var(--gray-400);
+    --color-border-strong: var(--gray-600);
+    --color-text-secondary: var(--gray-700);
+    --color-text-tertiary: var(--gray-600);
+    --color-accent-text: var(--blue-700);
+    --color-accent-fill: var(--blue-700);
+    --color-accent-fill-hover: var(--blue-800);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-base: 0ms;
+  }
+}
