@@ -15,8 +15,9 @@
   overflow: hidden;
   display: flex;
   align-items: flex-end;
-  min-height: clamp(15rem, 11rem + 12vw, 21rem);
-  padding-block: var(--space-8) var(--space-7);
+  /* 下層ページでは、ページを開いた最初の画面に本文が入るよう帯を低くする（144px → 176px） */
+  min-height: clamp(9rem, 7rem + 6vw, 11rem);
+  padding-block: var(--space-7) var(--space-6);
   background: var(--gradient-hero);
   color: var(--color-on-brand);
 }
@@ -87,6 +88,13 @@
 
 .page-hero__actions {
   margin-top: var(--space-7);
+}
+
+/* 帯の直後のセクションは、上の余白を通常のセクション間より狭くする。
+   帯とセクションの境目は背景色の違いで分かるため、広い余白で区切る必要がない */
+.page-hero + .section,
+.page-hero + .section-nav + .section {
+  padding-top: var(--space-7);
 }
 
 /* ---- トップページ -------------------------------------------------- */
