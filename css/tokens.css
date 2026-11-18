@@ -74,6 +74,9 @@
   --color-brand-tint: var(--blue-50);
   --color-brand-ink: var(--blue-500);          /* ブランド面上のアイコン */
   --color-on-brand: var(--gray-0);
+  --color-on-brand-tint: rgb(255 255 255 / 0.12);   /* ブランド面上の淡い塗り（hover） */
+  --color-on-brand-border: rgb(255 255 255 / 0.6);  /* ブランド面上の枠線 */
+  --color-brand-grid-line: rgb(1 113 192 / 0.06);   /* 薄い青背景の上のグリッド線 */
   /* ヒーロー共通の背景（写真は使わない） */
   --gradient-hero: linear-gradient(135deg, var(--blue-450) 0%, var(--blue-600) 45%, var(--blue-800) 100%);
   --hero-line: rgb(255 255 255 / 0.06);        /* ヒーローのグリッド線 */
@@ -132,6 +135,8 @@
 
   /* ---- Shape ----------------------------------------------------------- */
   /* 角丸は使うが、丸くしすぎない */
+  --radius-2xs: 2px;       /* 写真・ニュースの画像（輪郭をわずかに整える） */
+  --radius-indicator: 3px; /* 現在地を示す下線・縦線 */
   --radius-xs: 4px;      /* 書籍の表紙など小さな画像 */
   --radius-sm: 8px;      /* ナビ項目・画像・小さなタイル */
   --radius-button: 10px; /* ボタン */
@@ -144,6 +149,9 @@
   --shadow-sm: 0 1px 2px rgb(15 23 42 / 0.04);
   --shadow-md: 0 8px 30px rgb(15 23 42 / 0.04);
   --shadow-lg: 0 12px 40px rgb(15 23 42 / 0.08);
+  /* 書籍の表紙（本の厚みを感じさせる程度の薄い影） */
+  --shadow-cover: 0 1px 2px rgb(15 23 42 / 0.08), 0 4px 12px rgb(15 23 42 / 0.06);
+  --shadow-cover-hover: 0 2px 4px rgb(15 23 42 / 0.08), 0 10px 20px rgb(15 23 42 / 0.08);
 
   /* ---- Motion ---------------------------------------------------------- */
   --duration-fast: 120ms;

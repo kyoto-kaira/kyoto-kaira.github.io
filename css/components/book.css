@@ -57,9 +57,7 @@
   height: 100%;
   max-width: 100%;
   object-fit: contain;
-  box-shadow:
-    0 1px 2px rgb(15 23 42 / 0.08),
-    0 4px 12px rgb(15 23 42 / 0.06);
+  box-shadow: var(--shadow-cover);
   transition:
     transform var(--duration-base) ease,
     box-shadow var(--duration-base) ease;
@@ -67,9 +65,7 @@
 
 .book:hover .book__cover img {
   transform: translateY(-4px);
-  box-shadow:
-    0 2px 4px rgb(15 23 42 / 0.08),
-    0 10px 20px rgb(15 23 42 / 0.08);
+  box-shadow: var(--shadow-cover-hover);
 }
 
 /* 本文：細い罫線と通し番号で、ブックガイドの「項目」として区切る */
@@ -124,6 +120,26 @@
   color: var(--color-accent-text-hover);
   text-decoration: underline;
   text-underline-offset: 0.2em;
+}
+
+/* ---- Book archive — これまでに読んだ本 -----------------------------------
+   今期の本の下に、過去の輪読本の表紙を横に流して並べる。
+   流す仕組みは photo-strip を使い、表紙用の見た目は photo-strip--books で指定する。 */
+.book-archive {
+  margin-top: var(--space-8);
+}
+
+.book-archive__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-5);
+  margin-bottom: var(--space-4);
+}
+
+.book-archive__title {
+  font-size: var(--text-lg);
 }
 
 /* ---- Small screens: 1カラム。表紙を左、書誌情報を右に置く --------------- */

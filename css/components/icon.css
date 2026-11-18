@@ -1,4 +1,4 @@
-/* Icon — assets/icons.svg のシンボルを <svg class="icon"><use href="…#name"></use></svg> で使います。
+/* Icon — assets/icons/sprite.svg のシンボルを <svg class="icon"><use href="…#name"></use></svg> で使います。
    線の太さ・サイズを全アイコンで統一するため、個別に stroke 等を指定しないでください。 */
 .icon {
   flex: none;

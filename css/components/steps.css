@@ -1,8 +1,9 @@
-/* Steps — 入会方法などの手順 */
+/* Steps — 入会方法などの手順
+   カードの枠は使わず、各ステップ上端の罫線と余白で区切る。 */
 .steps {
   counter-reset: step;
   display: grid;
-  gap: var(--space-5);
+  gap: var(--space-7);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -11,6 +12,7 @@
 @media (min-width: 48rem) {
   .steps {
     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    column-gap: var(--space-8);
   }
 }
 
@@ -20,10 +22,8 @@
   flex-direction: column;
   gap: var(--space-4);
   margin: 0;
-  padding: var(--space-6);
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-border-strong);
 }
 
 .step__label {
@@ -41,19 +41,22 @@
   content: counter(step, decimal-leading-zero);
   color: var(--color-brand);
   font-family: var(--font-mono);
-  font-size: var(--text-sm);
+  font-size: var(--text-lg);
   font-weight: var(--weight-medium);
   letter-spacing: 0.04em;
+  line-height: 1;
 }
 
 .step__title {
-  font-size: var(--text-lg);
+  font-size: var(--text-xl);
+  line-height: var(--leading-tight);
 }
 
 .step__body {
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
+  max-width: 34rem;
   color: var(--color-text-secondary);
 }
 

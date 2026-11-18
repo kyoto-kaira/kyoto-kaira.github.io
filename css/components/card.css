@@ -162,8 +162,8 @@
   gap: var(--space-1);
   padding: var(--space-5);
   background:
-    linear-gradient(rgb(1 113 192 / 0.06) 1px, transparent 1px) 0 0 / 24px 24px,
-    linear-gradient(90deg, rgb(1 113 192 / 0.06) 1px, transparent 1px) 0 0 / 24px 24px,
+    linear-gradient(var(--color-brand-grid-line) 1px, transparent 1px) 0 0 / 24px 24px,
+    linear-gradient(90deg, var(--color-brand-grid-line) 1px, transparent 1px) 0 0 / 24px 24px,
     var(--color-bg-blue-subtle);
   color: var(--color-brand-deep);
 }

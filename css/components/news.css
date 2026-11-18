@@ -73,7 +73,7 @@
 .news-item__cover {
   width: 6.5rem;
   height: auto;
-  border-radius: 2px;
+  border-radius: var(--radius-2xs);
   box-shadow: 0 0 0 1px var(--color-border), var(--shadow-sm);
 }
 
@@ -81,7 +81,7 @@
 .news-item__photo {
   width: min(100%, 19rem);
   height: auto;
-  border-radius: 2px;
+  border-radius: var(--radius-2xs);
   box-shadow: 0 0 0 1px var(--color-border);
   background: var(--color-surface-muted);
 }
