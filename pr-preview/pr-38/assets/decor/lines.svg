@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" fill="none">
+  <!-- 入会案内 / News 用：直線と整理されたグリッド構造 -->
+  <g stroke="#fff" stroke-width="1">
+    <path d="M320 96 H640 M320 192 H640 M320 288 H640" stroke-opacity="0.14"/>
+    <path d="M416 0 V400 M512 0 V400 M608 0 V400" stroke-opacity="0.1"/>
+    <rect x="416" y="96" width="96" height="96" stroke-opacity="0.3"/>
+    <rect x="512" y="192" width="96" height="96" stroke-opacity="0.2" fill="#fff" fill-opacity="0.04"/>
+    <path d="M360 288 H416" stroke-opacity="0.45" stroke-width="2"/>
+  </g>
+  <g fill="#fff" fill-opacity="0.5">
+    <rect x="413" y="93" width="6" height="6"/>
+    <rect x="509" y="189" width="6" height="6"/>
+    <rect x="605" y="285" width="6" height="6"/>
+  </g>
+</svg>
