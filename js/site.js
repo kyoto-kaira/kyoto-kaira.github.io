@@ -42,6 +42,7 @@
 
     /* NF特設ページ（新しい年度を先頭に追加） */
     nfYears: [
+      { year: 2026, href: "works/nf2026.html" },
       { year: 2025, href: "works/nf2025.html" },
       { year: 2024, href: "works/nf2024.html" },
       { year: 2023, href: "works/nf2023.html" },
